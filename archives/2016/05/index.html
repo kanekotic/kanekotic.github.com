@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    Archive: 2016/5
+  
+</title>
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kanekotic's Blog">
+<meta property="og:url" content="http://kanekotic.github.com/archives/2016/05/index.html">
+<meta property="og:site_name" content="kanekotic's Blog">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="kanekotic's Blog">
+<meta name="twitter:description">
+
+
+  <link rel="alternative" href="/atom.xml" title="kanekotic&#39;s Blog" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">kanekotic&#39;s Blog</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">kanekotic&#39;s Blog</a></h1>
+    
+      <p class="subtitle">
+        I have a blog :D
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+        <!--
+          <div class="author">Kanekotic</div>
+        -->
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://avatars3.githubusercontent.com/u/3071208?v=3&amp;s=460"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-learn/">daily, learn</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-learn-sonarqube-LDAP/">daily, learn, sonarqube, LDAP</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">15</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/kanekotic" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          
+
+  
+  
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
+        </div>
+        <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/05/18/04-18-sonarqube-update-when-ldapmd/" >
+  Sonarqube Upgrade Error due LDAP
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/05/18/04-18-sonarqube-update-when-ldapmd/"><span class="article-date">
+  2016-05-18
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn-sonarqube-LDAP/">daily, learn, sonarqube, LDAP</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>While upgrading Sonarqube i am getting the next error message</p>
+<blockquote>
+<p>An error happened, some parts of the page might not render correctly. Please contact the administrator if you keep on experiencing this error</p>
+</blockquote>
+<p>As you can see the message is not to explicit, in reality it doesnt have anything to do with reality. In my case i had copy as per the instructions the <code>sonar.properties</code> file. after searching i fouund this discussion <a href="https://groups.google.com/forum/#!topic/sonarqube/clYmLXuz7Nk" target="_blank" rel="external">post</a>. </p>
+<p>The problem at this point became clear, LDAP is a plugin inside Sonarqube. During the upgrade process the plugins must have not been loaded causing an unidentified section in the upgrade.</p>
+<p>The solution is simple:</p>
+<ol>
+<li>Comment the LDAP section.</li>
+<li>Go through the upgrade process of Sonarqube.</li>
+<li>Stop Sonarqube.</li>
+<li>Uncomment LDAP section.</li>
+<li>Start Sonarqube.</li>
+</ol>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/05/17/04-17-ubuntu-not-turning-off-or-restartingmd/" >
+  ubuntu not restarting or turning off
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/05/17/04-17-ubuntu-not-turning-off-or-restartingmd/"><span class="article-date">
+  2016-05-17
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Lately I have been getting tired of my operating system just not wanting to reboot or sometimes not turning off. This happens in my version off ubuntu due a problem with the energy management.<br>The way to solve this is changing the boot parameters for the operating system. So you will need to follow the next steps:</p>
+<ol>
+<li><p>Edit the grub settings file (if you use nano as at the end do CTRL+O to save CTRL+X to close)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/default/grub</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Eddit the next line to look similar to the next one.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash acpi=force reboot=pci&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Call the command line to update the grub (os selector for operating system)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>first reboot this will not make any difference but after your first reboot as the computer will boot with the new parameters this should solve the issue.</p>
+<p>Disclaimer: this works in my case, every installation in different hardware than the one in my computer could have different outcomes (that i cannot be held accountable for, so use at your discretion), including  booting issues that you might solve by removing the previous parameters before booting Ubuntu from grub.</p>
+
+        
+      </div>
+    </div>
+
+  
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2016 kanekotic&#39;s Blog - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

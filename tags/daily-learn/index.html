@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    Tag: daily, learn
+  
+</title>
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kanekotic's Blog">
+<meta property="og:url" content="http://kanekotic.github.com/tags/daily-learn/index.html">
+<meta property="og:site_name" content="kanekotic's Blog">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="kanekotic's Blog">
+<meta name="twitter:description">
+
+
+  <link rel="alternative" href="/atom.xml" title="kanekotic&#39;s Blog" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">kanekotic&#39;s Blog</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">kanekotic&#39;s Blog</a></h1>
+    
+      <p class="subtitle">
+        I have a blog :D
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+        <!--
+          <div class="author">Kanekotic</div>
+        -->
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://avatars3.githubusercontent.com/u/3071208?v=3&amp;s=460"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-learn/">daily, learn</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-learn-sonarqube-LDAP/">daily, learn, sonarqube, LDAP</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">15</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/kanekotic" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <h1>daily, learn</h1>
+
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/05/17/04-17-ubuntu-not-turning-off-or-restartingmd/" >
+  ubuntu not restarting or turning off
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/05/17/04-17-ubuntu-not-turning-off-or-restartingmd/"><span class="article-date">
+  2016-05-17
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Lately I have been getting tired of my operating system just not wanting to reboot or sometimes not turning off. This happens in my version off ubuntu due a problem with the energy management.<br>The way to solve this is changing the boot parameters for the operating system. So you will need to follow the next steps:</p>
+<ol>
+<li><p>Edit the grub settings file (if you use nano as at the end do CTRL+O to save CTRL+X to close)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/default/grub</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Eddit the next line to look similar to the next one.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash acpi=force reboot=pci&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Call the command line to update the grub (os selector for operating system)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>first reboot this will not make any difference but after your first reboot as the computer will boot with the new parameters this should solve the issue.</p>
+<p>Disclaimer: this works in my case, every installation in different hardware than the one in my computer could have different outcomes (that i cannot be held accountable for, so use at your discretion), including  booting issues that you might solve by removing the previous parameters before booting Ubuntu from grub.</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/03/02/03-02-unit-test-cheatsheet/" >
+  Unit Test CheatSheet
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/03/02/03-02-unit-test-cheatsheet/"><span class="article-date">
+  2016-03-02
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>##<strong>mstest</strong></p>
+<p>links:</p>
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.assert.aspx" target="_blank" rel="external">assert</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.collectionassert.aspx" target="_blank" rel="external">collection assert</a></li>
+</ul>
+<p>##<strong>Nunit</strong></p>
+<p>links:</p>
+<ul>
+<li><a href="https://github.com/nunit/docs/wiki/Attributes" target="_blank" rel="external">Attributes</a></li>
+<li><a href="https://github.com/nunit/docs/wiki/Assertions" target="_blank" rel="external">Assertion</a></li>
+</ul>
+<p>##<strong>MOQ</strong><br>Example<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IFoo</span> &#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">DoSomething</span>(<span class="params"><span class="keyword">string</span></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> calls;</span><br><span class="line"><span class="keyword">var</span> mock = <span class="keyword">new</span> Mock&lt;IFoo&gt;();</span><br><span class="line">mock.Setup(foo =&gt; foo.DoSomething(It.IsAny&lt;<span class="keyword">string</span>&gt;())).</span><br><span class="line">         Returns((<span class="keyword">string</span> s) =&gt; s.ToLower())</span><br><span class="line">         .Callback(() =&gt; ++calls);</span><br><span class="line"></span><br><span class="line">mock.SetupProperty(f =&gt; f.Name, <span class="string">"foo"</span>);</span><br><span class="line">mock.VerifySet(foo =&gt; foo.Name = <span class="string">"foo"</span>);</span><br><span class="line"></span><br><span class="line">mock.Verify(foo =&gt; foo.DoSomething(It.IsAny&lt;<span class="keyword">string</span>&gt;()), Times.Never());</span><br></pre></td></tr></table></figure></p>
+<p>##<strong>Test internal Classes</strong></p>
+<p>In assembly info to test internal classes you will need to know the name of the file<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[assembly: InternalsVisibleToAttribute(<span class="string">"&lt;Project Name&gt;"</span>)]</span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/02/05/02-05-meteor-flowRouter/" >
+  Meteor - FlowRouter
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/02/05/02-05-meteor-flowRouter/"><span class="article-date">
+  2016-02-05
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>This package is a very useful to define the navigation on your client side application. To add it just use the next command line:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">meteor add kadira:flow-router</span><br></pre></td></tr></table></figure></p>
+<p>a static route can be done as the next code. Where name needs to be a unique identifier, and the render string has to be the name of the template.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FlowRouter.route(<span class="string">'/'</span>,</span><br><span class="line">&#123;</span><br><span class="line">  name: <span class="string">'homeId'</span>,</span><br><span class="line">  action()&#123;</span><br><span class="line">    BlazeLayout.render(<span class="string">'homeTemplate'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>in case of requiring a dynamic page. Where the change is just the second objects where you defined the child template.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FlowRouter.route(<span class="string">'/'</span>,</span><br><span class="line">&#123;</span><br><span class="line">  name: <span class="string">'mainId'</span>,</span><br><span class="line">  action()&#123;</span><br><span class="line">    BlazeLayout.render(<span class="string">'mainTemplate'</span>, &#123;mainTemplate: <span class="string">'dynamicTemplate'</span>&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Other interesting parts of this package is the definition of variables on the route definition (like :id in the next code).<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FlowRouter.route(<span class="string">'/playlist/:id'</span>,</span><br><span class="line">&#123;</span><br><span class="line">  name: <span class="string">'playlist'</span>,</span><br><span class="line">  action()&#123;</span><br><span class="line">    BlazeLayout.render(<span class="string">'main'</span>, &#123;main: <span class="string">'playlist'</span>&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>there is also a possibility to use it in any part of the client javascript code to do redirection by using:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FlowRouter.go(<span class="string">'home'</span>);</span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/02/04/02-04-csharp-path-combine/" >
+  C# - Path.Combine
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/02/04/02-04-csharp-path-combine/"><span class="article-date">
+  2016-02-04
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>When using path.Combine if the second argument starts with a /. the first path is ignored and will give a path based on the C: drive.<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = Path.Combine(firstpath,$<span class="string">@"\myfolder\myfile.txt"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>will not return <firstpath\myfolder\myfile.txt> will return <c:\\\myfolder\myfile.txt>.</c:\\\myfolder\myfile.txt></firstpath\myfolder\myfile.txt></p>
+<h2 id="Meteor-Session-variables"><a href="#Meteor-Session-variables" class="headerlink" title="Meteor - Session variables"></a><strong>Meteor - Session variables</strong></h2><p>Session variables are easy to use in meteor. the can ve get and set from the javascript code using:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Session.get(<span class="string">'variableName'</span>);</span><br><span class="line">Session.set(<span class="string">'variableName'</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<p>on your HTML you can reference the get method easily by:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">"admin"</span>&gt;</span></span><br><span class="line">    &#123;&#123;#if $.Session.get 'variableName'&#125;&#125;</span><br><span class="line">        I am here</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">        I am not here</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/02/04/02-04-meteor-session-variables/" >
+  Meteor - Session variables
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/02/04/02-04-meteor-session-variables/"><span class="article-date">
+  2016-02-04
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Session variables are easy to use in meteor. the can ve get and set from the javascript code using:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Session.get(<span class="string">'variableName'</span>);</span><br><span class="line">Session.set(<span class="string">'variableName'</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<p>on your HTML you can reference the get method easily by:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">"admin"</span>&gt;</span></span><br><span class="line">    &#123;&#123;#if $.Session.get 'variableName'&#125;&#125;</span><br><span class="line">        I am here</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">        I am not here</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/02/03/02-03-meteor-query-subdocument/" >
+  Meteor - Query subdocument
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/02/03/02-03-meteor-query-subdocument/"><span class="article-date">
+  2016-02-03
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>To make a query over a subdocument in meteor is not posible to use directly the ‘$’ or ‘$elemMatch’ notation. It is necesary to use the keyword ‘fields:’ to do this. To publish just part of a mongo document you should do a query similar to this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Meteor.publish(<span class="string">'chapter'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">id, name</span>)</span>&#123;</span><br><span class="line">  check(id,<span class="built_in">String</span>);</span><br><span class="line">  check(name,<span class="built_in">String</span>);</span><br><span class="line">  <span class="keyword">return</span> Playlists.find(&#123; _id: id &#125;, &#123; fields: &#123; chapters: &#123; $elemMatch: &#123; name: name &#125;&#125;&#125;&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>That from the original document:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"_id"</span>: <span class="string">"cx8cmw5KMjHQm8czw"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"Test"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"this is a test"</span>,</span><br><span class="line">  <span class="attr">"chapters"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"First chapter"</span>,</span><br><span class="line">      <span class="attr">"description"</span>: <span class="string">"this is a video about blah blah blah"</span>,</span><br><span class="line">      <span class="attr">"video"</span>: &#123;</span><br><span class="line">        <span class="attr">"youtube"</span>: <span class="string">"yoAFDy1WS94"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Second chapter"</span>,</span><br><span class="line">      <span class="attr">"description"</span>: <span class="string">"this is a video about blah blah blah"</span>,</span><br><span class="line">      <span class="attr">"video"</span>: &#123;</span><br><span class="line">        <span class="attr">"youtube"</span>: <span class="string">"yoAFDy1WS94"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"createdAt"</span>: <span class="string">"2016-02-03T07:18:52.371Z"</span>,</span><br><span class="line">  <span class="attr">"isPublic"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Will return:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"_id"</span>: <span class="string">"cx8cmw5KMjHQm8czw"</span>,</span><br><span class="line">  <span class="attr">"chapters"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"First chapter"</span>,</span><br><span class="line">      <span class="attr">"description"</span>: <span class="string">"this is a video about blah blah blah"</span>,</span><br><span class="line">      <span class="attr">"video"</span>: &#123;</span><br><span class="line">        <span class="attr">"youtube"</span>: <span class="string">"ldkfkfkdlfjdkf"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>This is useful if you have big documents or don’t want the complexity of having 2 different collections that need to be related. It will help with the performance and resources that your application uses.</p>
+<p>now if you want to use the sub-document in your UI, you should just subscribe and add a helper to access this array item, like for example:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Template.chapter.onCreated(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">  self.autorun(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> id = FlowRouter.getParam(<span class="string">'id'</span>);</span><br><span class="line">    <span class="keyword">var</span> name = FlowRouter.getParam(<span class="string">'name'</span>);</span><br><span class="line">    self.subscribe(<span class="string">'chapter'</span>, id, name);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Template.chapter.helpers(&#123;</span><br><span class="line">  chapter: () =&gt; &#123;</span><br><span class="line">      <span class="keyword">return</span> Playlists.findOne(&#123;&#125;).chapters[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Finally your HTML just needs to reference the helper defined to show the information<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">"chapter"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chapter-body"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123; chapter.name &#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">"560"</span> <span class="attr">height</span>=<span class="string">"315"</span> <span class="attr">class</span>=<span class="string">"video"</span></span><br><span class="line">          <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/&#123;&#123; chapter.video.youtube &#125;&#125;"</span></span><br><span class="line">          <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">        &#123;&#123; #markdown &#125;&#125;&#123;&#123; chapter.description &#125;&#125;&#123;&#123; /markdown &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/02/01/02-01-vnext-sonarqube-integration/" >
+  TFS 2015 - vnext and sonarqube integration
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/02/01/02-01-vnext-sonarqube-integration/"><span class="article-date">
+  2016-02-01
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>The modifications required to use the integrated sonarqube steps are:</p>
+<ol>
+<li><p>On your administration panel add a new Generic Endpoint with the connection name you decide and the sonarqube server address.<br><img src="Resources/sonarqube2.PNG" alt=""></p>
+</li>
+<li><p>Configure the start step as per the next image</p>
+<ul>
+<li>select the endpoint configured before</li>
+<li>Add the project parameters:<ul>
+<li>key (this is an unique identifier).</li>
+<li>Name (display name for your software).</li>
+<li>Version (related software version).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="Resources/sonarqube1.PNG" alt=""></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/01/29/01-29-csharp-path-to-system-folders/" >
+  C# - Paths to system folders
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/01/29/01-29-csharp-path-to-system-folders/"><span class="article-date">
+  2016-01-29
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>In the Environment class there is a property called SpecialFolder. This will provide the paths to folders like: Program files, desktop, AppData, etc. The use is the next one:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Environment.SpecialFolder.&lt;NameSpecialFolder&gt;</span><br></pre></td></tr></table></figure>
+<p>Where <namespecialfolder> is the given name of the folder required, for example the AppData Local folder will be</namespecialfolder></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Environment.SpecialFolder.LocalApplicationData</span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/01/29/01-29-git-branches-tags-and-commits/" >
+  C# - Paths to system folders
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/01/29/01-29-git-branches-tags-and-commits/"><span class="article-date">
+  2016-01-29
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>##<strong>GIT - Branches, Tags and Commits</strong></p>
+<p>I was concern what will happend with my comments in the case i remove a branch.</p>
+<p>In git Commits are independents of branch’s and Tag’s. This last two are just pointers to certain commit. Trying to delete a Branch could create unreachable commits but if this are tag they become reachable.</p>
+<p>Removing branches will not remove commits, they will just become unreachable. Unless they are deleted with the git-gc command for example.</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/01/28/01-28-extension-methods-overlap-with-linq/" >
+  C# - Extension methods overlap with linq
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/01/28/01-28-extension-methods-overlap-with-linq/"><span class="article-date">
+  2016-01-28
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/daily-learn/">daily, learn</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>I have hit a corner case of extension methods and LINQ. Today I was declaring some extension methods to make my code more readable.So I created an extension method that gets an object and performs a direct cast:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">GeneralExtensions</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> T Cast&lt;T&gt;(<span class="keyword">this</span> <span class="keyword">object</span> o)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">return</span> (T)o;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The intention was to be able to call my direct castings by something like this:<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyObject.CastTo&lt;MyInterface&gt;();</span><br></pre></td></tr></table></figure></p>
+<p>It happens that in the same namespace I have an extension method that has a LINQ expression<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">EnumExtenstions</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="keyword">string</span>&gt; <span class="title">UseLinq</span>(<span class="params"><span class="keyword">this</span> IEnumerable&lt;<span class="keyword">object</span>&gt; collection</span>)</span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">from</span> <span class="keyword">object</span> <span class="keyword">value</span> <span class="keyword">in</span> collection <span class="keyword">select</span> <span class="keyword">value</span>.ToString() ).ToList();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Adding this first extension method to my code base cause the next error<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error	CS1936	Could not find an implementation of the query pattern for source type &apos;object&apos;.  &apos;Select&apos; not found.</span><br></pre></td></tr></table></figure></p>
+<p>Having both extension methods in different namespaces (and not referred), or rename <figure class="highlight plain"><figcaption><span>to something different solves the issue. This is caused for an overlap of the extension methods where the nearest one to the code is the one called.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##**How bad Extension Methods over object could go?**</span><br><span class="line"></span><br><span class="line">This is an extract from the answer of Eric Lippert, regarding the code:</span><br><span class="line"></span><br><span class="line">```csharp</span><br><span class="line">public static class GeneralExtensions</span><br><span class="line">&#123;</span><br><span class="line">    public static T Cast&lt;T&gt;(this object o)</span><br><span class="line">    &#123;</span><br><span class="line">    	return (T)o;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Side Effects of the <code>cast&lt;T&gt;</code>:</p>
+<ul>
+<li><code>Cast&lt;int&gt;(123)</code> unnecessarily boxes the int, <code>(int)123</code> does not.</li>
+<li><code>Cast&lt; short &gt;(123)</code> fails but <code>(short)123</code> succeeds. There is no conversion from a boxed int to a short.</li>
+<li>Suppose you have a user-defined conversion from Animal to Shape. <code>Cast&lt;Shape&gt;(new Tiger())</code> fails but <code>(Shape) new Tiger()</code> succeeds.</li>
+<li>Suppose q is a nullable int that happens to be null. <code>Cast&lt;string&gt;(q)</code> succeeds! But <code>(string)q</code> would fail at compile time</li>
+<li>Etc</li>
+</ul>
+<p>Cast method has some overlap with the real cast operator but is not a substitute for it. To capture the semantics of the cast operator there is a need to use dynamic, which starts the compiler at runtime and does the compile time analysis on runtime types.</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+
+
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/tags/daily-learn/page/2/">2</a><a class="extend next" rel="next" href="/tags/daily-learn/page/2/">Next</a>
+  </div>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2016 kanekotic&#39;s Blog - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
