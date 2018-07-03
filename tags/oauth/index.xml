@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oauth on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/oauth/</link>
+    <description>Recent content in Oauth on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OAuth Electron Twitter</title>
+      <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron-twitter/</guid>
+      <description>Use Twitter OAuth in a simple way inside your electron App.
+Installation add it to your elenctron project using npm command
+npm install oauth-electron-twitter --save  Usage add the require for ouath and twitter specific code from this package
+var oauth = require(&#39;oauth-electron-twitter&#39;).oauth; var twitter = require(&#39;oauth-electron-twitter&#39;).twitter;  declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login.</description>
+    </item>
+    
+  </channel>
+</rss>

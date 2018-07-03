@@ -36,6 +36,18 @@ gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId
     </item>
     
     <item>
+      <title>OAuth Electron Twitter</title>
+      <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron-twitter/</guid>
+      <description>Use Twitter OAuth in a simple way inside your electron App.
+Installation add it to your elenctron project using npm command
+npm install oauth-electron-twitter --save  Usage add the require for ouath and twitter specific code from this package
+var oauth = require(&#39;oauth-electron-twitter&#39;).oauth; var twitter = require(&#39;oauth-electron-twitter&#39;).twitter;  declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login.</description>
+    </item>
+    
+    <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>

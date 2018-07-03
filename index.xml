@@ -221,6 +221,57 @@ example()
     </item>
     
     <item>
+      <title>OAuth Electron Twitter</title>
+      <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron-twitter/</guid>
+      <description>
+
+&lt;h1 id=&#34;logo-https-cloud-githubusercontent-com-assets-3071208-14719944-55c32866-07ff-11e6-9821-1a564a0cf065-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14719944/55c32866-07ff-11e6-9821-1a564a0cf065.png&#34; alt=&#34;logo&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;Use Twitter OAuth in a simple way inside your electron App.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install oauth-electron-twitter --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth;
+var twitter = require(&#39;oauth-electron-twitter&#39;).twitter;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login. the login method return a promise with the result or the errror provided by the login pase.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
+var info = new twitter(&amp;quot;key&amp;quot;,&amp;quot;secret&amp;quot;);
+var auth = new oauth();
+auth.login(info, window).then((result) =&amp;gt; {
+               console.log(result);
+          }).catch((error) =&amp;gt; {
+               console.log(error);
+          });;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the result of this promise is a json object similar to next one&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    oauth_access_token: ***,
+    oauth_access_token_secret: ***
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-twitter-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Twitter graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker &lt;/a&gt;&lt;/h6&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -724,76 +775,6 @@ public static class EnumExtenstions
 * Etc&lt;/p&gt;
 
 &lt;p&gt;Cast method has some overlap with the real cast operator but is not a substitute for it. To capture the semantics of the cast operator there is a need to use dynamic, which starts the compiler at runtime and does the compile time analysis on runtime types.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C# - Fluent Interfaces with Extension Methods</title>
-      <link>http://kanekotic.github.io/post/01-27-interface-with-extension-methods/</link>
-      <pubDate>Wed, 27 Jan 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/01-27-interface-with-extension-methods/</guid>
-      <description>&lt;p&gt;I have not experiment to much with fluent interfaces. But is something cool especially to make code that is expressive.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;public struct Coordenates
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double Z { get; set; }
-    }
-
-    public static class CoordenatesExtensions
-    {
-
-        public static Coordenates X(this Coordenates coordenates, double value)
-        {
-            coordenates.X = value;
-            return coordenates;
-        }
-
-        public static Coordenates Y(this Coordenates coordenates, double value)
-        {
-            coordenates.Y = value;
-            return coordenates;
-        }
-        public static Coordenates Z(this Coordenates coordenates, double value)
-        {
-            coordenates.Z = value;
-            return coordenates;
-        }
-    }
-
-    public class Points
-    {
-        private Coordenates point;
-        public Points()
-        {
-            point = new Coordenates().X(2.1).Y(2.4).Z(3.2);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;also can be used with some language properties to make it more expressive&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;public static class GeneralExtensions
-{
-    public static T As&amp;lt;T&amp;gt;(this object o) where T : class
-    {
-        return o as T;
-    }
-
-    public static T Cast&amp;lt;T&amp;gt;(this object o)
-    {
-        return (T)o;
-    }
-
-    public static bool Is&amp;lt;T&amp;gt;(this object o)
-    {
-        return o is T;
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
