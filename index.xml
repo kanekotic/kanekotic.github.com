@@ -341,6 +341,90 @@ let guid = convert(&#39;0e883046-0b6d-4036-ab44-6c6fb3c44fe3&#39;)
     </item>
     
     <item>
+      <title>Scala Local Toggle</title>
+      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-6etktj-https-user-images-githubusercontent-com-3071208-32364786-318debc0-c077-11e7-9064-a65d6ce35cf6-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/32364786-318debc0-c077-11e7-9064-a65d6ce35cf6.png&#34; alt=&#34;logomakr_6etktj&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/scala-local-toggle&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/scala-local-toggle.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; alt=&#34;Maven Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;feature toggle by configuration file for scala applications&lt;/p&gt;
+
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;//Use version in badge
+libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val toggle = new ToggleManager();
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;system properties&lt;/li&gt;
+&lt;li&gt;application.conf (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;application.json (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;application.properties (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;reference.conf (all resources on classpath with this name)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;this files will require to have an setting for the toggles HOCON or JSON complient configuration similar to this, in any other case toggles will default to false:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;feature.local.toggles: [
+    {
+      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;,
+      &amp;quot;local&amp;quot;: true
+      &amp;quot;development&amp;quot;: true
+      &amp;quot;production&amp;quot;: false
+    }, 
+    {
+      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_OTHER_YOUR_TOGGLE&amp;quot;,
+      &amp;quot;local&amp;quot;: true
+      &amp;quot;development&amp;quot;: false
+      &amp;quot;production&amp;quot;: false
+    }
+  ]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the boolean denotes the state of the toggle depending on the environment, and the name is the identifying the value of the environment variable:
+- local maps to environment variable value LOCAL.
+- development maps to environment variable value DEVELOPMENT.
+- production maps to environment variable value PRODUCTION.&lt;/p&gt;
+
+&lt;p&gt;aditionally the enviroment variable that will be track to know the current environment of execution can be modified by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;  feature.local.environment: &amp;quot;SOME_ENVIROMENT_VARIABLE_NAME&amp;quot;
+  #Defaults to ENVIRONMENT 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use with the name identifier defined in the previous step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;  if (toggle.isEnabled(&amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;)) {
+    //your code under toggle here
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;logo&#34;&gt;LOGO&lt;/h5&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6ETKtj&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6ETKtj&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sonarqube Upgrade Error due LDAP</title>
       <link>http://kanekotic.github.io/post/04-18-sonarqube-update-when-ldapmd/</link>
       <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
@@ -707,74 +791,6 @@ Template.chapter.helpers({
 &lt;p&gt;In git Commits are independents of branch&amp;rsquo;s and Tag&amp;rsquo;s. This last two are just pointers to certain commit. Trying to delete a Branch could create unreachable commits but if this are tag they become reachable.&lt;/p&gt;
 
 &lt;p&gt;Removing branches will not remove commits, they will just become unreachable. Unless they are deleted with the git-gc command for example.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C# - Extension methods overlap with linq</title>
-      <link>http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/</link>
-      <pubDate>Thu, 28 Jan 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/</guid>
-      <description>&lt;p&gt;I have hit a corner case of extension methods and LINQ. Today I was declaring some extension methods to make my code more readable.So I created an extension method that gets an object and performs a direct cast:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;public static class GeneralExtensions
-{
-    public static T Cast&amp;lt;T&amp;gt;(this object o)
-    {
-    	return (T)o;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The intention was to be able to call my direct castings by something like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;MyObject.CastTo&amp;lt;MyInterface&amp;gt;();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It happens that in the same namespace I have an extension method that has a LINQ expression&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public static class EnumExtenstions
-{
-	public static IEnumerable&amp;lt;string&amp;gt; UseLinq(this IEnumerable&amp;lt;object&amp;gt; collection)
-	{
-		return (from object value in collection select value.ToString() ).ToList();
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Adding this first extension method to my code base cause the next error&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Error	CS1936	Could not find an implementation of the query pattern for source type &#39;object&#39;.  &#39;Select&#39; not found.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Having both extension methods in different namespaces (and not referred), or rename &lt;code&gt;Cast&amp;lt;T&amp;gt;&lt;/code&gt; to something different solves the issue. This is caused for an overlap of the extension methods where the nearest one to the code is the one called.&lt;/p&gt;
-
-&lt;p&gt;##&lt;strong&gt;How bad Extension Methods over object could go?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This is an extract from the answer of Eric Lippert, regarding the code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;public static class GeneralExtensions
-{
-    public static T Cast&amp;lt;T&amp;gt;(this object o)
-    {
-    	return (T)o;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Side Effects of the &lt;code&gt;cast&amp;lt;T&amp;gt;&lt;/code&gt;:
-* &lt;code&gt;Cast&amp;lt;int&amp;gt;(123)&lt;/code&gt; unnecessarily boxes the int, &lt;code&gt;(int)123&lt;/code&gt; does not.
-* &lt;code&gt;Cast&amp;lt; short &amp;gt;(123)&lt;/code&gt; fails but &lt;code&gt;(short)123&lt;/code&gt; succeeds. There is no conversion from a boxed int to a short.
-* Suppose you have a user-defined conversion from Animal to Shape. &lt;code&gt;Cast&amp;lt;Shape&amp;gt;(new Tiger())&lt;/code&gt; fails but &lt;code&gt;(Shape) new Tiger()&lt;/code&gt; succeeds.
-* Suppose q is a nullable int that happens to be null. &lt;code&gt;Cast&amp;lt;string&amp;gt;(q)&lt;/code&gt; succeeds! But &lt;code&gt;(string)q&lt;/code&gt; would fail at compile time
-* Etc&lt;/p&gt;
-
-&lt;p&gt;Cast method has some overlap with the real cast operator but is not a substitute for it. To capture the semantics of the cast operator there is a need to use dynamic, which starts the compiler at runtime and does the compile time analysis on runtime types.&lt;/p&gt;
 </description>
     </item>
     

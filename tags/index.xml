@@ -85,6 +85,33 @@
     </item>
     
     <item>
+      <title>Feature-flags</title>
+      <link>http://kanekotic.github.io/tags/feature-flags/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-flags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feature-toggle</title>
+      <link>http://kanekotic.github.io/tags/feature-toggle/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-toggle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feature-toggles</title>
+      <link>http://kanekotic.github.io/tags/feature-toggles/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-toggles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Google</title>
       <link>http://kanekotic.github.io/tags/google/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -180,6 +207,15 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/raw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toggle</title>
+      <link>http://kanekotic.github.io/tags/toggle/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/toggle/</guid>
       <description></description>
     </item>
     
