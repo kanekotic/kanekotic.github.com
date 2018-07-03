@@ -221,6 +221,75 @@ example()
     </item>
     
     <item>
+      <title>Raw Guid Converter</title>
+      <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-5c2oee-https-user-images-githubusercontent-com-3071208-41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb.png&#34; alt=&#34;logomakr_5c2oee&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/raw-guid-converter&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/raw-guid-converter.svg?branch=v0.0.2&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/raw-guid-converter?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/raw-guid-converter/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/Naereen/StrapDown.js/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/Naereen/StrapDown.js.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;
+
+&lt;p&gt;command line and library to convert guids from oracle raw format to formated guid and viceversa&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;if you want ot use in a package &lt;code&gt;yarn add raw-guid-converter&lt;/code&gt; or &lt;code&gt;npm i raw-guid-converter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;if you want to use it as a command install globally with &lt;code&gt;npm i raw-guid-converter -g&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;raw-to-guid-string&#34;&gt;Raw to Guid String&lt;/h3&gt;
+
+&lt;h4 id=&#34;code&#34;&gt;Code&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertRaw
+let guid = convert(&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;)
+//guid =&amp;gt; 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;command-line&#34;&gt;Command line&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromRaw 4630880E6D0B3640AB446C6FB3C44FE3
+#0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
+
+&lt;h3 id=&#34;guid-string-to-raw&#34;&gt;Guid string to Raw&lt;/h3&gt;
+
+&lt;h4 id=&#34;code-1&#34;&gt;Code&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertString
+let guid = convert(&#39;0e883046-0b6d-4036-ab44-6c6fb3c44fe3&#39;)
+//guid =&amp;gt; &#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;command-line-1&#34;&gt;Command line&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromString 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+#&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/5c2oEE&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/5c2oEE&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sonarqube Upgrade Error due LDAP</title>
       <link>http://kanekotic.github.io/post/04-18-sonarqube-update-when-ldapmd/</link>
       <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
@@ -724,47 +793,6 @@ public static class EnumExtenstions
     }
 }
 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Meteor the beginning</title>
-      <link>http://kanekotic.github.io/post/01-27-meteor-the-beginning/</link>
-      <pubDate>Wed, 27 Jan 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/01-27-meteor-the-beginning/</guid>
-      <description>&lt;p&gt;##&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I found a lot of interesting things in this link, i can setup my view model to a real JavaScript object.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://viewmodel.meteor.com/docs&#34; target=&#34;_blank&#34;&gt;https://viewmodel.meteor.com/docs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To add markdown support you will have to add the markdown package:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;meteor add markdown
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you also want your snippets of code to have some style you will also need to add the highlight.js package:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;meteor add simple:highlight.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;##&lt;strong&gt;AutoForm&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;to get a multi-line input you need to make sure you get a textarea. This can be done in the collection definition by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;TestSchema = new SimpleSchema({
-    content: {
-        type: String,
-        label: &amp;quot;Content&amp;quot;,
-        autoform: {
-            rows: 10
-        }
-    }
-});
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

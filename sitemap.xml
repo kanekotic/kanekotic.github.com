@@ -23,6 +23,15 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/raw-guid-converter/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/post/04-18-sonarqube-update-when-ldapmd/</loc>
       <lastmod>2016-03-17T09:56:49+02:00</lastmod>
     </url>
@@ -187,6 +196,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/converter/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/daily/</loc>
       <lastmod>2016-03-17T09:56:49+02:00</lastmod>
       <priority>0</priority>
@@ -257,6 +276,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/guid/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/infrastructure/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -307,6 +336,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/oracle/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/post/</loc>
       <lastmod>2016-03-17T09:56:49+02:00</lastmod>
       <priority>0</priority>
@@ -328,6 +367,16 @@
     <url>
     
       <loc>http://kanekotic.github.io/publication_types/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/raw/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

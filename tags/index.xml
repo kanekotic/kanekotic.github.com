@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>Converter</title>
+      <link>http://kanekotic.github.io/tags/converter/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/converter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Daily</title>
       <link>http://kanekotic.github.io/tags/daily/</link>
       <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
@@ -94,6 +103,15 @@
     </item>
     
     <item>
+      <title>Guid</title>
+      <link>http://kanekotic.github.io/tags/guid/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/guid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Infrastructure</title>
       <link>http://kanekotic.github.io/tags/infrastructure/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -126,6 +144,24 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>http://kanekotic.github.io/tags/oracle/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raw</title>
+      <link>http://kanekotic.github.io/tags/raw/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/raw/</guid>
       <description></description>
     </item>
     
