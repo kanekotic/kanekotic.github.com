@@ -181,6 +181,184 @@ module.exports.path = anyPrebuilt.path
     </item>
     
     <item>
+      <title>Endomondo Unofficial API</title>
+      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-7drp6q-https-cloud-githubusercontent-com-assets-3071208-22858608-36797c5e-f088-11e6-9821-ad926355ff05-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22858608/36797c5e-f088-11e6-9821-ad926355ff05.png&#34; alt=&#34;logomakr_7drp6q&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;This is a promise based unofficial endomondo api.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install endomondo-unofficial-api
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
+
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+
+&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate
+
+authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
+    .then((result) =&amp;gt; console.log(result))
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    email: params.email,
+    password: params.password,
+    deviceId: params.uuid || uuid,
+    country: params.country || &#39;ES&#39;,
+    action: params.action || &#39;pair&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ 
+  authToken: &amp;lt;token&amp;gt;,
+  measure: &amp;lt;mesure unit&amp;gt;,
+  displayName: &amp;lt;user name&amp;gt;,
+  userId: &amp;lt;user id&amp;gt;,
+  facebookConnected: &amp;lt;true|false&amp;gt;,
+  secureToken: &amp;lt;token&amp;gt; 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
+
+&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;endomondo-unofficial-api&#39;).workouts
+
+var token = &#39;authToken&#39;
+
+workouts({authToken: token})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    authToken: params.authToken,
+    fields: params.fields || undefined,
+    maxResults: params.maxResults || undefined,
+    deflate: params.deflate || undefined,
+    compression: params.compression || undefined,
+    before: params.before || undefined,
+    after: params.after || undefined,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;data&amp;quot;:[&amp;lt;activities&amp;gt;],
+  &amp;quot;more&amp;quot;:false
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workout-get&#34;&gt;Workout (get)&lt;/h3&gt;
+
+&lt;p&gt;Get a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutGet = require(&#39;endomondo-unofficial-api&#39;).workout.get
+
+var token = &#39;authToken&#39;
+var workoutId = &#39;workoutId&#39;
+
+workoutGet({authToken: token, workoutId: workoutId})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    workoutId: params.id,
+    sport: params.sport || 0,
+    duration: params.duration || 0,
+    gzip: params.gzip || true,
+    audioMessage: params.audioMessage || false,
+    goalType: params.goalType || &#39;BASIC&#39;,
+    extendedResponse: params.extendedResponse || undefined,
+    calories: params.calories || undefined,
+    hydration: params.hydration || undefined
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object that is quite complex to describe just try it ;) .&lt;/p&gt;
+
+&lt;h3 id=&#34;workout-set&#34;&gt;Workout (set)&lt;/h3&gt;
+
+&lt;p&gt;Set (or create) a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutSet = require(&#39;endomondo-unofficial-api&#39;).workout.set
+
+var token = &#39;authToken&#39;
+var userId = &#39;userId&#39;
+
+workoutSet({authToken: token, userId: userId, time: Date.now()-70, duration: 60, distance: 0.05 })
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    authToken: params.authToken,
+    duration: params.duration,
+    trackPoints: [ { dateTime, inst, latitude, longitude, distance, speed, altitude, heartRate }],
+    workoutId: params.workoutId || Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    authToken: params.authToken,
+    duration: params.duration,
+    time: params.time, 
+    distance: params.distance,
+    workoutId: params.workoutId || Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ workoutId: &amp;lt;workoutId&amp;gt; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;thanks&#34;&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;Special thanks to @aperezm85 whos code was used as inspiration for this package.&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Sport graphic by &lt;a href=&#34;http://www.flaticon.com/authors/webalys&#34;&gt;Webalys&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
+
+&lt;p&gt;This is not affiliated or endorset by Endomondo, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Express Exception Handler</title>
       <link>http://kanekotic.github.io/project/express-exception-handler/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -357,6 +535,83 @@ example()
 &lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
 
 &lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/32f2Md&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/32f2Md&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nike Unofficial API</title>
+      <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/nike-unofficial-api/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-3e4ole-https-cloud-githubusercontent-com-assets-3071208-22865444-590b48ae-f12a-11e6-921c-f7a9c4b5dd48-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22865444/590b48ae-f12a-11e6-921c-f7a9c4b5dd48.png&#34; alt=&#34;logomakr_3e4ole&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;unofficial nike api&lt;/p&gt;
+
+&lt;p&gt;This is a promise based unofficial nikeplus api.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install nike-unofficial-api
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
+
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+
+&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate
+
+authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
+    .then((result) =&amp;gt; console.log(result))
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    email: params.email,
+    password: params.password
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ 
+  	access_token: &amp;lt;token&amp;gt;,
+  	expires_in: &amp;lt;expiration time&amp;gt;,
+  	profile_img_url: &amp;lt;profile image&amp;gt;,
+  	token_type: &amp;lt;token type&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
+
+&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;nike-unofficial-api&#39;).workouts
+
+var token = &#39;access_token&#39;
+
+workouts({access_token: token})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Speed graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
+
+&lt;p&gt;This is not affiliated or endorset by Nike , or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
 </description>
     </item>
     
@@ -936,125 +1191,6 @@ Session.set(&#39;variableName&#39;, true);
     {{else}}
         I am not here
     {{/if}}
-&amp;lt;/template&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Meteor - Session variables</title>
-      <link>http://kanekotic.github.io/post/02-04-meteor-session-variables/</link>
-      <pubDate>Thu, 04 Feb 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/02-04-meteor-session-variables/</guid>
-      <description>&lt;p&gt;Session variables are easy to use in meteor. the can ve get and set from the javascript code using:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Session.get(&#39;variableName&#39;);
-Session.set(&#39;variableName&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;on your HTML you can reference the get method easily by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;template name=&amp;quot;admin&amp;quot;&amp;gt;
-    {{#if $.Session.get &#39;variableName&#39;}}
-        I am here
-    {{else}}
-        I am not here
-    {{/if}}
-&amp;lt;/template&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Meteor - Query subdocument</title>
-      <link>http://kanekotic.github.io/post/02-03-meteor-query-subdocument/</link>
-      <pubDate>Wed, 03 Feb 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/02-03-meteor-query-subdocument/</guid>
-      <description>&lt;p&gt;To make a query over a subdocument in meteor is not posible to use directly the &amp;lsquo;$&amp;rsquo; or &amp;lsquo;$elemMatch&amp;rsquo; notation. It is necesary to use the keyword &amp;lsquo;fields:&amp;rsquo; to do this. To publish just part of a mongo document you should do a query similar to this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Meteor.publish(&#39;chapter&#39;, function(id, name){
-  check(id,String);
-  check(name,String);
-  return Playlists.find({ _id: id }, { fields: { chapters: { $elemMatch: { name: name }}}});
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That from the original document:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;_id&amp;quot;: &amp;quot;cx8cmw5KMjHQm8czw&amp;quot;,
-  &amp;quot;name&amp;quot;: &amp;quot;Test&amp;quot;,
-  &amp;quot;description&amp;quot;: &amp;quot;this is a test&amp;quot;,
-  &amp;quot;chapters&amp;quot;: [
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;First chapter&amp;quot;,
-      &amp;quot;description&amp;quot;: &amp;quot;this is a video about blah blah blah&amp;quot;,
-      &amp;quot;video&amp;quot;: {
-        &amp;quot;youtube&amp;quot;: &amp;quot;yoAFDy1WS94&amp;quot;
-      }
-    },
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;Second chapter&amp;quot;,
-      &amp;quot;description&amp;quot;: &amp;quot;this is a video about blah blah blah&amp;quot;,
-      &amp;quot;video&amp;quot;: {
-        &amp;quot;youtube&amp;quot;: &amp;quot;yoAFDy1WS94&amp;quot;
-      }
-    }
-  ],
-  &amp;quot;createdAt&amp;quot;: &amp;quot;2016-02-03T07:18:52.371Z&amp;quot;,
-  &amp;quot;isPublic&amp;quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Will return:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;_id&amp;quot;: &amp;quot;cx8cmw5KMjHQm8czw&amp;quot;,
-  &amp;quot;chapters&amp;quot;: [
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;First chapter&amp;quot;,
-      &amp;quot;description&amp;quot;: &amp;quot;this is a video about blah blah blah&amp;quot;,
-      &amp;quot;video&amp;quot;: {
-        &amp;quot;youtube&amp;quot;: &amp;quot;ldkfkfkdlfjdkf&amp;quot;
-      }
-    }
-  ]
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is useful if you have big documents or don&amp;rsquo;t want the complexity of having 2 different collections that need to be related. It will help with the performance and resources that your application uses.&lt;/p&gt;
-
-&lt;p&gt;now if you want to use the sub-document in your UI, you should just subscribe and add a helper to access this array item, like for example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Template.chapter.onCreated(function(){
-  var self = this;
-  self.autorun(function(){
-    var id = FlowRouter.getParam(&#39;id&#39;);
-    var name = FlowRouter.getParam(&#39;name&#39;);
-    self.subscribe(&#39;chapter&#39;, id, name);
-  });
-});
-
-Template.chapter.helpers({
-  chapter: () =&amp;gt; {
-      return Playlists.findOne({}).chapters[0];
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally your HTML just needs to reference the helper defined to show the information&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;template name=&amp;quot;chapter&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;chapter-body&amp;quot;&amp;gt;
-        &amp;lt;h3&amp;gt;{{ chapter.name }}&amp;lt;/h3&amp;gt;
-        &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; class=&amp;quot;video&amp;quot;
-          src=&amp;quot;https://www.youtube.com/embed/{{ chapter.video.youtube }}&amp;quot;
-          frameborder=&amp;quot;0&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;
-        {{ #markdown }}{{ chapter.description }}{{ /markdown }}
-    &amp;lt;/div&amp;gt;
 &amp;lt;/template&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>

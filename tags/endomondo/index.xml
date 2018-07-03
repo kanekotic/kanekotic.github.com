@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Endomondo on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/endomondo/</link>
+    <description>Recent content in Endomondo on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/endomondo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Endomondo Unofficial API</title>
+      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
+      <description>This is a promise based unofficial endomondo api.
+installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
+{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.</description>
+    </item>
+    
+  </channel>
+</rss>

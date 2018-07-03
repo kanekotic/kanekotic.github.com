@@ -238,6 +238,33 @@
   
   
   <div>
+    <h2><a href="http://kanekotic.github.io/project/endomondo-unofficial-api.1/">Endomondo Unofficial API</a></h2>
+    <div class="article-style">
+      
+      This is a promise based unofficial endomondo api.
+installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&lsquo;endomondo-unofficial-api&rsquo;).authenticate authenticate({email: &lt;email&gt;, password: &lt;password&gt;}) .then((result) =&gt; console.log(result)) .catch((result) =&gt; console.log(result))  the complete set of parameters get determined by:
+{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://kanekotic.github.io/project/nike-unofficial-api/">Nike Unofficial API</a></h2>
+    <div class="article-style">
+      
+      unofficial nike api
+This is a promise based unofficial nikeplus api.
+installation npm install nike-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&lsquo;nike-unofficial-api&rsquo;).authenticate authenticate({email: &lt;email&gt;, password: &lt;password&gt;}) .then((result) =&gt; console.log(result)) .catch((result) =&gt; console.log(result))  the complete set of parameters get determined by:
+{ email: params.email, password: params.password }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="http://kanekotic.github.io/project/runtastic-unofficial-api/">Runtastic Unofficial API</a></h2>
     <div class="article-style">
       
