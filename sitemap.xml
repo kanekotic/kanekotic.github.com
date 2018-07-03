@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/elk-docker/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/project/gatoo/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
@@ -188,6 +197,26 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/elasticsearch/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/elk-stack/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/export/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -218,6 +247,26 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/grafana/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/infrastructure/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -228,8 +277,28 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/kibana/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/learn/</loc>
       <lastmod>2016-03-17T09:56:49+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/logstash/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -40,6 +40,24 @@
     </item>
     
     <item>
+      <title>Elasticsearch</title>
+      <link>http://kanekotic.github.io/tags/elasticsearch/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk-stack</title>
+      <link>http://kanekotic.github.io/tags/elk-stack/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/elk-stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Export</title>
       <link>http://kanekotic.github.io/tags/export/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -67,11 +85,47 @@
     </item>
     
     <item>
+      <title>Grafana</title>
+      <link>http://kanekotic.github.io/tags/grafana/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infrastructure</title>
+      <link>http://kanekotic.github.io/tags/infrastructure/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kibana</title>
+      <link>http://kanekotic.github.io/tags/kibana/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Learn</title>
       <link>http://kanekotic.github.io/tags/learn/</link>
       <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
       
       <guid>http://kanekotic.github.io/tags/learn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logstash</title>
+      <link>http://kanekotic.github.io/tags/logstash/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/logstash/</guid>
       <description></description>
     </item>
     
