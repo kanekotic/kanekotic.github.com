@@ -241,7 +241,11 @@
     <h2><a href="http://kanekotic.github.io/project/runtastic-unofficial-api/">Runtastic Unofficial API</a></h2>
     <div class="article-style">
       
-      unofficial runtastic api wrapper
+      This is a promise based unofficial runtastic api.
+installation npm install runtastic-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&lsquo;runtastic-unofficial-api&rsquo;).authenticate authenticate({email: &lt;email&gt;, password: &lt;password&gt;}) .then((result) =&gt; console.log(result)) .catch((result) =&gt; console.log(result))  the complete set of parameters get determined by:
+{ &lsquo;user[email]&rsquo;: params.email, &lsquo;user[password]&rsquo;: params.password, grant_type: &lsquo;password&rsquo; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:
       
     </div>
   </div>

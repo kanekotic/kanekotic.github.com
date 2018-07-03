@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Any Prebuilt</title>
+      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
+      <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
+Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
+    </item>
+    
+    <item>
       <title>ELK Docker</title>
       <link>http://kanekotic.github.io/project/elk-docker/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -30,9 +40,9 @@ Run you will need docker installed in your computer, after it :
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/express-exception-handler/</guid>
-      <description>feature toggle by configuration file for scala applications
-Install //Use version in badge libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;  Use  Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.
-val toggle = new ToggleManager();  use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):</description>
+      <description>Motivation This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.
+Installation add it to your project with npm install express-exception-handler or yarn add express-exception-handler
+Use there are 2 diferent ways to integrate the main functionality of this package, either by adding the handle that gets injected to the router framework</description>
     </item>
     
     <item>

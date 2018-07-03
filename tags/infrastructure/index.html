@@ -241,7 +241,10 @@
     <h2><a href="http://kanekotic.github.io/project/elk-docker/">ELK Docker</a></h2>
     <div class="article-style">
       
-      a logging infrastructure with docker
+      This show how multiple containers can aggregate log to logging infrastructure with docker compose using logstash, elastic search and kibana
+Run you will need docker installed in your computer, after it :
+ Run  docker-compose up   run to get some logs from httpd  repeat 10 curl <a href="http://localhost:80/" target="_blank">http://localhost:80/</a>   Kibana:
+ this might take a bit Navigate to <a href="http://localhost:5601" target="_blank">http://localhost:5601</a> Add logstash-* as index with @timestamp as Time-field name Go to Discover  Grafana:
       
     </div>
   </div>

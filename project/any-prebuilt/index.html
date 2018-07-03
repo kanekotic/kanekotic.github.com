@@ -17,11 +17,11 @@
       
     
   
-  <meta name="description" content="I have hit a corner case of extension methods and LINQ. Today I was declaring some extension methods to make my code more readable.So I created an extension method that gets an object and performs a direct cast:
-public static class GeneralExtensions { public static T Cast&lt;T&gt;(this object o) { return (T)o; } }  The intention was to be able to call my direct castings by something like this:">
+  <meta name="description" content="Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
+Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/">
+  <link rel="alternate" hreflang="en-us" href="http://kanekotic.github.io/project/any-prebuilt/">
 
   
 
@@ -70,7 +70,7 @@ public static class GeneralExtensions { public static T Cast&lt;T&gt;(this objec
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/">
+  <link rel="canonical" href="http://kanekotic.github.io/project/any-prebuilt/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -78,15 +78,15 @@ public static class GeneralExtensions { public static T Cast&lt;T&gt;(this objec
   <meta property="twitter:creator" content="@kanekotic">
   
   <meta property="og:site_name" content="Kanekotic">
-  <meta property="og:url" content="http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/">
-  <meta property="og:title" content="C# - Extension methods overlap with linq | Kanekotic">
-  <meta property="og:description" content="I have hit a corner case of extension methods and LINQ. Today I was declaring some extension methods to make my code more readable.So I created an extension method that gets an object and performs a direct cast:
-public static class GeneralExtensions { public static T Cast&lt;T&gt;(this object o) { return (T)o; } }  The intention was to be able to call my direct castings by something like this:">
+  <meta property="og:url" content="http://kanekotic.github.io/project/any-prebuilt/">
+  <meta property="og:title" content="Any Prebuilt | Kanekotic">
+  <meta property="og:description" content="Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
+Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-01-28T09:56:49&#43;02:00">
+  <meta property="article:published_time" content="2016-04-27T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2016-01-28T09:56:49&#43;02:00">
+  <meta property="article:modified_time" content="2016-04-27T00:00:00&#43;00:00">
   
 
   
@@ -117,7 +117,7 @@ public static class GeneralExtensions { public static T Cast&lt;T&gt;(this objec
 
   
 
-  <title>C# - Extension methods overlap with linq | Kanekotic</title>
+  <title>Any Prebuilt | Kanekotic</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -232,78 +232,51 @@ public static class GeneralExtensions { public static T Cast&lt;T&gt;(this objec
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
 
   
 
 
   <div class="article-container">
-    <h1 itemprop="name">C# - Extension methods overlap with linq</h1>
 
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2016-01-28 09:56:49 &#43;0200 &#43;0200" itemprop="datePublished dateModified">
-      2016-01-28
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kanekotic">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://kanekotic.github.io/post/01-28-extension-methods-overlap-with-linq/#disqus_thread"></a>
-  
-
-  
-
-  
-  
+    <div class="pub-title">
+      <h1 itemprop="name">Any Prebuilt</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=C%23%20-%20Extension%20methods%20overlap%20with%20linq&amp;url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-28-extension-methods-overlap-with-linq%2f"
+         href="https://twitter.com/intent/tweet?text=Any%20Prebuilt&amp;url=http%3a%2f%2fkanekotic.github.io%2fproject%2fany-prebuilt%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-28-extension-methods-overlap-with-linq%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkanekotic.github.io%2fproject%2fany-prebuilt%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-28-extension-methods-overlap-with-linq%2f&amp;title=C%23%20-%20Extension%20methods%20overlap%20with%20linq"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkanekotic.github.io%2fproject%2fany-prebuilt%2f&amp;title=Any%20Prebuilt"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-28-extension-methods-overlap-with-linq%2f&amp;title=C%23%20-%20Extension%20methods%20overlap%20with%20linq"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkanekotic.github.io%2fproject%2fany-prebuilt%2f&amp;title=Any%20Prebuilt"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=C%23%20-%20Extension%20methods%20overlap%20with%20linq&amp;body=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-28-extension-methods-overlap-with-linq%2f">
+         href="mailto:?subject=Any%20Prebuilt&amp;body=http%3a%2f%2fkanekotic.github.io%2fproject%2fany-prebuilt%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -311,71 +284,87 @@ public static class GeneralExtensions { public static T Cast&lt;T&gt;(this objec
 </div>
 
 
-  
+      </span>
+    </div>
 
-</div>
-
+    
 
     <div class="article-style" itemprop="articleBody">
-      <p>I have hit a corner case of extension methods and LINQ. Today I was declaring some extension methods to make my code more readable.So I created an extension method that gets an object and performs a direct cast:</p>
+      
 
-<pre><code class="language-csharp">public static class GeneralExtensions
-{
-    public static T Cast&lt;T&gt;(this object o)
-    {
-    	return (T)o;
-    }
-}
+<h1 id="logomakr-3dkn9b-https-cloud-githubusercontent-com-assets-3071208-22477192-c7ce1d86-e7aa-11e6-87de-c24336e1ea3e-png"><img src="https://cloud.githubusercontent.com/assets/3071208/22477192/c7ce1d86-e7aa-11e6-87de-c24336e1ea3e.png" alt="logomakr_3dkn9b" /></h1>
+
+<h1 id="mission">Mission</h1>
+
+<p>Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.</p>
+
+<h1 id="generate-a-prebuilt-package">Generate a prebuilt package</h1>
+
+<ol>
+<li>Create new project</li>
+</ol>
+
+<pre><code>npm init
 </code></pre>
 
-<p>The intention was to be able to call my direct castings by something like this:</p>
+<ol>
+<li>Add this package as dependency</li>
+</ol>
 
-<pre><code class="language-csharp">MyObject.CastTo&lt;MyInterface&gt;();
+<pre><code>npm install any-prebuilt --save
 </code></pre>
 
-<p>It happens that in the same namespace I have an extension method that has a LINQ expression</p>
+<ol>
+<li>Create <code>postinstall.js</code> file with content:</li>
+</ol>
 
-<pre><code class="language-csharp">using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public static class EnumExtenstions
-{
-	public static IEnumerable&lt;string&gt; UseLinq(this IEnumerable&lt;object&gt; collection)
-	{
-		return (from object value in collection select value.ToString() ).ToList();
-	}
-}
+<pre><code class="language-js">require('any-prebuilt').install(require('./package.json').prebuilt)
 </code></pre>
 
-<p>Adding this first extension method to my code base cause the next error</p>
+<ol>
+<li>Create <code>index.js</code> file with content:</li>
+</ol>
 
-<pre><code>Error	CS1936	Could not find an implementation of the query pattern for source type 'object'.  'Select' not found.
+<pre><code class="language-js">var anyPrebuilt = require('any-prebuilt')
+anyPrebuilt.initialize(__dirname, require('./package.json').prebuilt)
+module.exports.path = anyPrebuilt.path
 </code></pre>
 
-<p>Having both extension methods in different namespaces (and not referred), or rename <code>Cast&lt;T&gt;</code> to something different solves the issue. This is caused for an overlap of the extension methods where the nearest one to the code is the one called.</p>
+<ol>
+<li>On the <code>package.json</code> add a prebuilt element (you can also add this to any other file that provides a jason object to both index and postinstall.js).</li>
+</ol>
 
-<p>##<strong>How bad Extension Methods over object could go?</strong></p>
-
-<p>This is an extract from the answer of Eric Lippert, regarding the code:</p>
-
-<pre><code class="language-csharp">public static class GeneralExtensions
-{
-    public static T Cast&lt;T&gt;(this object o)
-    {
-    	return (T)o;
-    }
-}
+<pre><code>  &quot;prebuilt&quot;: {
+    &quot;arch&quot;: &lt;string&gt;, // Target architecture (supported: `ia32` / `x64`. Default value: machine's architecture)
+    &quot;platform&quot;: &lt;string&gt;, //Target platform (supported: `win` / `osx` / `linux`. Default value: machine's platform)
+    &quot;version&quot;: &lt;string&gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
+    &quot;targetDir&quot;: &lt;string&gt;, //Target directory (where to install the binaries. Default value: `./bin`)
+    &quot;targetBin&quot;: &lt;string&gt;, //Target binary (the precompiled binary to be required in node. No default value)
+    &quot;version&quot;: &lt;string&gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
+    &quot;user&quot;: &lt;string&gt;, // user or Organization (format: string. Is `required`)
+    &quot;repo&quot;: &lt;string&gt;, //Origin repo (format: string. Is `required`)
+    &quot;token&quot;: &lt;string&gt; //Github token (format: string. `required` if private repo)
+  }
 </code></pre>
 
-<p>Side Effects of the <code>cast&lt;T&gt;</code>:
-* <code>Cast&lt;int&gt;(123)</code> unnecessarily boxes the int, <code>(int)123</code> does not.
-* <code>Cast&lt; short &gt;(123)</code> fails but <code>(short)123</code> succeeds. There is no conversion from a boxed int to a short.
-* Suppose you have a user-defined conversion from Animal to Shape. <code>Cast&lt;Shape&gt;(new Tiger())</code> fails but <code>(Shape) new Tiger()</code> succeeds.
-* Suppose q is a nullable int that happens to be null. <code>Cast&lt;string&gt;(q)</code> succeeds! But <code>(string)q</code> would fail at compile time
-* Etc</p>
+<ol>
+<li>In your <code>package .json</code> add the next script:</li>
+</ol>
 
-<p>Cast method has some overlap with the real cast operator but is not a substitute for it. To capture the semantics of the cast operator there is a need to use dynamic, which starts the compiler at runtime and does the compile time analysis on runtime types.</p>
+<pre><code>&quot;scripts&quot;: {
+    &quot;postinstall&quot;: &quot;node postinstall.js&quot;
+  }
+</code></pre>
+
+<p>As seen before this can be configured using a json object but also can be configured or overrided using the next enviroment variables <code>PREBUILT_ARCH</code>, <code>PREBUILT_PLATFORM</code>, <code>PREBUILT_VERSION</code>, <code>PREBUILT_BINARY</code>, <code>PREBUILT_TOKEN</code>, <code>PREBUILT_REPO</code>, <code>PREBUILT_USER</code> and <code>PREBUILT_TARGET_DIR</code> environment variables.</p>
+
+<h3 id="special-thanks">Special thanks</h3>
+
+<p>to all the contributors to <a href="https://github.com/Ivshti/wcjs-prebuilt" target="_blank">wcjs-prebuilt</a> that this package is based on.</p>
+
+<h3 id="logo">Logo</h3>
+
+<p>Hours graphic by <a href="http://www.flaticon.com/authors/freepik">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a></p>
 
     </div>
 
@@ -384,9 +373,9 @@ public static class EnumExtenstions
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/daily/">daily</a>
+  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/prebuilt/">prebuilt</a>
   
-  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/learn/">learn</a>
+  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/prebuilt-packages/">prebuilt-packages</a>
   
 </div>
 
@@ -395,53 +384,24 @@ public static class EnumExtenstions
 
     
     
-    <div class="article-widget">
-      <div class="hr-light"></div>
-      <h3>Related</h3>
-      <ul>
-        
-        <li><a href="/post/01-27-interface-with-extension-methods/">C# - Fluent Interfaces with Extension Methods</a></li>
-        
-        <li><a href="/post/01-27-meteor-the-beginning/">Meteor the beginning</a></li>
-        
-        <li><a href="/post/01-26-gitbook-the-beginning/">Gitbook - The beginning</a></li>
-        
-        <li><a href="/post/01-26-c-sharp-complex-constructors/">Coding - C# - Complex Constructors</a></li>
-        
-      </ul>
-    </div>
     
 
     
+      
+      
+      
+      
 
+      
+      
+      
+      
     
-<section id="comments">
-  <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "kanekotics" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
 
   </div>
 </article>
+
+
 
 <footer class="site-footer">
   <div class="container">
