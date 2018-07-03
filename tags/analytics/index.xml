@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analytics on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/analytics/</link>
+    <description>Recent content in Analytics on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://kanekotic.github.io/project/gatoo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/gatoo/</guid>
+      <description>this project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).
+Use as Command Line install globally with npm install gatoo -g. Aftyer this it can be run with the next command:
+gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;  Use as library first step is to add this to your project throught yarn add gatoo or npm install gatoo</description>
+    </item>
+    
+  </channel>
+</rss>
