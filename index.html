@@ -55,6 +55,20 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-121835212-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   
   <link rel="alternate" href="http://kanekotic.github.io/index.xml" type="application/rss+xml" title="Kanekotic">
@@ -303,7 +317,7 @@
 
 <h1 id="biography">Biography</h1>
 
-<p>Polyglot Software Engineer with +8 years of experience currently working in one of the most well known Agile consulting firms.</p>
+<p>I am a passionate software developer that enjoys doing open source and sharing with my team and the community</p>
 
 
     <div class="row">
@@ -313,11 +327,13 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Open Source</li>
+          <li>Micro-services</li>
           
-          <li>Coding</li>
+          <li>Tools</li>
           
-          <li>Agile</li>
+          <li>Mobile development</li>
+          
+          <li>Artificial Intelligence</li>
           
         </ul>
       </div>
@@ -332,6 +348,14 @@
             <i class="fa-li fa fa-graduation-cap"></i>
             <div class="description">
               <p class="course">MEng Software Engineering, 2011</p>
+              <p class="institution">University of Alicante</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Bsc Software Engineering, 2011</p>
               <p class="institution">University of Alicante</p>
             </div>
           </li>
@@ -764,242 +788,6 @@
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
     <a href="http://kanekotic.github.io/post/04-17-ubuntu-not-turning-off-or-restartingmd/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2016-03-02 09:56:49 &#43;0200 &#43;0200" itemprop="datePublished dateModified">
-      2016-03-02
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kanekotic">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://kanekotic.github.io/post/03-02-unit-test-cheatsheet/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="http://kanekotic.github.io/post/03-02-unit-test-cheatsheet/" itemprop="url">Unit Test CheatSheet</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    ##mstest
-links: * assert * collection assert
-##Nunit
-links: * Attributes * Assertion
-##MOQ Example
-public interface IFoo { public bool DoSomething(string); } int calls; var mock = new Mock&lt;IFoo&gt;(); mock.Setup(foo =&gt; foo.DoSomething(It.IsAny&lt;string&gt;())). Returns((string s) =&gt; s.ToLower()) .Callback(() =&gt; ++calls); mock.SetupProperty(f =&gt; f.Name, &quot;foo&quot;); mock.VerifySet(foo =&gt; foo.Name = &quot;foo&quot;); mock.Verify(foo =&gt; foo.DoSomething(It.IsAny&lt;string&gt;()), Times.Never());  ##Test internal Classes
-In assembly info to test internal classes you will need to know the name of the file
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="http://kanekotic.github.io/post/03-02-unit-test-cheatsheet/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2016-02-05 09:56:49 &#43;0200 &#43;0200" itemprop="datePublished dateModified">
-      2016-02-05
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kanekotic">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://kanekotic.github.io/post/02-05-meteor-flowrouter/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="http://kanekotic.github.io/post/02-05-meteor-flowrouter/" itemprop="url">Meteor - FlowRouter</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    This package is a very useful to define the navigation on your client side application. To add it just use the next command line:
-meteor add kadira:flow-router  a static route can be done as the next code. Where name needs to be a unique identifier, and the render string has to be the name of the template.
-FlowRouter.route('/', { name: 'homeId', action(){ BlazeLayout.render('homeTemplate'); } });  in case of requiring a dynamic page.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="http://kanekotic.github.io/post/02-05-meteor-flowrouter/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2016-02-04 09:56:49 &#43;0200 &#43;0200" itemprop="datePublished dateModified">
-      2016-02-04
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kanekotic">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://kanekotic.github.io/post/02-04-csharp-path-combine/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="http://kanekotic.github.io/post/02-04-csharp-path-combine/" itemprop="url">C# - Path.Combine</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    When using path.Combine if the second argument starts with a /. the first path is ignored and will give a path based on the C: drive.
-var path = Path.Combine(firstpath,$@&quot;\myfolder\myfile.txt&quot;);  will not return  will return .
-Meteor - Session variables Session variables are easy to use in meteor. the can ve get and set from the javascript code using:
-Session.get('variableName'); Session.set('variableName', true);  on your HTML you can reference the get method easily by:
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="http://kanekotic.github.io/post/02-04-csharp-path-combine/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
