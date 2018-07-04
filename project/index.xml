@@ -23,6 +23,17 @@ Generate a prebuilt package  Create new project  npm init   Add this package as 
     </item>
     
     <item>
+      <title>Dependency Shrinker</title>
+      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
+      <description>Mission a command line tool to check what dependencies of an executable are really critical and not
+Installation npm install dependency-shrinker  use this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
+depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]  Warning if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.</description>
+    </item>
+    
+    <item>
       <title>ELK Docker</title>
       <link>http://kanekotic.github.io/project/elk-docker/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -155,6 +166,29 @@ var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate auth
       <description>feature toggle by configuration file for scala applications
 Install //Use version in badge libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;  Use  Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.
 val toggle = new ToggleManager();  use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):</description>
+    </item>
+    
+    <item>
+      <title>Specflow.Rider</title>
+      <link>http://kanekotic.github.io/project/specflow-rider/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/specflow-rider/</guid>
+      <description>Intent Integration of Specflow autogeneration for Rider
+Setup clone this repo, and make sure you have intellij installed the community version should be enough. you can use the next Gradle commands from command line:
+gradle compile # generate the code gradle check # gnerate the code and test  TODO Table Support Parameters Support Move to Rider style plugin XUnit Support MSTest Support Add Files to project  Logo Check out the new logo that I created on LogoMaker.</description>
+    </item>
+    
+    <item>
+      <title>Travis YML Plugin</title>
+      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
+      <description>This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.
+Use Install by navigating and selecting Manage Jenkins -&amp;gt; Manage Plugins -&amp;gt; Travis YML Plugin
+Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:
+ before_install install before_script script after_success after_failure before_deploy deploy after_deploy after_script  If you have any failure on your build and want to review the final generated, you should declare the environment variable DEBUG_TRAVIS_YML either on your build node or in jenkins.</description>
     </item>
     
   </channel>

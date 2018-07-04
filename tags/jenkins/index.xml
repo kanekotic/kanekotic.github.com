@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Travis YML Plugin</title>
+      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
+      <description>This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.
+Use Install by navigating and selecting Manage Jenkins -&amp;gt; Manage Plugins -&amp;gt; Travis YML Plugin
+Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:
+ before_install install before_script script after_success after_failure before_deploy deploy after_deploy after_script  If you have any failure on your build and want to review the final generated, you should declare the environment variable DEBUG_TRAVIS_YML either on your build node or in jenkins.</description>
+    </item>
+    
+  </channel>
+</rss>
