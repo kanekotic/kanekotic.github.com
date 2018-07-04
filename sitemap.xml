@@ -68,6 +68,15 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/any-prebuilt.1/</loc>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/project/scala-local-toggle/</loc>
       <lastmod>2017-06-28T00:00:01+00:00</lastmod>
     </url>
@@ -503,7 +512,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/facebook/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -801,6 +810,26 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/social/</loc>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/social-network/</loc>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/specflow/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -852,7 +881,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/twitter/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

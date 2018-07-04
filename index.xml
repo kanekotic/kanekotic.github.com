@@ -541,6 +541,82 @@ module.exports.path = anyPrebuilt.path
     </item>
     
     <item>
+      <title>Koteky</title>
+      <link>http://kanekotic.github.io/project/any-prebuilt.1/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/any-prebuilt.1/</guid>
+      <description>
+
+&lt;h1 id=&#34;drawing-https-cloud-githubusercontent-com-assets-3071208-14738483-22967ed8-0882-11e6-874d-4c19eb244373-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14738483/22967ed8-0882-11e6-874d-4c19eb244373.png&#34; alt=&#34;drawing&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gitter.im/Hatisoft/koteky?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Hatisoft/koteky.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/koteky&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/Hatisoft/koteky&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/Hatisoft/koteky.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/koteky&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/np9fywosgs2ob33i?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;
+&lt;img src=&#34;https://img.shields.io/npm/v/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
+&lt;img src=&#34;https://img.shields.io/npm/l/koteky.svg&#34; alt=&#34;license&#34; /&gt;
+&lt;img src=&#34;https://img.shields.io/github/issues/Hatisoft/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
+&lt;img src=&#34;https://img.shields.io/npm/dm/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
+&lt;img src=&#34;https://img.shields.io/npm/dt/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
+&lt;img src=&#34;https://img.shields.io/github/downloads/Hatisoft/koteky/total.svg&#34; alt=&#34;Build status&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a plugin based crossplatform social network manager application based on electron.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage-alpha&#34;&gt;Usage (Alpha)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;This project is still on development and is not ready for public use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Current early use can be done by cloning repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;# Clone the repository
+$ git clone https://github.com/Hatisoft/koteky.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Plugins can be installed in app or modifying the package.json&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  ...
+  &amp;quot;plugins&amp;quot;:
+  {
+   &amp;quot;name_of_plugin&amp;quot; : &amp;quot;version_or_repo&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;# Go into the repository
+$ cd koteky
+
+# Install the dependencies and run
+$ npm install &amp;amp;&amp;amp; npm start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Use plugin based architecture&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Style and Display posts&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Authentication based on Oauth for social networks&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Implement Twitter plugin&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Implement Facebook plugin&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Implement LinkedIn plugin&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;credits&#34;&gt;Credits&lt;/h4&gt;
+
+&lt;p&gt;Social Network graphic by &lt;a href=&#34;http://www.freepik.com&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;.Dog graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Scala Local Toggle</title>
       <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
@@ -1252,57 +1328,6 @@ auth.login(info, window);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-letter-f-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Letter F graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OAuth Electron Twitter</title>
-      <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/oauth-electron-twitter/</guid>
-      <description>
-
-&lt;h1 id=&#34;logo-https-cloud-githubusercontent-com-assets-3071208-14719944-55c32866-07ff-11e6-9821-1a564a0cf065-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14719944/55c32866-07ff-11e6-9821-1a564a0cf065.png&#34; alt=&#34;logo&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;Use Twitter OAuth in a simple way inside your electron App.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install oauth-electron-twitter --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth;
-var twitter = require(&#39;oauth-electron-twitter&#39;).twitter;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login. the login method return a promise with the result or the errror provided by the login pase.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
-var info = new twitter(&amp;quot;key&amp;quot;,&amp;quot;secret&amp;quot;);
-var auth = new oauth();
-auth.login(info, window).then((result) =&amp;gt; {
-               console.log(result);
-          }).catch((error) =&amp;gt; {
-               console.log(error);
-          });;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the result of this promise is a json object similar to next one&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    oauth_access_token: ***,
-    oauth_access_token_secret: ***
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-twitter-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Twitter graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker &lt;/a&gt;&lt;/h6&gt;
 </description>
     </item>
     
