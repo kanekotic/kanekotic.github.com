@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/executable/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Dependency Shrinker</title>
       <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
       <description>Mission a command line tool to check what dependencies of an executable are really critical and not

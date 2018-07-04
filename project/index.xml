@@ -7,61 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Any Prebuilt</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
-      <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
-Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
-    </item>
-    
-    <item>
-      <title>Dependency Shrinker</title>
-      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
-      <description>Mission a command line tool to check what dependencies of an executable are really critical and not
-Installation npm install dependency-shrinker  use this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
-depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]  Warning if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.</description>
-    </item>
-    
-    <item>
-      <title>ELK Docker</title>
-      <link>http://kanekotic.github.io/project/elk-docker/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/elk-docker/</guid>
-      <description>This show how multiple containers can aggregate log to logging infrastructure with docker compose using logstash, elastic search and kibana
-Run you will need docker installed in your computer, after it :
- Run  docker-compose up   run to get some logs from httpd  repeat 10 curl http://localhost:80/   Kibana:
- this might take a bit Navigate to http://localhost:5601 Add logstash-* as index with @timestamp as Time-field name Go to Discover  Grafana:</description>
-    </item>
-    
-    <item>
-      <title>Endomondo Unofficial API</title>
-      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
-      <description>This is a promise based unofficial endomondo api.
-installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
-Authentication Get login information and tokens. The next snippet describes an example of the call:
-var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
-{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.</description>
-    </item>
-    
-    <item>
       <title>Express Exception Handler</title>
       <link>http://kanekotic.github.io/project/express-exception-handler/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/express-exception-handler/</guid>
       <description>Motivation This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.
@@ -72,7 +26,7 @@ Use there are 2 diferent ways to integrate the main functionality of this packag
     <item>
       <title>Gatoo</title>
       <link>http://kanekotic.github.io/project/gatoo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/gatoo/</guid>
       <description>This project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).
@@ -81,9 +35,90 @@ gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId
     </item>
     
     <item>
+      <title>ELK Docker</title>
+      <link>http://kanekotic.github.io/project/elk-docker/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/elk-docker/</guid>
+      <description>This show how multiple containers can aggregate log to logging infrastructure with docker compose using logstash, elastic search and kibana
+Run you will need docker installed in your computer, after it :
+ Run  docker-compose up   run to get some logs from httpd  repeat 10 curl http://localhost:80/   Kibana:
+ this might take a bit Navigate to http://localhost:5601 Add logstash-* as index with @timestamp as Time-field name Go to Discover  Grafana:</description>
+    </item>
+    
+    <item>
+      <title>Travis YML Plugin</title>
+      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
+      <description>This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.
+Use Install by navigating and selecting Manage Jenkins -&amp;gt; Manage Plugins -&amp;gt; Travis YML Plugin
+Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:
+ before_install install before_script script after_success after_failure before_deploy deploy after_deploy after_script  If you have any failure on your build and want to review the final generated, you should declare the environment variable DEBUG_TRAVIS_YML either on your build node or in jenkins.</description>
+    </item>
+    
+    <item>
+      <title>Raw Guid Converter</title>
+      <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
+      <description>Use Case command line and library to convert guids from oracle raw format to formated guid and viceversa
+Installation if you want ot use in a package yarn add raw-guid-converter or npm i raw-guid-converter
+if you want to use it as a command install globally with npm i raw-guid-converter -g
+Usage Raw to Guid String Code const convert = require(&#39;raw-guid-converter&#39;).convertRaw let guid = convert(&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;) //guid =&amp;gt; 0e883046-0b6d-4036-ab44-6c6fb3c44fe3  Command line convert-guid fromRaw 4630880E6D0B3640AB446C6FB3C44FE3 #0e883046-0b6d-4036-ab44-6c6fb3c44fe3  you can pass multiple guids to convert all of them in one go</description>
+    </item>
+    
+    <item>
+      <title>Any Prebuilt</title>
+      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
+      <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
+Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
+    </item>
+    
+    <item>
+      <title>Scala Local Toggle</title>
+      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
+      <description>feature toggle by configuration file for scala applications
+Install //Use version in badge libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;  Use  Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.
+val toggle = new ToggleManager();  use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):</description>
+    </item>
+    
+    <item>
+      <title>Dependency Shrinker</title>
+      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
+      <description>Mission a command line tool to check what dependencies of an executable are really critical and not
+Installation npm install dependency-shrinker  use this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
+depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]  Warning if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.</description>
+    </item>
+    
+    <item>
+      <title>Runtastic Unofficial API</title>
+      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
+      <description>This is a promise based unofficial runtastic api.
+installation npm install runtastic-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
+{ &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
+    </item>
+    
+    <item>
       <title>Nike Unofficial API</title>
       <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/nike-unofficial-api/</guid>
       <description>unofficial nike api
@@ -92,6 +127,19 @@ installation npm install nike-unofficial-api  Use the API provides the next func
 Authentication Get login information and tokens. The next snippet describes an example of the call:
 var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
 { email: params.email, password: params.password }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
+    </item>
+    
+    <item>
+      <title>Endomondo Unofficial API</title>
+      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
+      <description>This is a promise based unofficial endomondo api.
+installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
+Authentication Get login information and tokens. The next snippet describes an example of the call:
+var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
+{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.</description>
     </item>
     
     <item>
@@ -144,42 +192,6 @@ Protocol capable of P2P (master to master) syncing key-value datastores. using c
     </item>
     
     <item>
-      <title>Raw Guid Converter</title>
-      <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
-      <description>Use Case command line and library to convert guids from oracle raw format to formated guid and viceversa
-Installation if you want ot use in a package yarn add raw-guid-converter or npm i raw-guid-converter
-if you want to use it as a command install globally with npm i raw-guid-converter -g
-Usage Raw to Guid String Code const convert = require(&#39;raw-guid-converter&#39;).convertRaw let guid = convert(&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;) //guid =&amp;gt; 0e883046-0b6d-4036-ab44-6c6fb3c44fe3  Command line convert-guid fromRaw 4630880E6D0B3640AB446C6FB3C44FE3 #0e883046-0b6d-4036-ab44-6c6fb3c44fe3  you can pass multiple guids to convert all of them in one go</description>
-    </item>
-    
-    <item>
-      <title>Runtastic Unofficial API</title>
-      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
-      <description>This is a promise based unofficial runtastic api.
-installation npm install runtastic-unofficial-api  Use the API provides the next functionalities
-Authentication Get login information and tokens. The next snippet describes an example of the call:
-var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
-{ &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
-    </item>
-    
-    <item>
-      <title>Scala Local Toggle</title>
-      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
-      <description>feature toggle by configuration file for scala applications
-Install //Use version in badge libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;  Use  Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.
-val toggle = new ToggleManager();  use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):</description>
-    </item>
-    
-    <item>
       <title>Specflow.Rider</title>
       <link>http://kanekotic.github.io/project/specflow-rider/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -188,18 +200,6 @@ val toggle = new ToggleManager();  use default files for loading configuration, 
       <description>Intent Integration of Specflow autogeneration for Rider
 Setup clone this repo, and make sure you have intellij installed the community version should be enough. you can use the next Gradle commands from command line:
 gradle compile # generate the code gradle check # gnerate the code and test  TODO Table Support Parameters Support Move to Rider style plugin XUnit Support MSTest Support Add Files to project  Logo Check out the new logo that I created on LogoMaker.</description>
-    </item>
-    
-    <item>
-      <title>Travis YML Plugin</title>
-      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
-      <description>This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.
-Use Install by navigating and selecting Manage Jenkins -&amp;gt; Manage Plugins -&amp;gt; Travis YML Plugin
-Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:
- before_install install before_script script after_success after_failure before_deploy deploy after_deploy after_script  If you have any failure on your build and want to review the final generated, you should declare the environment variable DEBUG_TRAVIS_YML either on your build node or in jenkins.</description>
     </item>
     
   </channel>

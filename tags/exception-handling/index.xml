@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/exception-handling/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Express Exception Handler</title>
       <link>http://kanekotic.github.io/project/express-exception-handler/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/express-exception-handler/</guid>
       <description>Motivation This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.

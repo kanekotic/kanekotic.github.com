@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/runtastic/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Runtastic Unofficial API</title>
       <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
       <description>This is a promise based unofficial runtastic api.

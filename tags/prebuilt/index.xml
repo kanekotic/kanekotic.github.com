@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/prebuilt/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Any Prebuilt</title>
       <link>http://kanekotic.github.io/project/any-prebuilt/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
       <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.

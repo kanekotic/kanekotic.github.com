@@ -11,131 +11,242 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Any Prebuilt</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Create your User/Organization GitHub Page with Hugo &#43; Travis</title>
+      <link>http://kanekotic.github.io/post/2018-07-04-deploy-hugo-with-travis/</link>
+      <pubDate>Wed, 04 Jul 2018 08:35:42 +0200</pubDate>
       
-      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
-      <description>
+      <guid>http://kanekotic.github.io/post/2018-07-04-deploy-hugo-with-travis/</guid>
+      <description>&lt;p&gt;I have just finished migrating my static blog from Hexo to Hugo and one of the main things I care about is to be able to do continuous deployment of my profile and blog. There are quite a few blog posts out there but they are based on using shell scripts and it really becomes a pain to give permissions etc. In the next few lines you will see the simplest way I have found to do this (and is currently as this blog post is being published).&lt;/p&gt;
 
-&lt;h1 id=&#34;logomakr-3dkn9b-https-cloud-githubusercontent-com-assets-3071208-22477192-c7ce1d86-e7aa-11e6-87de-c24336e1ea3e-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22477192/c7ce1d86-e7aa-11e6-87de-c24336e1ea3e.png&#34; alt=&#34;logomakr_3dkn9b&#34; /&gt;&lt;/h1&gt;
+&lt;p&gt;You will need to have:&lt;/p&gt;
 
-&lt;h1 id=&#34;mission&#34;&gt;Mission&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;A Github account.&lt;/li&gt;
+&lt;li&gt;A Travis CI account.&lt;/li&gt;
+&lt;li&gt;A Github repository with source code of your web page with Hugo (*1)&lt;/li&gt;
+&lt;li&gt;A Github repository with the name &lt;code&gt;&amp;lt;your User or Organization&amp;gt;.github.com&lt;/code&gt; (ex. kanekotic.github.com) (*2).&lt;/li&gt;
+&lt;li&gt;A developer token from GitHub with commit capabilities (can create in github &lt;code&gt;Settings -&amp;gt; Developer Settings -&amp;gt; Personal Access Token -&amp;gt; Generate New Token&lt;/code&gt; )&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.&lt;/p&gt;
+&lt;p&gt;I wont cover how to create a Hugo web page as this is best explained in the &lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34; target=&#34;_blank&#34;&gt;quick start&lt;/a&gt;) of Hugo.&lt;/p&gt;
 
-&lt;h1 id=&#34;generate-a-prebuilt-package&#34;&gt;Generate a prebuilt package&lt;/h1&gt;
+&lt;p&gt;After you are happy with the content of your blog in the repository of source code (*1), and want to start deploying you will need to add a &lt;code&gt;.travis.yml&lt;/code&gt; with the next content&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Create new project&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;sudo: true
+dist: trusty
 
-&lt;pre&gt;&lt;code&gt;npm init
+install:
+  - sudo apt-get --yes install snapd
+  - sudo snap install hugo
+
+script:
+  - /snap/bin/hugo 
+
+deploy:
+  provider: pages
+  local-dir: public
+  repo: &amp;lt;User or Organization&amp;gt;/&amp;lt;User or Organization&amp;gt;.github.com
+  target-branch: master
+  skip-cleanup: true
+  email: $GITHUB_EMAIL
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Add this package as dependency&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;you will have to change the repo content to match your destination repository (*2). The previous code what does is installs hugo in the deployment machine, builds your web page and deploys using the pages plugin.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;npm install any-prebuilt --save
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to &lt;code&gt;More Options -&amp;gt; Settings -&amp;gt; Environment Variables&lt;/code&gt; and add &lt;code&gt;GITHUB_EMAIL&lt;/code&gt; as your email and &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; as the token retrieved from github.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Create &lt;code&gt;postinstall.js&lt;/code&gt; file with content:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create &lt;code&gt;index.js&lt;/code&gt; file with content:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var anyPrebuilt = require(&#39;any-prebuilt&#39;)
-anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt)
-module.exports.path = anyPrebuilt.path
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;On the &lt;code&gt;package.json&lt;/code&gt; add a prebuilt element (you can also add this to any other file that provides a jason object to both index and postinstall.js).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;  &amp;quot;prebuilt&amp;quot;: {
-    &amp;quot;arch&amp;quot;: &amp;lt;string&amp;gt;, // Target architecture (supported: `ia32` / `x64`. Default value: machine&#39;s architecture)
-    &amp;quot;platform&amp;quot;: &amp;lt;string&amp;gt;, //Target platform (supported: `win` / `osx` / `linux`. Default value: machine&#39;s platform)
-    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
-    &amp;quot;targetDir&amp;quot;: &amp;lt;string&amp;gt;, //Target directory (where to install the binaries. Default value: `./bin`)
-    &amp;quot;targetBin&amp;quot;: &amp;lt;string&amp;gt;, //Target binary (the precompiled binary to be required in node. No default value)
-    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
-    &amp;quot;user&amp;quot;: &amp;lt;string&amp;gt;, // user or Organization (format: string. Is `required`)
-    &amp;quot;repo&amp;quot;: &amp;lt;string&amp;gt;, //Origin repo (format: string. Is `required`)
-    &amp;quot;token&amp;quot;: &amp;lt;string&amp;gt; //Github token (format: string. `required` if private repo)
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;In your &lt;code&gt;package .json&lt;/code&gt; add the next script:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;scripts&amp;quot;: {
-    &amp;quot;postinstall&amp;quot;: &amp;quot;node postinstall.js&amp;quot;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As seen before this can be configured using a json object but also can be configured or overrided using the next enviroment variables &lt;code&gt;PREBUILT_ARCH&lt;/code&gt;, &lt;code&gt;PREBUILT_PLATFORM&lt;/code&gt;, &lt;code&gt;PREBUILT_VERSION&lt;/code&gt;, &lt;code&gt;PREBUILT_BINARY&lt;/code&gt;, &lt;code&gt;PREBUILT_TOKEN&lt;/code&gt;, &lt;code&gt;PREBUILT_REPO&lt;/code&gt;, &lt;code&gt;PREBUILT_USER&lt;/code&gt; and &lt;code&gt;PREBUILT_TARGET_DIR&lt;/code&gt; environment variables.&lt;/p&gt;
-
-&lt;h3 id=&#34;special-thanks&#34;&gt;Special thanks&lt;/h3&gt;
-
-&lt;p&gt;to all the contributors to &lt;a href=&#34;https://github.com/Ivshti/wcjs-prebuilt&#34; target=&#34;_blank&#34;&gt;wcjs-prebuilt&lt;/a&gt; that this package is based on.&lt;/p&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Hours graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After this in any commit in the master branch of your web page you will get it deployed and go live.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Dependency Shrinker</title>
-      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Express Exception Handler</title>
+      <link>http://kanekotic.github.io/project/express-exception-handler/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
+      <guid>http://kanekotic.github.io/project/express-exception-handler/</guid>
       <description>
 
-&lt;h1 id=&#34;logomakr-6rglby-https-cloud-githubusercontent-com-assets-3071208-22743728-b6164884-ede0-11e6-9bbe-5e7643b22be7-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22743728/b6164884-ede0-11e6-9bbe-5e7643b22be7.png&#34; alt=&#34;logomakr_6rglby&#34; /&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;logomakr-6nl700-https-user-images-githubusercontent-com-3071208-28988724-97dc463a-7971-11e7-9cec-ffc06bcc9205-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/28988724-97dc463a-7971-11e7-9cec-ffc06bcc9205.png&#34; alt=&#34;logomakr_6nl700&#34; /&gt;&lt;/h1&gt;
 
-&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 
-&lt;p&gt;a command line tool to check what dependencies of an executable are really critical and not&lt;/p&gt;
+&lt;p&gt;This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.&lt;/p&gt;
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;npm install dependency-shrinker
+&lt;p&gt;add it to your project with &lt;code&gt;npm install express-exception-handler&lt;/code&gt; or &lt;code&gt;yarn add express-exception-handler&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;there are 2 diferent ways to integrate the main functionality of this package, either by adding the handle that gets injected to the router framework&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var exceptionHandler = require(&#39;express-exception-handler&#39;)
+exceptionHandler.handle()
+const app = require(&#39;express&#39;)()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;use&#34;&gt;use&lt;/h2&gt;
+&lt;p&gt;or by wraping manually the routes&lt;/p&gt;
 
-&lt;p&gt;this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var wrap = require(&#39;express-exception-handler&#39;).wrap
+router.post(&#39;/&#39;, wrap(async (req, res) =&amp;gt; {
+    ...
+}))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;warning&#34;&gt;Warning&lt;/h2&gt;
+&lt;p&gt;it also integrates an extended class from Error that contains a &lt;code&gt;message&lt;/code&gt; and a &lt;code&gt;status&lt;/code&gt; that can be used to pass diferent information to the error handle&lt;/p&gt;
 
-&lt;p&gt;if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var httpError = require(&#39;express-exception-handler&#39;).exception
+router.post(&#39;/&#39;, async (req, res) =&amp;gt; {
+    throw new HttpError(&#39;Great Message&#39;, 400, &amp;quot;{Response: awesome}&amp;quot;)
+}))
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;I will not take resposability on the issues generated by this package, so use at your own risk and make sure you backup all before using. And use with caution.&lt;/p&gt;
+&lt;p&gt;last but not least it also contains a middleware that can be added directly to express that handles the previous named errors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var middleware = require(&#39;express-exception-handler&#39;).middleware
+const app = require(&#39;express&#39;)()
+app.use(middleware)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
 
-&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/stephen-hutchings&#34;&gt;Stephen Hutchings&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/madebyoliver&#34;&gt;madebyoliver&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6nL7006nL700&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6nL7006nL700&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gatoo</title>
+      <link>http://kanekotic.github.io/project/gatoo/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/gatoo/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-32f2md-https-user-images-githubusercontent-com-3071208-42147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8.png&#34; alt=&#34;logomakr_32f2md&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/gatoo&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/gatoo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/gatoo?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/gatoo/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).&lt;/p&gt;
+
+&lt;h2 id=&#34;use-as-command-line&#34;&gt;Use as Command Line&lt;/h2&gt;
+
+&lt;p&gt;install globally with &lt;code&gt;npm install gatoo -g&lt;/code&gt;. Aftyer this it can be run with the next command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use-as-library&#34;&gt;Use as library&lt;/h2&gt;
+
+&lt;p&gt;first step is to add this to your project throught &lt;code&gt;yarn add gatoo&lt;/code&gt; or &lt;code&gt;npm install gatoo&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;currently you can retrieve in a simple way data from google analytics and route it to your prefered output. An example of retrieval is the next one.&lt;/p&gt;
+
+&lt;h3 id=&#34;import&#34;&gt;Import&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const importer = require(&#39;../lib/index&#39;).importer
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const example = async () =&amp;gt; {
+    const result = await importer(email, keyPath, config)
+    console.log(JSON.stringify(result.data))
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;export&#34;&gt;Export&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).exporter
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const doSomething () =&amp;gt; {}
+
+const example = async () =&amp;gt; {
+    const result = await exporter(email, keyPath, config,  doSomething)
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;export-to-console&#34;&gt;Export to console&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).outputTo
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const example = async () =&amp;gt; {
+    const result = await outputTo.console(email, keyPath, config)
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Retrieve data from google analytics&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create library&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create adapter for output console&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create command line tool console&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter logstash&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter fluentd&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter ES&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool logstash&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool fluentd&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool ES&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/32f2Md&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/32f2Md&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>ELK Docker</title>
       <link>http://kanekotic.github.io/project/elk-docker/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/elk-docker/</guid>
       <description>
@@ -219,9 +330,609 @@ module.exports.path = anyPrebuilt.path
     </item>
     
     <item>
+      <title>Travis YML Plugin</title>
+      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-5059hu-https-cloud-githubusercontent-com-assets-3071208-20248819-1e3637aa-a9ec-11e6-89b7-6c9c403af3c7-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/20248819/1e3637aa-a9ec-11e6-89b7-6c9c403af3c7.png&#34; alt=&#34;logomakr_5059hu&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.&lt;/p&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;Install by navigating and selecting &lt;code&gt;Manage Jenkins&lt;/code&gt; -&amp;gt; &lt;code&gt;Manage Plugins&lt;/code&gt; -&amp;gt; &lt;code&gt;Travis YML Plugin&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;before_install&lt;/li&gt;
+&lt;li&gt;install&lt;/li&gt;
+&lt;li&gt;before_script&lt;/li&gt;
+&lt;li&gt;script&lt;/li&gt;
+&lt;li&gt;after_success&lt;/li&gt;
+&lt;li&gt;after_failure&lt;/li&gt;
+&lt;li&gt;before_deploy&lt;/li&gt;
+&lt;li&gt;deploy&lt;/li&gt;
+&lt;li&gt;after_deploy&lt;/li&gt;
+&lt;li&gt;after_script&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you have any failure on your build and want to review the final generated, you should declare the environment variable &lt;code&gt;DEBUG_TRAVIS_YML&lt;/code&gt; either on your build node or in jenkins.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;If you want to help on the development of this plugin you will need &lt;code&gt;Jruby&lt;/code&gt; and the next prerequisites:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For development and to see this plugin in a test Jenkins server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle install
+$ jpi server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;after that open a pull request to add your changes.&lt;/p&gt;
+
+&lt;p&gt;If you have any further request open an issue on the main repository or contact the sustainers:
+- @kanekotic
+- @masaki&lt;/p&gt;
+
+&lt;h2 id=&#34;logo&#34;&gt;Logo&lt;/h2&gt;
+
+&lt;p&gt;People graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Raw Guid Converter</title>
+      <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-5c2oee-https-user-images-githubusercontent-com-3071208-41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb.png&#34; alt=&#34;logomakr_5c2oee&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/raw-guid-converter&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/raw-guid-converter.svg?branch=v0.0.2&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/raw-guid-converter?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/raw-guid-converter/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/Naereen/StrapDown.js/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/Naereen/StrapDown.js.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;
+
+&lt;p&gt;command line and library to convert guids from oracle raw format to formated guid and viceversa&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;if you want ot use in a package &lt;code&gt;yarn add raw-guid-converter&lt;/code&gt; or &lt;code&gt;npm i raw-guid-converter&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;if you want to use it as a command install globally with &lt;code&gt;npm i raw-guid-converter -g&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;raw-to-guid-string&#34;&gt;Raw to Guid String&lt;/h3&gt;
+
+&lt;h4 id=&#34;code&#34;&gt;Code&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertRaw
+let guid = convert(&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;)
+//guid =&amp;gt; 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;command-line&#34;&gt;Command line&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromRaw 4630880E6D0B3640AB446C6FB3C44FE3
+#0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
+
+&lt;h3 id=&#34;guid-string-to-raw&#34;&gt;Guid string to Raw&lt;/h3&gt;
+
+&lt;h4 id=&#34;code-1&#34;&gt;Code&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertString
+let guid = convert(&#39;0e883046-0b6d-4036-ab44-6c6fb3c44fe3&#39;)
+//guid =&amp;gt; &#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;command-line-1&#34;&gt;Command line&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromString 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
+#&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/5c2oEE&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/5c2oEE&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Any Prebuilt</title>
+      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-3dkn9b-https-cloud-githubusercontent-com-assets-3071208-22477192-c7ce1d86-e7aa-11e6-87de-c24336e1ea3e-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22477192/c7ce1d86-e7aa-11e6-87de-c24336e1ea3e.png&#34; alt=&#34;logomakr_3dkn9b&#34; /&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;mission&#34;&gt;Mission&lt;/h1&gt;
+
+&lt;p&gt;Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.&lt;/p&gt;
+
+&lt;h1 id=&#34;generate-a-prebuilt-package&#34;&gt;Generate a prebuilt package&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create new project&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Add this package as dependency&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install any-prebuilt --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create &lt;code&gt;postinstall.js&lt;/code&gt; file with content:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create &lt;code&gt;index.js&lt;/code&gt; file with content:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var anyPrebuilt = require(&#39;any-prebuilt&#39;)
+anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt)
+module.exports.path = anyPrebuilt.path
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;On the &lt;code&gt;package.json&lt;/code&gt; add a prebuilt element (you can also add this to any other file that provides a jason object to both index and postinstall.js).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;quot;prebuilt&amp;quot;: {
+    &amp;quot;arch&amp;quot;: &amp;lt;string&amp;gt;, // Target architecture (supported: `ia32` / `x64`. Default value: machine&#39;s architecture)
+    &amp;quot;platform&amp;quot;: &amp;lt;string&amp;gt;, //Target platform (supported: `win` / `osx` / `linux`. Default value: machine&#39;s platform)
+    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
+    &amp;quot;targetDir&amp;quot;: &amp;lt;string&amp;gt;, //Target directory (where to install the binaries. Default value: `./bin`)
+    &amp;quot;targetBin&amp;quot;: &amp;lt;string&amp;gt;, //Target binary (the precompiled binary to be required in node. No default value)
+    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
+    &amp;quot;user&amp;quot;: &amp;lt;string&amp;gt;, // user or Organization (format: string. Is `required`)
+    &amp;quot;repo&amp;quot;: &amp;lt;string&amp;gt;, //Origin repo (format: string. Is `required`)
+    &amp;quot;token&amp;quot;: &amp;lt;string&amp;gt; //Github token (format: string. `required` if private repo)
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In your &lt;code&gt;package .json&lt;/code&gt; add the next script:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;scripts&amp;quot;: {
+    &amp;quot;postinstall&amp;quot;: &amp;quot;node postinstall.js&amp;quot;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As seen before this can be configured using a json object but also can be configured or overrided using the next enviroment variables &lt;code&gt;PREBUILT_ARCH&lt;/code&gt;, &lt;code&gt;PREBUILT_PLATFORM&lt;/code&gt;, &lt;code&gt;PREBUILT_VERSION&lt;/code&gt;, &lt;code&gt;PREBUILT_BINARY&lt;/code&gt;, &lt;code&gt;PREBUILT_TOKEN&lt;/code&gt;, &lt;code&gt;PREBUILT_REPO&lt;/code&gt;, &lt;code&gt;PREBUILT_USER&lt;/code&gt; and &lt;code&gt;PREBUILT_TARGET_DIR&lt;/code&gt; environment variables.&lt;/p&gt;
+
+&lt;h3 id=&#34;special-thanks&#34;&gt;Special thanks&lt;/h3&gt;
+
+&lt;p&gt;to all the contributors to &lt;a href=&#34;https://github.com/Ivshti/wcjs-prebuilt&#34; target=&#34;_blank&#34;&gt;wcjs-prebuilt&lt;/a&gt; that this package is based on.&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Hours graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scala Local Toggle</title>
+      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-6etktj-https-user-images-githubusercontent-com-3071208-32364786-318debc0-c077-11e7-9064-a65d6ce35cf6-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/32364786-318debc0-c077-11e7-9064-a65d6ce35cf6.png&#34; alt=&#34;logomakr_6etktj&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/scala-local-toggle&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/scala-local-toggle.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; alt=&#34;Maven Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;feature toggle by configuration file for scala applications&lt;/p&gt;
+
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;//Use version in badge
+libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val toggle = new ToggleManager();
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;system properties&lt;/li&gt;
+&lt;li&gt;application.conf (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;application.json (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;application.properties (all resources on classpath with this name)&lt;/li&gt;
+&lt;li&gt;reference.conf (all resources on classpath with this name)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;this files will require to have an setting for the toggles HOCON or JSON complient configuration similar to this, in any other case toggles will default to false:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;feature.local.toggles: [
+    {
+      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;,
+      &amp;quot;local&amp;quot;: true
+      &amp;quot;development&amp;quot;: true
+      &amp;quot;production&amp;quot;: false
+    }, 
+    {
+      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_OTHER_YOUR_TOGGLE&amp;quot;,
+      &amp;quot;local&amp;quot;: true
+      &amp;quot;development&amp;quot;: false
+      &amp;quot;production&amp;quot;: false
+    }
+  ]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the boolean denotes the state of the toggle depending on the environment, and the name is the identifying the value of the environment variable:
+- local maps to environment variable value LOCAL.
+- development maps to environment variable value DEVELOPMENT.
+- production maps to environment variable value PRODUCTION.&lt;/p&gt;
+
+&lt;p&gt;aditionally the enviroment variable that will be track to know the current environment of execution can be modified by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;  feature.local.environment: &amp;quot;SOME_ENVIROMENT_VARIABLE_NAME&amp;quot;
+  #Defaults to ENVIRONMENT 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use with the name identifier defined in the previous step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;  if (toggle.isEnabled(&amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;)) {
+    //your code under toggle here
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;logo&#34;&gt;LOGO&lt;/h5&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6ETKtj&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6ETKtj&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dependency Shrinker</title>
+      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-6rglby-https-cloud-githubusercontent-com-assets-3071208-22743728-b6164884-ede0-11e6-9bbe-5e7643b22be7-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22743728/b6164884-ede0-11e6-9bbe-5e7643b22be7.png&#34; alt=&#34;logomakr_6rglby&#34; /&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+
+&lt;p&gt;a command line tool to check what dependencies of an executable are really critical and not&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install dependency-shrinker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;use&lt;/h2&gt;
+
+&lt;p&gt;this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;warning&#34;&gt;Warning&lt;/h2&gt;
+
+&lt;p&gt;if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.&lt;/p&gt;
+
+&lt;p&gt;I will not take resposability on the issues generated by this package, so use at your own risk and make sure you backup all before using. And use with caution.&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/stephen-hutchings&#34;&gt;Stephen Hutchings&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Runtastic Unofficial API</title>
+      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-4dzqyb-https-cloud-githubusercontent-com-assets-3071208-23109294-74bb4208-f6dd-11e6-9f09-24e7ac0d9d28-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/23109294/74bb4208-f6dd-11e6-9f09-24e7ac0d9d28.png&#34; alt=&#34;logomakr_4dzqyb&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;This is a promise based unofficial runtastic api.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install runtastic-unofficial-api
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
+
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+
+&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate
+
+authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
+    .then((result) =&amp;gt; console.log(result))
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &#39;user[email]&#39;: params.email,
+    &#39;user[password]&#39;: params.password,
+    grant_type: &#39;password&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    authToken: token,
+    user: user,
+    cookieString: cookieString,
+    cookies: cookie
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
+
+&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;runtastic-unofficial-api&#39;).workouts
+
+var token = &#39;authToken&#39;
+
+workouts({authToken: token, user: user})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    user_id: params.user.id,
+    authenticity_token: params.authToken,
+    items: ids.join(&#39;,&#39;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[&amp;lt;sessions&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workout-get&#34;&gt;Workout (get)&lt;/h3&gt;
+
+&lt;p&gt;Get a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutGet = require(&#39;runtastic-unofficial-api&#39;).workout.get
+
+var token = &#39;authToken&#39;
+var user = {}
+var sessions = []
+
+workoutGet(user, sessions[0],{authToken : token, user : user})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//const defaultIncludes = [&#39;city&#39;,&#39;country&#39;,&#39;creation_application&#39;,&#39;sport_type&#39;,&#39;trace_collection&#39;,&#39;zones&#39;,&#39;sharing_token&#39;,&#39;neighbourhood&#39;]
+//var includes = params.includes || defaultIncludes
+
+{
+    user_id: params.user.id,
+    authenticity_token: params.authToken,
+    includes: includes.join(&#39;,&#39;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object that is quite complex to describe just try it ;) .&lt;/p&gt;
+
+&lt;h3 id=&#34;workout-set&#34;&gt;Workout (set)&lt;/h3&gt;
+
+&lt;p&gt;Set (or create) a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutSet = require(&#39;runtastic-unofficial-api&#39;).workout.set
+
+var token = &#39;authToken&#39;
+var user = {}
+var sessions = []
+
+workoutSet(user, sessions[0] ,{authToken : token, user : user})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//var duration = params.duration ? moment.duration(params.duration) : moment.duration(0)
+//var pause = params.pause ? moment.duration(params.pause) : moment.duration(0)
+//var datetime =  params.date ? moment(params.date) : moment()
+{
+    authenticity_token: params.authToken,
+    &#39;run_session[start_time_day]&#39;: datetime.format(&#39;YYYY-MM-DD&#39;),
+    &amp;quot;run_session[sport_type_id]&amp;quot;: params.type || 1,
+    &amp;quot;run_session[distance]&amp;quot;: params.distance || 0,
+    &amp;quot;run_session[distance_from_user]&amp;quot;: params.distance || 0,
+    &amp;quot;run_session[elevation_gain]&amp;quot;: params.elevation_gain || 0,
+    &amp;quot;run_session[elevation_loss]&amp;quot;: params.elevation_loss || 0,
+    &amp;quot;run_session[elevation_gain_from_user]&amp;quot;: params.elevation_gain || 0,
+    &amp;quot;run_session[elevation_loss_from_user]&amp;quot;: params.elevation_loss || 0,
+    &amp;quot;run_session[start_time_hour]&amp;quot;: datetime.format(&#39;hh&#39;),
+    &amp;quot;run_session[start_time_minutes]&amp;quot; : datetime.format(&#39;mm&#39;),
+    &amp;quot;run_session[start_time_seconds]&amp;quot;: datetime.format(&#39;ss&#39;),
+    &amp;quot;run_session[duration]&amp;quot;: duration.asMilliseconds(),
+    &amp;quot;run_session[duration_hours]&amp;quot;: duration.hours(),
+    &amp;quot;run_session[duration_minutes]&amp;quot;: duration.minutes(),
+    &amp;quot;run_session[duration_seconds]&amp;quot;:duration.seconds(),
+    &amp;quot;run_session[pause_duration]&amp;quot;: pause.asMilliseconds(),
+    &amp;quot;run_session[pause_duration_hours]&amp;quot;: pause.hours(),
+    &amp;quot;run_session[pause_duration_minutes]&amp;quot;: pause.minutes(),
+    &amp;quot;run_session[pause_duration_seconds]&amp;quot;: pause.seconds(),
+    &amp;quot;run_session[calories]&amp;quot;: params.calories || 0,
+    &amp;quot;run_session[calories_from_user]&amp;quot;: params.calories || 0,
+    &amp;quot;run_session[avg_cadence]&amp;quot;: params.avg_cadence || undefined,
+    &amp;quot;run_session[max_cadence]&amp;quot;:params.max_cadence || undefined,
+    &amp;quot;run_session[avg_cadence_from_user]&amp;quot;: params.avg_cadence || undefined,
+    &amp;quot;run_session[max_cadence_from_user]&amp;quot;: params.max_cadence || undefined,
+    &amp;quot;run_session[total_crank_revolutions]&amp;quot;: params.total_crank_revolutions || undefined,
+    &amp;quot;run_session[total_crank_revolutions_from_user]&amp;quot;: params.total_crank_revolutions || undefined,
+    &amp;quot;run_session[wheel_circumference]&amp;quot;: params.wheel_circumference || undefined,
+    &amp;quot;run_session[wheel_circumference_from_user]&amp;quot;: params.wheel_circumference || undefined,
+    &amp;quot;run_session[pulse_avg]&amp;quot;: params.pulse_avg || undefined,
+    &amp;quot;run_session[pulse_max]&amp;quot;: params.pulse_max || undefined,
+    &amp;quot;run_session[pulse_avg_from_user]&amp;quot;:  params.pulse_avg || undefined,
+    &amp;quot;run_session[pulse_max_from_user]&amp;quot;: params.pulse_max || undefined,
+    &amp;quot;run_session[temperature]&amp;quot;: params.temperature || 0,
+    &amp;quot;run_session[temperature_from_user]&amp;quot;: params.temperature || 0,
+    &amp;quot;run_session[notes]&amp;quot;: params.notes || &#39;&#39;,
+    &amp;quot;run_session[subjective_feeling_id]&amp;quot;: params.feeling || 5,
+    &amp;quot;run_session[weather_condition_id]&amp;quot;: params.weather || 1,
+    &amp;quot;run_session[surface_id]&amp;quot; : params.surface || 1
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ workoutId: &amp;lt;workoutId&amp;gt; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Sports graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h4&gt;
+
+&lt;p&gt;This is not affiliated or endorset by runtastic, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nike Unofficial API</title>
+      <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/nike-unofficial-api/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-3e4ole-https-cloud-githubusercontent-com-assets-3071208-22865444-590b48ae-f12a-11e6-921c-f7a9c4b5dd48-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22865444/590b48ae-f12a-11e6-921c-f7a9c4b5dd48.png&#34; alt=&#34;logomakr_3e4ole&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;unofficial nike api&lt;/p&gt;
+
+&lt;p&gt;This is a promise based unofficial nikeplus api.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install nike-unofficial-api
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
+
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+
+&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate
+
+authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
+    .then((result) =&amp;gt; console.log(result))
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    email: params.email,
+    password: params.password
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ 
+  	access_token: &amp;lt;token&amp;gt;,
+  	expires_in: &amp;lt;expiration time&amp;gt;,
+  	profile_img_url: &amp;lt;profile image&amp;gt;,
+  	token_type: &amp;lt;token type&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
+
+&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;nike-unofficial-api&#39;).workouts
+
+var token = &#39;access_token&#39;
+
+workouts({access_token: token})
+    .then((result) =&amp;gt; { console.log(result) })
+    .catch((result) =&amp;gt; console.log(result))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Speed graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
+
+&lt;p&gt;This is not affiliated or endorset by Nike , or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Endomondo Unofficial API</title>
       <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
       <description>
@@ -393,263 +1104,6 @@ workoutSet({authToken: token, userId: userId, time: Date.now()-70, duration: 60,
 &lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
 
 &lt;p&gt;This is not affiliated or endorset by Endomondo, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Express Exception Handler</title>
-      <link>http://kanekotic.github.io/project/express-exception-handler/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/express-exception-handler/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-6nl700-https-user-images-githubusercontent-com-3071208-28988724-97dc463a-7971-11e7-9cec-ffc06bcc9205-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/28988724-97dc463a-7971-11e7-9cec-ffc06bcc9205.png&#34; alt=&#34;logomakr_6nl700&#34; /&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-
-&lt;p&gt;This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;add it to your project with &lt;code&gt;npm install express-exception-handler&lt;/code&gt; or &lt;code&gt;yarn add express-exception-handler&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;p&gt;there are 2 diferent ways to integrate the main functionality of this package, either by adding the handle that gets injected to the router framework&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var exceptionHandler = require(&#39;express-exception-handler&#39;)
-exceptionHandler.handle()
-const app = require(&#39;express&#39;)()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or by wraping manually the routes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var wrap = require(&#39;express-exception-handler&#39;).wrap
-router.post(&#39;/&#39;, wrap(async (req, res) =&amp;gt; {
-    ...
-}))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;it also integrates an extended class from Error that contains a &lt;code&gt;message&lt;/code&gt; and a &lt;code&gt;status&lt;/code&gt; that can be used to pass diferent information to the error handle&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var httpError = require(&#39;express-exception-handler&#39;).exception
-router.post(&#39;/&#39;, async (req, res) =&amp;gt; {
-    throw new HttpError(&#39;Great Message&#39;, 400, &amp;quot;{Response: awesome}&amp;quot;)
-}))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;last but not least it also contains a middleware that can be added directly to express that handles the previous named errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var middleware = require(&#39;express-exception-handler&#39;).middleware
-const app = require(&#39;express&#39;)()
-app.use(middleware)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/madebyoliver&#34;&gt;madebyoliver&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6nL7006nL700&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6nL7006nL700&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Gatoo</title>
-      <link>http://kanekotic.github.io/project/gatoo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/gatoo/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-32f2md-https-user-images-githubusercontent-com-3071208-42147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8.png&#34; alt=&#34;logomakr_32f2md&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/gatoo&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/gatoo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/github/kanekotic/gatoo?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/gatoo/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).&lt;/p&gt;
-
-&lt;h2 id=&#34;use-as-command-line&#34;&gt;Use as Command Line&lt;/h2&gt;
-
-&lt;p&gt;install globally with &lt;code&gt;npm install gatoo -g&lt;/code&gt;. Aftyer this it can be run with the next command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use-as-library&#34;&gt;Use as library&lt;/h2&gt;
-
-&lt;p&gt;first step is to add this to your project throught &lt;code&gt;yarn add gatoo&lt;/code&gt; or &lt;code&gt;npm install gatoo&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;currently you can retrieve in a simple way data from google analytics and route it to your prefered output. An example of retrieval is the next one.&lt;/p&gt;
-
-&lt;h3 id=&#34;import&#34;&gt;Import&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const importer = require(&#39;../lib/index&#39;).importer
-    path = require(&#39;path&#39;)
-    
-const email = &#39;your email&#39; //email account from the user credentials
-    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
-    config = {
-    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
-    daterange:{
-        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
-        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
-      },
-      metrics: &amp;quot;ga:users&amp;quot;,
-      dimensions: &amp;quot;ga:date&amp;quot;
-    }
-
-const example = async () =&amp;gt; {
-    const result = await importer(email, keyPath, config)
-    console.log(JSON.stringify(result.data))
-}
-
-example()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;export&#34;&gt;Export&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).exporter
-    path = require(&#39;path&#39;)
-    
-const email = &#39;your email&#39; //email account from the user credentials
-    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
-    config = {
-    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
-    daterange:{
-        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
-        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
-      },
-      metrics: &amp;quot;ga:users&amp;quot;,
-      dimensions: &amp;quot;ga:date&amp;quot;
-    }
-
-const doSomething () =&amp;gt; {}
-
-const example = async () =&amp;gt; {
-    const result = await exporter(email, keyPath, config,  doSomething)
-}
-
-example()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;export-to-console&#34;&gt;Export to console&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).outputTo
-    path = require(&#39;path&#39;)
-    
-const email = &#39;your email&#39; //email account from the user credentials
-    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
-    config = {
-    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
-    daterange:{
-        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
-        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
-      },
-      metrics: &amp;quot;ga:users&amp;quot;,
-      dimensions: &amp;quot;ga:date&amp;quot;
-    }
-
-const example = async () =&amp;gt; {
-    const result = await outputTo.console(email, keyPath, config)
-}
-
-example()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Retrieve data from google analytics&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create library&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create adapter for output console&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Create command line tool console&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter logstash&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter fluentd&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create adapter ES&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool logstash&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool fluentd&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Create command line tool ES&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/32f2Md&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/32f2Md&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Nike Unofficial API</title>
-      <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/nike-unofficial-api/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-3e4ole-https-cloud-githubusercontent-com-assets-3071208-22865444-590b48ae-f12a-11e6-921c-f7a9c4b5dd48-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22865444/590b48ae-f12a-11e6-921c-f7a9c4b5dd48.png&#34; alt=&#34;logomakr_3e4ole&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;unofficial nike api&lt;/p&gt;
-
-&lt;p&gt;This is a promise based unofficial nikeplus api.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install nike-unofficial-api
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
-
-&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
-
-&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate
-
-authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
-    .then((result) =&amp;gt; console.log(result))
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    email: params.email,
-    password: params.password
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{ 
-  	access_token: &amp;lt;token&amp;gt;,
-  	expires_in: &amp;lt;expiration time&amp;gt;,
-  	profile_img_url: &amp;lt;profile image&amp;gt;,
-  	token_type: &amp;lt;token type&amp;gt;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
-
-&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;nike-unofficial-api&#39;).workouts
-
-var token = &#39;access_token&#39;
-
-workouts({access_token: token})
-    .then((result) =&amp;gt; { console.log(result) })
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Speed graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
-
-&lt;p&gt;This is not affiliated or endorset by Nike , or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
 </description>
     </item>
     
@@ -849,497 +1303,6 @@ auth.login(info, window).then((result) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-twitter-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Twitter graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker &lt;/a&gt;&lt;/h6&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Peer2Sync</title>
-      <link>http://kanekotic.github.io/project/peer-2-sync/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/peer-2-sync/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-0ewpnu-https-cloud-githubusercontent-com-assets-3071208-17784932-e2b96a14-657e-11e6-9cf9-ad0000e3e18c-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/17784932/e2b96a14-657e-11e6-9cf9-ad0000e3e18c.png&#34; alt=&#34;logomakr_0ewpnu&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;##Intro&lt;/p&gt;
-
-&lt;p&gt;Protocol capable of P2P (master to master) syncing key-value datastores. using &lt;code&gt;c++&lt;/code&gt; high performance web server with a redis backend. The path to requests is &lt;code&gt;/rpc&lt;/code&gt; and takes only &lt;code&gt;POST&lt;/code&gt; requests in &lt;code&gt;JSON-RPC 2.0&lt;/code&gt;. The  methods that have been implemented are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;datastorePut({ collection: String, changes: [Object]  }) -&amp;gt;&lt;/code&gt;: sync objects to the server.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&amp;gt; [Object]&lt;/code&gt;: retrieve all of the objects which are newer on the server.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;datastoreMeta({ collection: String }) -&amp;gt; [id,mtime]&lt;/code&gt;: get last modification times of all objects upstream.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Arguments explanation:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;collection&lt;/code&gt;: this is a string identifier of the collection we want to sync.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;changes&lt;/code&gt;: this is an array of objects to save in the collection; every object can be anything (JSON object). Has three special properties:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;_id&lt;/code&gt;: (always required) is the object key/id.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_mtime&lt;/code&gt;: is the last time the object was modified. This is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Unix_time&#34; target=&#34;_blank&#34;&gt;POSIX time&lt;/a&gt; in millisecons.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_delete&lt;/code&gt;: is set to true if we want to remove this object from the collection. If not it can be either false or not included.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;all&lt;/code&gt;: this is a boolean which, when set to true, makes datastoreGet return all objects in the collection&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ids&lt;/code&gt;: array of strings, specifies which objects to fetch from the database.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The implementation is integrated in Travis-CI, that will generate and publish automatically containers to easy deploy the application.&lt;/p&gt;
-
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
-
-&lt;p&gt;Download the container from the docker-hub&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker pull kanekotic/p2s
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And execute with the next command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker run -p &amp;lt;service port&amp;gt; -e PORT=&amp;lt;service port&amp;gt; -e REDIS_IP=&amp;lt;redis ip&amp;gt; -e REDIS_PORT=&amp;lt;redis port&amp;gt; --net=host kanekotic/p2s
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
-
-&lt;p&gt;Current development enviroment is based on un an Ubuntu machine. Please follow the next steps to setup the enviroment:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Basic building will require the next packages&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install redis-server libboost-all-dev gcc-5 g++-5 libgtest-dev cmake qt5-qmake qt5-default qtbase5-dev qttools5-dev-tools
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To build gtest run&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /usr/src/gtest
-sudo cmake .
-sudo cmake --build . 
-sudo mv libg* /usr/local/lib/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;you will also need to pull the dependency for the redis client trought&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/Cylix/cpp_redis.git 
-cd cpp_redis 
-mkdir build 
-cd build 
-cmake .. 
-make -j 
-sudo make install -j 
-sudo cp /usr/local/lib/libcpp_redis.so /usr/lib/libcpp_redis.so
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;the code can be build using the next command line on the directory&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;qmake 
-make
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;Qt Creator&lt;/code&gt; as development enviroment, it can be installed by:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install qtcreator
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Install and use Postman for integration testing (&lt;code&gt;./test/Test_P2S_Postman.json&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Raw Guid Converter</title>
-      <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-5c2oee-https-user-images-githubusercontent-com-3071208-41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/41022709-abb95bd6-696a-11e8-8564-3ad7d43d44fb.png&#34; alt=&#34;logomakr_5c2oee&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/raw-guid-converter&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/raw-guid-converter.svg?branch=v0.0.2&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/github/kanekotic/raw-guid-converter?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/raw-guid-converter/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://github.com/Naereen/StrapDown.js/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/Naereen/StrapDown.js.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;
-
-&lt;p&gt;command line and library to convert guids from oracle raw format to formated guid and viceversa&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;if you want ot use in a package &lt;code&gt;yarn add raw-guid-converter&lt;/code&gt; or &lt;code&gt;npm i raw-guid-converter&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;if you want to use it as a command install globally with &lt;code&gt;npm i raw-guid-converter -g&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;h3 id=&#34;raw-to-guid-string&#34;&gt;Raw to Guid String&lt;/h3&gt;
-
-&lt;h4 id=&#34;code&#34;&gt;Code&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertRaw
-let guid = convert(&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;)
-//guid =&amp;gt; 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;command-line&#34;&gt;Command line&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromRaw 4630880E6D0B3640AB446C6FB3C44FE3
-#0e883046-0b6d-4036-ab44-6c6fb3c44fe3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
-
-&lt;h3 id=&#34;guid-string-to-raw&#34;&gt;Guid string to Raw&lt;/h3&gt;
-
-&lt;h4 id=&#34;code-1&#34;&gt;Code&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const convert = require(&#39;raw-guid-converter&#39;).convertString
-let guid = convert(&#39;0e883046-0b6d-4036-ab44-6c6fb3c44fe3&#39;)
-//guid =&amp;gt; &#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;command-line-1&#34;&gt;Command line&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;convert-guid fromString 0e883046-0b6d-4036-ab44-6c6fb3c44fe3
-#&#39;4630880E6D0B3640AB446C6FB3C44FE3&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;you can pass multiple guids to convert all of them in one go&lt;/p&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/5c2oEE&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/5c2oEE&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Runtastic Unofficial API</title>
-      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-4dzqyb-https-cloud-githubusercontent-com-assets-3071208-23109294-74bb4208-f6dd-11e6-9f09-24e7ac0d9d28-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/23109294/74bb4208-f6dd-11e6-9f09-24e7ac0d9d28.png&#34; alt=&#34;logomakr_4dzqyb&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;This is a promise based unofficial runtastic api.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install runtastic-unofficial-api
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;p&gt;the API provides the next functionalities&lt;/p&gt;
-
-&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
-
-&lt;p&gt;Get login information and tokens. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate
-
-authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;})
-    .then((result) =&amp;gt; console.log(result))
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &#39;user[email]&#39;: params.email,
-    &#39;user[password]&#39;: params.password,
-    grant_type: &#39;password&#39;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    authToken: token,
-    user: user,
-    cookieString: cookieString,
-    cookies: cookie
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
-
-&lt;p&gt;Get a list of your workouts. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workouts = require(&#39;runtastic-unofficial-api&#39;).workouts
-
-var token = &#39;authToken&#39;
-
-workouts({authToken: token, user: user})
-    .then((result) =&amp;gt; { console.log(result) })
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the complete set of parameters get determined by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    user_id: params.user.id,
-    authenticity_token: params.authToken,
-    items: ids.join(&#39;,&#39;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object similar to this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[&amp;lt;sessions&amp;gt;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;workout-get&#34;&gt;Workout (get)&lt;/h3&gt;
-
-&lt;p&gt;Get a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutGet = require(&#39;runtastic-unofficial-api&#39;).workout.get
-
-var token = &#39;authToken&#39;
-var user = {}
-var sessions = []
-
-workoutGet(user, sessions[0],{authToken : token, user : user})
-    .then((result) =&amp;gt; { console.log(result) })
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;//const defaultIncludes = [&#39;city&#39;,&#39;country&#39;,&#39;creation_application&#39;,&#39;sport_type&#39;,&#39;trace_collection&#39;,&#39;zones&#39;,&#39;sharing_token&#39;,&#39;neighbourhood&#39;]
-//var includes = params.includes || defaultIncludes
-
-{
-    user_id: params.user.id,
-    authenticity_token: params.authToken,
-    includes: includes.join(&#39;,&#39;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object that is quite complex to describe just try it ;) .&lt;/p&gt;
-
-&lt;h3 id=&#34;workout-set&#34;&gt;Workout (set)&lt;/h3&gt;
-
-&lt;p&gt;Set (or create) a specific workout. The next snippet describes an example of the call:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var workoutSet = require(&#39;runtastic-unofficial-api&#39;).workout.set
-
-var token = &#39;authToken&#39;
-var user = {}
-var sessions = []
-
-workoutSet(user, sessions[0] ,{authToken : token, user : user})
-    .then((result) =&amp;gt; { console.log(result) })
-    .catch((result) =&amp;gt; console.log(result))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the complete set of parameters are determined by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;//var duration = params.duration ? moment.duration(params.duration) : moment.duration(0)
-//var pause = params.pause ? moment.duration(params.pause) : moment.duration(0)
-//var datetime =  params.date ? moment(params.date) : moment()
-{
-    authenticity_token: params.authToken,
-    &#39;run_session[start_time_day]&#39;: datetime.format(&#39;YYYY-MM-DD&#39;),
-    &amp;quot;run_session[sport_type_id]&amp;quot;: params.type || 1,
-    &amp;quot;run_session[distance]&amp;quot;: params.distance || 0,
-    &amp;quot;run_session[distance_from_user]&amp;quot;: params.distance || 0,
-    &amp;quot;run_session[elevation_gain]&amp;quot;: params.elevation_gain || 0,
-    &amp;quot;run_session[elevation_loss]&amp;quot;: params.elevation_loss || 0,
-    &amp;quot;run_session[elevation_gain_from_user]&amp;quot;: params.elevation_gain || 0,
-    &amp;quot;run_session[elevation_loss_from_user]&amp;quot;: params.elevation_loss || 0,
-    &amp;quot;run_session[start_time_hour]&amp;quot;: datetime.format(&#39;hh&#39;),
-    &amp;quot;run_session[start_time_minutes]&amp;quot; : datetime.format(&#39;mm&#39;),
-    &amp;quot;run_session[start_time_seconds]&amp;quot;: datetime.format(&#39;ss&#39;),
-    &amp;quot;run_session[duration]&amp;quot;: duration.asMilliseconds(),
-    &amp;quot;run_session[duration_hours]&amp;quot;: duration.hours(),
-    &amp;quot;run_session[duration_minutes]&amp;quot;: duration.minutes(),
-    &amp;quot;run_session[duration_seconds]&amp;quot;:duration.seconds(),
-    &amp;quot;run_session[pause_duration]&amp;quot;: pause.asMilliseconds(),
-    &amp;quot;run_session[pause_duration_hours]&amp;quot;: pause.hours(),
-    &amp;quot;run_session[pause_duration_minutes]&amp;quot;: pause.minutes(),
-    &amp;quot;run_session[pause_duration_seconds]&amp;quot;: pause.seconds(),
-    &amp;quot;run_session[calories]&amp;quot;: params.calories || 0,
-    &amp;quot;run_session[calories_from_user]&amp;quot;: params.calories || 0,
-    &amp;quot;run_session[avg_cadence]&amp;quot;: params.avg_cadence || undefined,
-    &amp;quot;run_session[max_cadence]&amp;quot;:params.max_cadence || undefined,
-    &amp;quot;run_session[avg_cadence_from_user]&amp;quot;: params.avg_cadence || undefined,
-    &amp;quot;run_session[max_cadence_from_user]&amp;quot;: params.max_cadence || undefined,
-    &amp;quot;run_session[total_crank_revolutions]&amp;quot;: params.total_crank_revolutions || undefined,
-    &amp;quot;run_session[total_crank_revolutions_from_user]&amp;quot;: params.total_crank_revolutions || undefined,
-    &amp;quot;run_session[wheel_circumference]&amp;quot;: params.wheel_circumference || undefined,
-    &amp;quot;run_session[wheel_circumference_from_user]&amp;quot;: params.wheel_circumference || undefined,
-    &amp;quot;run_session[pulse_avg]&amp;quot;: params.pulse_avg || undefined,
-    &amp;quot;run_session[pulse_max]&amp;quot;: params.pulse_max || undefined,
-    &amp;quot;run_session[pulse_avg_from_user]&amp;quot;:  params.pulse_avg || undefined,
-    &amp;quot;run_session[pulse_max_from_user]&amp;quot;: params.pulse_max || undefined,
-    &amp;quot;run_session[temperature]&amp;quot;: params.temperature || 0,
-    &amp;quot;run_session[temperature_from_user]&amp;quot;: params.temperature || 0,
-    &amp;quot;run_session[notes]&amp;quot;: params.notes || &#39;&#39;,
-    &amp;quot;run_session[subjective_feeling_id]&amp;quot;: params.feeling || 5,
-    &amp;quot;run_session[weather_condition_id]&amp;quot;: params.weather || 1,
-    &amp;quot;run_session[surface_id]&amp;quot; : params.surface || 1
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result of the promise will be if failed the error that caused it and if success an result object like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{ workoutId: &amp;lt;workoutId&amp;gt; }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Sports graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h4&gt;
-
-&lt;p&gt;This is not affiliated or endorset by runtastic, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Scala Local Toggle</title>
-      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-6etktj-https-user-images-githubusercontent-com-3071208-32364786-318debc0-c077-11e7-9064-a65d6ce35cf6-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/32364786-318debc0-c077-11e7-9064-a65d6ce35cf6.png&#34; alt=&#34;logomakr_6etktj&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/scala-local-toggle&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/scala-local-toggle.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; alt=&#34;Maven Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;feature toggle by configuration file for scala applications&lt;/p&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;//Use version in badge
-libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val toggle = new ToggleManager();
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;system properties&lt;/li&gt;
-&lt;li&gt;application.conf (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;application.json (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;application.properties (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;reference.conf (all resources on classpath with this name)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;this files will require to have an setting for the toggles HOCON or JSON complient configuration similar to this, in any other case toggles will default to false:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;feature.local.toggles: [
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;,
-      &amp;quot;local&amp;quot;: true
-      &amp;quot;development&amp;quot;: true
-      &amp;quot;production&amp;quot;: false
-    }, 
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_OTHER_YOUR_TOGGLE&amp;quot;,
-      &amp;quot;local&amp;quot;: true
-      &amp;quot;development&amp;quot;: false
-      &amp;quot;production&amp;quot;: false
-    }
-  ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the boolean denotes the state of the toggle depending on the environment, and the name is the identifying the value of the environment variable:
-- local maps to environment variable value LOCAL.
-- development maps to environment variable value DEVELOPMENT.
-- production maps to environment variable value PRODUCTION.&lt;/p&gt;
-
-&lt;p&gt;aditionally the enviroment variable that will be track to know the current environment of execution can be modified by&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;  feature.local.environment: &amp;quot;SOME_ENVIROMENT_VARIABLE_NAME&amp;quot;
-  #Defaults to ENVIRONMENT 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Use with the name identifier defined in the previous step&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;  if (toggle.isEnabled(&amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;)) {
-    //your code under toggle here
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;logo&#34;&gt;LOGO&lt;/h5&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6ETKtj&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6ETKtj&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Specflow.Rider</title>
-      <link>http://kanekotic.github.io/project/specflow-rider/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/specflow-rider/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-8dchdu-https-user-images-githubusercontent-com-3071208-29508416-bf674688-8654-11e7-8c90-5472529cd9aa-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/29508416-bf674688-8654-11e7-8c90-5472529cd9aa.png&#34; alt=&#34;logomakr_8dchdu&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/Specflow.Rider&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/Specflow.Rider.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;intent&#34;&gt;Intent&lt;/h2&gt;
-
-&lt;p&gt;Integration of Specflow autogeneration for Rider&lt;/p&gt;
-
-&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
-
-&lt;p&gt;clone this repo, and make sure you have intellij installed the community version should be enough. you can use the next Gradle commands from command line:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gradle compile  # generate the code
-gradle check    # gnerate the code and test
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Table Support&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Parameters Support&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Move to Rider style plugin&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; XUnit Support&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; MSTest Support&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Add Files to project&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/8dchdu8dchdu&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/8dchdu8dchdu&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

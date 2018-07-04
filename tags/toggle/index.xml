@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jun 2017 00:00:01 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/toggle/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Scala Local Toggle</title>
       <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
       <description>feature toggle by configuration file for scala applications

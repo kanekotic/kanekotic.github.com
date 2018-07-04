@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Analytics</title>
       <link>http://kanekotic.github.io/tags/analytics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/analytics/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Api</title>
       <link>http://kanekotic.github.io/tags/api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/api/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>Command line</title>
       <link>http://kanekotic.github.io/tags/command-line/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/command-line/</guid>
       <description></description>
@@ -42,7 +42,7 @@
     <item>
       <title>Command-line</title>
       <link>http://kanekotic.github.io/tags/command-line/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/command-line/</guid>
       <description></description>
@@ -51,7 +51,7 @@
     <item>
       <title>Command-line-tool</title>
       <link>http://kanekotic.github.io/tags/command-line-tool/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/command-line-tool/</guid>
       <description></description>
@@ -60,7 +60,7 @@
     <item>
       <title>Converter</title>
       <link>http://kanekotic.github.io/tags/converter/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/converter/</guid>
       <description></description>
@@ -78,7 +78,7 @@
     <item>
       <title>Dependencies</title>
       <link>http://kanekotic.github.io/tags/dependencies/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/dependencies/</guid>
       <description></description>
@@ -87,7 +87,7 @@
     <item>
       <title>Elasticsearch</title>
       <link>http://kanekotic.github.io/tags/elasticsearch/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/elasticsearch/</guid>
       <description></description>
@@ -105,7 +105,7 @@
     <item>
       <title>Elk-stack</title>
       <link>http://kanekotic.github.io/tags/elk-stack/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/elk-stack/</guid>
       <description></description>
@@ -114,7 +114,7 @@
     <item>
       <title>Endomondo</title>
       <link>http://kanekotic.github.io/tags/endomondo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/endomondo/</guid>
       <description></description>
@@ -123,7 +123,7 @@
     <item>
       <title>Exception-handler</title>
       <link>http://kanekotic.github.io/tags/exception-handler/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/exception-handler/</guid>
       <description></description>
@@ -132,7 +132,7 @@
     <item>
       <title>Exception-handling</title>
       <link>http://kanekotic.github.io/tags/exception-handling/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/exception-handling/</guid>
       <description></description>
@@ -141,7 +141,7 @@
     <item>
       <title>Exceptions</title>
       <link>http://kanekotic.github.io/tags/exceptions/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/exceptions/</guid>
       <description></description>
@@ -150,7 +150,7 @@
     <item>
       <title>Executable</title>
       <link>http://kanekotic.github.io/tags/executable/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/executable/</guid>
       <description></description>
@@ -159,7 +159,7 @@
     <item>
       <title>Export</title>
       <link>http://kanekotic.github.io/tags/export/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/export/</guid>
       <description></description>
@@ -168,7 +168,7 @@
     <item>
       <title>Express</title>
       <link>http://kanekotic.github.io/tags/express/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/express/</guid>
       <description></description>
@@ -177,7 +177,7 @@
     <item>
       <title>Express-middleware</title>
       <link>http://kanekotic.github.io/tags/express-middleware/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/express-middleware/</guid>
       <description></description>
@@ -186,7 +186,7 @@
     <item>
       <title>Expressjs</title>
       <link>http://kanekotic.github.io/tags/expressjs/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/expressjs/</guid>
       <description></description>
@@ -204,7 +204,7 @@
     <item>
       <title>Feature-flags</title>
       <link>http://kanekotic.github.io/tags/feature-flags/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/feature-flags/</guid>
       <description></description>
@@ -213,7 +213,7 @@
     <item>
       <title>Feature-toggle</title>
       <link>http://kanekotic.github.io/tags/feature-toggle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/feature-toggle/</guid>
       <description></description>
@@ -222,7 +222,7 @@
     <item>
       <title>Feature-toggles</title>
       <link>http://kanekotic.github.io/tags/feature-toggles/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/feature-toggles/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Google</title>
       <link>http://kanekotic.github.io/tags/google/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/google/</guid>
       <description></description>
@@ -240,7 +240,7 @@
     <item>
       <title>Google-analytics</title>
       <link>http://kanekotic.github.io/tags/google-analytics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/google-analytics/</guid>
       <description></description>
@@ -249,7 +249,7 @@
     <item>
       <title>Grafana</title>
       <link>http://kanekotic.github.io/tags/grafana/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/grafana/</guid>
       <description></description>
@@ -258,7 +258,7 @@
     <item>
       <title>Guid</title>
       <link>http://kanekotic.github.io/tags/guid/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/guid/</guid>
       <description></description>
@@ -267,7 +267,7 @@
     <item>
       <title>Infrastructure</title>
       <link>http://kanekotic.github.io/tags/infrastructure/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/infrastructure/</guid>
       <description></description>
@@ -294,7 +294,7 @@
     <item>
       <title>Jenkins</title>
       <link>http://kanekotic.github.io/tags/jenkins/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/jenkins/</guid>
       <description></description>
@@ -312,7 +312,7 @@
     <item>
       <title>Kibana</title>
       <link>http://kanekotic.github.io/tags/kibana/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/kibana/</guid>
       <description></description>
@@ -330,7 +330,7 @@
     <item>
       <title>Logstash</title>
       <link>http://kanekotic.github.io/tags/logstash/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/logstash/</guid>
       <description></description>
@@ -339,7 +339,7 @@
     <item>
       <title>Nike</title>
       <link>http://kanekotic.github.io/tags/nike/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/nike/</guid>
       <description></description>
@@ -357,7 +357,7 @@
     <item>
       <title>Oracle</title>
       <link>http://kanekotic.github.io/tags/oracle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/oracle/</guid>
       <description></description>
@@ -375,7 +375,7 @@
     <item>
       <title>Plugin</title>
       <link>http://kanekotic.github.io/tags/plugin/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/plugin/</guid>
       <description></description>
@@ -384,7 +384,7 @@
     <item>
       <title>Prebuilt</title>
       <link>http://kanekotic.github.io/tags/prebuilt/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/prebuilt/</guid>
       <description></description>
@@ -393,7 +393,7 @@
     <item>
       <title>Prebuilt-packages</title>
       <link>http://kanekotic.github.io/tags/prebuilt-packages/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/prebuilt-packages/</guid>
       <description></description>
@@ -402,7 +402,7 @@
     <item>
       <title>Raw</title>
       <link>http://kanekotic.github.io/tags/raw/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/raw/</guid>
       <description></description>
@@ -420,7 +420,7 @@
     <item>
       <title>Runtastic</title>
       <link>http://kanekotic.github.io/tags/runtastic/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/runtastic/</guid>
       <description></description>
@@ -447,7 +447,7 @@
     <item>
       <title>Toggle</title>
       <link>http://kanekotic.github.io/tags/toggle/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/toggle/</guid>
       <description></description>
@@ -456,7 +456,7 @@
     <item>
       <title>Travis</title>
       <link>http://kanekotic.github.io/tags/travis/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/travis/</guid>
       <description></description>
@@ -474,7 +474,7 @@
     <item>
       <title>Unofficial</title>
       <link>http://kanekotic.github.io/tags/unofficial/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/unofficial/</guid>
       <description></description>
@@ -483,7 +483,7 @@
     <item>
       <title>Yml</title>
       <link>http://kanekotic.github.io/tags/yml/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/yml/</guid>
       <description></description>

@@ -7,28 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Endomondo Unofficial API</title>
-      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Runtastic Unofficial API</title>
+      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
-      <description>This is a promise based unofficial endomondo api.
-installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
+      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
+      <description>This is a promise based unofficial runtastic api.
+installation npm install runtastic-unofficial-api  Use the API provides the next functionalities
 Authentication Get login information and tokens. The next snippet describes an example of the call:
-var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
-{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.</description>
+var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
+{ &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
     </item>
     
     <item>
       <title>Nike Unofficial API</title>
       <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/nike-unofficial-api/</guid>
       <description>unofficial nike api
@@ -40,16 +40,16 @@ var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate authentic
     </item>
     
     <item>
-      <title>Runtastic Unofficial API</title>
-      <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Endomondo Unofficial API</title>
+      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/runtastic-unofficial-api/</guid>
-      <description>This is a promise based unofficial runtastic api.
-installation npm install runtastic-unofficial-api  Use the API provides the next functionalities
+      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
+      <description>This is a promise based unofficial endomondo api.
+installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
 Authentication Get login information and tokens. The next snippet describes an example of the call:
-var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
-{ &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
+var authenticate = require(&#39;endomondo-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
+{ email: params.email, password: params.password, deviceId: params.uuid || uuid, country: params.</description>
     </item>
     
   </channel>

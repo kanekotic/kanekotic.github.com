@@ -5,35 +5,8 @@
     
     <url>
     
-      <loc>http://kanekotic.github.io/project/any-prebuilt/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/dependency-shrinker/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/elk-docker/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <loc>http://kanekotic.github.io/post/2018-07-04-deploy-hugo-with-travis/</loc>
+      <lastmod>2018-07-04T08:35:42+02:00</lastmod>
     </url>
     
   
@@ -42,7 +15,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/project/express-exception-handler/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -51,7 +24,70 @@
     <url>
     
       <loc>http://kanekotic.github.io/project/gatoo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/elk-docker/</loc>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/travis-yml-plugin/</loc>
+      <lastmod>2017-06-30T00:00:01+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/raw-guid-converter/</loc>
+      <lastmod>2017-06-30T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/any-prebuilt/</loc>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/scala-local-toggle/</loc>
+      <lastmod>2017-06-28T00:00:01+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/dependency-shrinker/</loc>
+      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/runtastic-unofficial-api/</loc>
+      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -60,7 +96,16 @@
     <url>
     
       <loc>http://kanekotic.github.io/project/nike-unofficial-api/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</loc>
+      <lastmod>2017-05-28T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -104,43 +149,7 @@
     
     <url>
     
-      <loc>http://kanekotic.github.io/project/raw-guid-converter/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/runtastic-unofficial-api/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/scala-local-toggle/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://kanekotic.github.io/project/specflow-rider/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://kanekotic.github.io/project/travis-yml-plugin/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -285,7 +294,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/analytics/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -295,7 +304,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/api/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -314,7 +323,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/command-line/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -324,7 +333,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/command-line/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -334,7 +343,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/command-line-tool/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -344,7 +353,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/converter/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -364,7 +373,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/dependencies/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -374,7 +383,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/elasticsearch/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -394,7 +403,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/elk-stack/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -404,7 +413,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/endomondo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -414,7 +423,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/exception-handler/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -424,7 +433,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/exception-handling/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -434,7 +443,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/exceptions/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -444,7 +453,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/executable/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -454,7 +463,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/export/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -464,7 +473,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/express/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -474,7 +483,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/express-middleware/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -484,7 +493,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/expressjs/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -504,7 +513,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/feature-flags/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -514,7 +523,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/feature-toggle/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -524,7 +533,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/feature-toggles/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -534,7 +543,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/google/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -544,7 +553,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/google-analytics/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -554,7 +563,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/grafana/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -564,7 +573,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/guid/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -574,7 +583,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/infrastructure/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -604,7 +613,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/jenkins/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -634,7 +643,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/kibana/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -654,7 +663,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/logstash/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -664,7 +673,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/nike/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -684,7 +693,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/oracle/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -704,7 +713,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/plugin/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -714,7 +723,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/post/</loc>
-      <lastmod>2016-03-17T09:56:49+02:00</lastmod>
+      <lastmod>2018-07-04T08:35:42+02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -724,7 +733,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/prebuilt/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -734,7 +743,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/prebuilt-packages/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -744,7 +753,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -763,7 +772,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/raw/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -783,7 +792,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/runtastic/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -813,7 +822,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -823,7 +832,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/toggle/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-28T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -833,7 +842,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/travis/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -853,7 +862,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/unofficial/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -863,7 +872,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/yml/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-06-30T00:00:01+00:00</lastmod>
       <priority>0</priority>
     </url>
     
