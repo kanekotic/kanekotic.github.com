@@ -68,7 +68,7 @@
     
     <url>
     
-      <loc>http://kanekotic.github.io/project/any-prebuilt.1/</loc>
+      <loc>http://kanekotic.github.io/project/koteky/</loc>
       <lastmod>2017-06-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -97,6 +97,15 @@
     
       <loc>http://kanekotic.github.io/project/runtastic-unofficial-api/</loc>
       <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/coin-run/</loc>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -304,6 +313,16 @@
     
       <loc>http://kanekotic.github.io/tags/analytics/</loc>
       <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/android/</loc>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -543,6 +562,16 @@
     
       <loc>http://kanekotic.github.io/tags/feature-toggles/</loc>
       <lastmod>2017-06-28T00:00:01+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/game/</loc>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -832,6 +861,16 @@
     
       <loc>http://kanekotic.github.io/tags/specflow/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/survival/</loc>
+      <lastmod>2017-05-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

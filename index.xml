@@ -542,10 +542,10 @@ module.exports.path = anyPrebuilt.path
     
     <item>
       <title>Koteky</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt.1/</link>
+      <link>http://kanekotic.github.io/project/koteky/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/any-prebuilt.1/</guid>
+      <guid>http://kanekotic.github.io/project/koteky/</guid>
       <description>
 
 &lt;h1 id=&#34;drawing-https-cloud-githubusercontent-com-assets-3071208-14738483-22967ed8-0882-11e6-874d-4c19eb244373-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14738483/22967ed8-0882-11e6-874d-4c19eb244373.png&#34; alt=&#34;drawing&#34; /&gt;&lt;/h1&gt;
@@ -929,6 +929,28 @@ workoutSet(user, sessions[0] ,{authToken : token, user : user})
     </item>
     
     <item>
+      <title>Coin Run</title>
+      <link>http://kanekotic.github.io/project/coin-run/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/coin-run/</guid>
+      <description>
+
+&lt;h1 id=&#34;coin-run&#34;&gt;Coin Run&lt;/h1&gt;
+
+&lt;p&gt;Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen.
+This is my first app, so very simple game.
+Developed using:
+- Unreal Engine
+- Kenney 2D Assests&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793489/2c808a60-cab1-11e5-8bac-47785f5593fc.png&#34; alt=&#34;img1&#34; /&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793490/2c84a500-cab1-11e5-9e75-e45d61cd4d40.png&#34; alt=&#34;img2&#34; /&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793491/2c8af2ca-cab1-11e5-90d1-722c242a5b05.png&#34; alt=&#34;img3&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Nike Unofficial API</title>
       <link>http://kanekotic.github.io/project/nike-unofficial-api/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
@@ -1280,54 +1302,6 @@ auth.login(info, window);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;logo-award-passport-graphics-by-a-href-http-www-freepik-com-freepik-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo Award,Passport graphics by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OAuth Electron Facebook</title>
-      <link>http://kanekotic.github.io/project/oauth-electron-facebook/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/oauth-electron-facebook/</guid>
-      <description>
-
-&lt;h1 id=&#34;logo-fb-https-cloud-githubusercontent-com-assets-3071208-14721795-aa18135a-0808-11e6-987b-14583e3fbb1d-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14721795/aa18135a-0808-11e6-987b-14583e3fbb1d.png&#34; alt=&#34;logo_fb&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;this package is currently in development and is not available for use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Use Facebook OAuth in a simple way inside your electron App.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install oauth-electron-facebook --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-facebook&#39;).oauth;
-var facebook = require(&#39;oauth-electron-facebook&#39;).facebook;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var info = new facebook(&amp;quot;key&amp;quot;,&amp;quot;secret&amp;quot;, &amp;lt;scope&amp;gt;, &amp;lt;params&amp;gt;);
-var auth = new oauth();
-auth.login(info, window);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    oauth_access_token: ***,
-    oauth_refresh_token: ***
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-letter-f-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Letter F graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
 </description>
     </item>
     

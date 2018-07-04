@@ -82,10 +82,10 @@ Generate a prebuilt package  Create new project  npm init   Add this package as 
     
     <item>
       <title>Koteky</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt.1/</link>
+      <link>http://kanekotic.github.io/project/koteky/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/any-prebuilt.1/</guid>
+      <guid>http://kanekotic.github.io/project/koteky/</guid>
       <description>This is a plugin based crossplatform social network manager application based on electron.
 Usage (Alpha) This project is still on development and is not ready for public use
  Current early use can be done by cloning repo  # Clone the repository $ git clone https://github.com/Hatisoft/koteky.git   Plugins can be installed in app or modifying the package.json  { ... &amp;quot;plugins&amp;quot;: { &amp;quot;name_of_plugin&amp;quot; : &amp;quot;version_or_repo&amp;quot; } }   Run:  # Go into the repository $ cd koteky # Install the dependencies and run $ npm install &amp;amp;&amp;amp; npm start  Roadmap Use plugin based architecture Style and Display posts Authentication based on Oauth for social networks Implement Twitter plugin Implement Facebook plugin Implement LinkedIn plugin  Credits Social Network graphic by Freepik from Flaticon is licensed under CC BY 3.</description>
@@ -124,6 +124,15 @@ installation npm install runtastic-unofficial-api  Use the API provides the next
 Authentication Get login information and tokens. The next snippet describes an example of the call:
 var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
 { &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
+    </item>
+    
+    <item>
+      <title>Coin Run</title>
+      <link>http://kanekotic.github.io/project/coin-run/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/coin-run/</guid>
+      <description>Coin Run Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen. This is my first app, so very simple game. Developed using: - Unreal Engine - Kenney 2D Assests</description>
     </item>
     
     <item>
