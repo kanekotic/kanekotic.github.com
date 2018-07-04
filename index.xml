@@ -616,6 +616,154 @@ workouts({access_token: token})
     </item>
     
     <item>
+      <title>OAuth Electron</title>
+      <link>http://kanekotic.github.io/project/oauth-electron/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron/</guid>
+      <description>
+
+&lt;h1 id=&#34;drawing-1-https-cloud-githubusercontent-com-assets-3071208-14776049-cb6164ea-0ac3-11e6-8219-c8a46a56e3e5-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14776049/cb6164ea-0ac3-11e6-8219-c8a46a56e3e5.png&#34; alt=&#34;drawing 1&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;this package is currently in development and is not available for use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use OAuth in a simple way inside your electron App.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install oauth-electron --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;oauth1&#34;&gt;Oauth1&lt;/h3&gt;
+
+&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth2;
+var data = require(&#39;oauth-electron-twitter&#39;).oauth2_data;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;use or extend the oauth object as per your requirements&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;key&amp;quot; : &amp;quot;&amp;quot;,
+    &amp;quot;secret&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;window&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;url&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;request_token&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;access_token&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;version&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;callback&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;signature_method&amp;quot; : &amp;quot;&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pass the previously named object and a the widow to display into the login process.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var auth = new oauth();
+auth.login(info, window);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    oauth_access_token: ***,
+    oauth_access_token_secret: ***
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;oauth2&#34;&gt;Oauth2&lt;/h3&gt;
+
+&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth2;
+var data = require(&#39;oauth-electron-twitter&#39;).oauth2_data;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;use or extend the oauth object as per your requirements&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;key&amp;quot; : &amp;quot;&amp;quot;,
+    &amp;quot;secret&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;window&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;base_url&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;auth_path&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;token_path&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;customHeaders&amp;quot; : &amp;quot;&amp;quot;;
+    &amp;quot;scope&amp;quot; : &amp;quot;&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pass the previously named object and a the widow to display into the login process.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var auth = new oauth();
+auth.login(info, window);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    oauth_access_token: ***,
+    oauth_refresh_token: ***
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&#34;logo-award-passport-graphics-by-a-href-http-www-freepik-com-freepik-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo Award,Passport graphics by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OAuth Electron Facebook</title>
+      <link>http://kanekotic.github.io/project/oauth-electron-facebook/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron-facebook/</guid>
+      <description>
+
+&lt;h1 id=&#34;logo-fb-https-cloud-githubusercontent-com-assets-3071208-14721795-aa18135a-0808-11e6-987b-14583e3fbb1d-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14721795/aa18135a-0808-11e6-987b-14583e3fbb1d.png&#34; alt=&#34;logo_fb&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;this package is currently in development and is not available for use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use Facebook OAuth in a simple way inside your electron App.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install oauth-electron-facebook --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-facebook&#39;).oauth;
+var facebook = require(&#39;oauth-electron-facebook&#39;).facebook;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var info = new facebook(&amp;quot;key&amp;quot;,&amp;quot;secret&amp;quot;, &amp;lt;scope&amp;gt;, &amp;lt;params&amp;gt;);
+var auth = new oauth();
+auth.login(info, window);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    oauth_access_token: ***,
+    oauth_refresh_token: ***
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&#34;logo-award-graphic-by-a-href-http-www-freepik-com-freepik-a-and-letter-f-graphic-by-a-href-http-www-icomoon-io-icomoon-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-and-modified-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo: Award graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; and Letter F graphic by &lt;a href=&#34;http://www.icomoon.io&#34;&gt;Icomoon&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made and modified with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
+</description>
+    </item>
+    
+    <item>
       <title>OAuth Electron Twitter</title>
       <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -1105,93 +1253,6 @@ mock.Verify(foo =&amp;gt; foo.DoSomething(It.IsAny&amp;lt;string&amp;gt;()), Tim
 &lt;p&gt;In assembly info to test internal classes you will need to know the name of the file&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cs&#34;&gt;[assembly: InternalsVisibleToAttribute(&amp;quot;&amp;lt;Project Name&amp;gt;&amp;quot;)]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Meteor - FlowRouter</title>
-      <link>http://kanekotic.github.io/post/02-05-meteor-flowrouter/</link>
-      <pubDate>Fri, 05 Feb 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/02-05-meteor-flowrouter/</guid>
-      <description>&lt;p&gt;This package is a very useful to define the navigation on your client side application. To add it just use the next command line:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;meteor add kadira:flow-router
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;a static route can be done as the next code. Where name needs to be a unique identifier, and the render string has to be the name of the template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;FlowRouter.route(&#39;/&#39;,
-{
-  name: &#39;homeId&#39;,
-  action(){
-    BlazeLayout.render(&#39;homeTemplate&#39;);
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;in case of requiring a dynamic page. Where the change is just the second objects where you defined the child template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;FlowRouter.route(&#39;/&#39;,
-{
-  name: &#39;mainId&#39;,
-  action(){
-    BlazeLayout.render(&#39;mainTemplate&#39;, {mainTemplate: &#39;dynamicTemplate&#39;});
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Other interesting parts of this package is the definition of variables on the route definition (like :id in the next code).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;FlowRouter.route(&#39;/playlist/:id&#39;,
-{
-  name: &#39;playlist&#39;,
-  action(){
-    BlazeLayout.render(&#39;main&#39;, {main: &#39;playlist&#39;});
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;there is also a possibility to use it in any part of the client javascript code to do redirection by using:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;FlowRouter.go(&#39;home&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C# - Path.Combine</title>
-      <link>http://kanekotic.github.io/post/02-04-csharp-path-combine/</link>
-      <pubDate>Thu, 04 Feb 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/post/02-04-csharp-path-combine/</guid>
-      <description>
-
-&lt;p&gt;When using path.Combine if the second argument starts with a /. the first path is ignored and will give a path based on the C: drive.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;var path = Path.Combine(firstpath,$@&amp;quot;\myfolder\myfile.txt&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will not return &lt;firstpath\myfolder\myfile.txt&gt; will return &lt;C:\\\myfolder\myfile.txt&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;meteor-session-variables&#34;&gt;&lt;strong&gt;Meteor - Session variables&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Session variables are easy to use in meteor. the can ve get and set from the javascript code using:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Session.get(&#39;variableName&#39;);
-Session.set(&#39;variableName&#39;, true);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;on your HTML you can reference the get method easily by:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;template name=&amp;quot;admin&amp;quot;&amp;gt;
-    {{#if $.Session.get &#39;variableName&#39;}}
-        I am here
-    {{else}}
-        I am not here
-    {{/if}}
-&amp;lt;/template&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

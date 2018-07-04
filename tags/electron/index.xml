@@ -13,6 +13,32 @@
     
     
     <item>
+      <title>OAuth Electron</title>
+      <link>http://kanekotic.github.io/project/oauth-electron/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron/</guid>
+      <description>this package is currently in development and is not available for use
+Use OAuth in a simple way inside your electron App.
+Installation add it to your elenctron project using npm command
+npm install oauth-electron --save  Usage Oauth1 add the require for ouath and twitter specific code from this package
+var oauth = require(&#39;oauth-electron-twitter&#39;).oauth2; var data = require(&#39;oauth-electron-twitter&#39;).oauth2_data;  use or extend the oauth object as per your requirements</description>
+    </item>
+    
+    <item>
+      <title>OAuth Electron Facebook</title>
+      <link>http://kanekotic.github.io/project/oauth-electron-facebook/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/oauth-electron-facebook/</guid>
+      <description>this package is currently in development and is not available for use
+Use Facebook OAuth in a simple way inside your electron App.
+Installation add it to your elenctron project using npm command
+npm install oauth-electron-facebook --save  Usage add the require for ouath and twitter specific code from this package
+var oauth = require(&#39;oauth-electron-facebook&#39;).oauth; var facebook = require(&#39;oauth-electron-facebook&#39;).facebook;  declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login</description>
+    </item>
+    
+    <item>
       <title>OAuth Electron Twitter</title>
       <link>http://kanekotic.github.io/project/oauth-electron-twitter/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
