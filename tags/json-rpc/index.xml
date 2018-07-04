@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json-rpc on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/json-rpc/</link>
+    <description>Recent content in Json-rpc on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/json-rpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Peer2Sync</title>
+      <link>http://kanekotic.github.io/project/peer-2-sync/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/peer-2-sync/</guid>
+      <description>##Intro
+Protocol capable of P2P (master to master) syncing key-value datastores. using c++ high performance web server with a redis backend. The path to requests is /rpc and takes only POST requests in JSON-RPC 2.0. The methods that have been implemented are:
+ datastorePut({ collection: String, changes: [Object] }) -&amp;gt;: sync objects to the server. datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&amp;gt; [Object]: retrieve all of the objects which are newer on the server.</description>
+    </item>
+    
+  </channel>
+</rss>

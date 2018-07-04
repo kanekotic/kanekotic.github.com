@@ -853,6 +853,113 @@ auth.login(info, window).then((result) =&amp;gt; {
     </item>
     
     <item>
+      <title>Peer2Sync</title>
+      <link>http://kanekotic.github.io/project/peer-2-sync/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/peer-2-sync/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-0ewpnu-https-cloud-githubusercontent-com-assets-3071208-17784932-e2b96a14-657e-11e6-9cf9-ad0000e3e18c-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/17784932/e2b96a14-657e-11e6-9cf9-ad0000e3e18c.png&#34; alt=&#34;logomakr_0ewpnu&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;##Intro&lt;/p&gt;
+
+&lt;p&gt;Protocol capable of P2P (master to master) syncing key-value datastores. using &lt;code&gt;c++&lt;/code&gt; high performance web server with a redis backend. The path to requests is &lt;code&gt;/rpc&lt;/code&gt; and takes only &lt;code&gt;POST&lt;/code&gt; requests in &lt;code&gt;JSON-RPC 2.0&lt;/code&gt;. The  methods that have been implemented are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;datastorePut({ collection: String, changes: [Object]  }) -&amp;gt;&lt;/code&gt;: sync objects to the server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&amp;gt; [Object]&lt;/code&gt;: retrieve all of the objects which are newer on the server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;datastoreMeta({ collection: String }) -&amp;gt; [id,mtime]&lt;/code&gt;: get last modification times of all objects upstream.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Arguments explanation:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;collection&lt;/code&gt;: this is a string identifier of the collection we want to sync.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;changes&lt;/code&gt;: this is an array of objects to save in the collection; every object can be anything (JSON object). Has three special properties:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_id&lt;/code&gt;: (always required) is the object key/id.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_mtime&lt;/code&gt;: is the last time the object was modified. This is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Unix_time&#34; target=&#34;_blank&#34;&gt;POSIX time&lt;/a&gt; in millisecons.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_delete&lt;/code&gt;: is set to true if we want to remove this object from the collection. If not it can be either false or not included.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;all&lt;/code&gt;: this is a boolean which, when set to true, makes datastoreGet return all objects in the collection&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ids&lt;/code&gt;: array of strings, specifies which objects to fetch from the database.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The implementation is integrated in Travis-CI, that will generate and publish automatically containers to easy deploy the application.&lt;/p&gt;
+
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;Download the container from the docker-hub&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker pull kanekotic/p2s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And execute with the next command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -p &amp;lt;service port&amp;gt; -e PORT=&amp;lt;service port&amp;gt; -e REDIS_IP=&amp;lt;redis ip&amp;gt; -e REDIS_PORT=&amp;lt;redis port&amp;gt; --net=host kanekotic/p2s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;Current development enviroment is based on un an Ubuntu machine. Please follow the next steps to setup the enviroment:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Basic building will require the next packages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install redis-server libboost-all-dev gcc-5 g++-5 libgtest-dev cmake qt5-qmake qt5-default qtbase5-dev qttools5-dev-tools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To build gtest run&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/src/gtest
+sudo cmake .
+sudo cmake --build . 
+sudo mv libg* /usr/local/lib/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;you will also need to pull the dependency for the redis client trought&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/Cylix/cpp_redis.git 
+cd cpp_redis 
+mkdir build 
+cd build 
+cmake .. 
+make -j 
+sudo make install -j 
+sudo cp /usr/local/lib/libcpp_redis.so /usr/lib/libcpp_redis.so
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the code can be build using the next command line on the directory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;qmake 
+make
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;Qt Creator&lt;/code&gt; as development enviroment, it can be installed by:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install qtcreator
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install and use Postman for integration testing (&lt;code&gt;./test/Test_P2S_Postman.json&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -1233,64 +1340,6 @@ gradle check    # gnerate the code and test
 &lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
 
 &lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/8dchdu8dchdu&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/8dchdu8dchdu&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Travis YML Plugin</title>
-      <link>http://kanekotic.github.io/project/travis-yml-plugin/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/travis-yml-plugin/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-5059hu-https-cloud-githubusercontent-com-assets-3071208-20248819-1e3637aa-a9ec-11e6-89b7-6c9c403af3c7-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/20248819/1e3637aa-a9ec-11e6-89b7-6c9c403af3c7.png&#34; alt=&#34;logomakr_5059hu&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.&lt;/p&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;p&gt;Install by navigating and selecting &lt;code&gt;Manage Jenkins&lt;/code&gt; -&amp;gt; &lt;code&gt;Manage Plugins&lt;/code&gt; -&amp;gt; &lt;code&gt;Travis YML Plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;before_install&lt;/li&gt;
-&lt;li&gt;install&lt;/li&gt;
-&lt;li&gt;before_script&lt;/li&gt;
-&lt;li&gt;script&lt;/li&gt;
-&lt;li&gt;after_success&lt;/li&gt;
-&lt;li&gt;after_failure&lt;/li&gt;
-&lt;li&gt;before_deploy&lt;/li&gt;
-&lt;li&gt;deploy&lt;/li&gt;
-&lt;li&gt;after_deploy&lt;/li&gt;
-&lt;li&gt;after_script&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you have any failure on your build and want to review the final generated, you should declare the environment variable &lt;code&gt;DEBUG_TRAVIS_YML&lt;/code&gt; either on your build node or in jenkins.&lt;/p&gt;
-
-&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
-
-&lt;p&gt;If you want to help on the development of this plugin you will need &lt;code&gt;Jruby&lt;/code&gt; and the next prerequisites:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gem install bundler
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For development and to see this plugin in a test Jenkins server:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ bundle install
-$ jpi server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;after that open a pull request to add your changes.&lt;/p&gt;
-
-&lt;p&gt;If you have any further request open an issue on the main repository or contact the sustainers:
-- @kanekotic
-- @masaki&lt;/p&gt;
-
-&lt;h2 id=&#34;logo&#34;&gt;Logo&lt;/h2&gt;
-
-&lt;p&gt;People graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

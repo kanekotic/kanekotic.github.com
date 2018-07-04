@@ -17,13 +17,12 @@
       
     
   
-  <meta name="description" content="##GIT - Branches, Tags and Commits
-I was concern what will happend with my comments in the case i remove a branch.
-In git Commits are independents of branch&rsquo;s and Tag&rsquo;s. This last two are just pointers to certain commit. Trying to delete a Branch could create unreachable commits but if this are tag they become reachable.
-Removing branches will not remove commits, they will just become unreachable. Unless they are deleted with the git-gc command for example.">
+  <meta name="description" content="##Intro
+Protocol capable of P2P (master to master) syncing key-value datastores. using c&#43;&#43; high performance web server with a redis backend. The path to requests is /rpc and takes only POST requests in JSON-RPC 2.0. The methods that have been implemented are:
+ datastorePut({ collection: String, changes: [Object] }) -&gt;: sync objects to the server. datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&gt; [Object]: retrieve all of the objects which are newer on the server.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://kanekotic.github.io/post/01-29-git-branches-tags-and-commits/">
+  <link rel="alternate" hreflang="en-us" href="http://kanekotic.github.io/project/peer-2-sync/">
 
   
 
@@ -86,7 +85,7 @@ Removing branches will not remove commits, they will just become unreachable. Un
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://kanekotic.github.io/post/01-29-git-branches-tags-and-commits/">
+  <link rel="canonical" href="http://kanekotic.github.io/project/peer-2-sync/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -94,17 +93,16 @@ Removing branches will not remove commits, they will just become unreachable. Un
   <meta property="twitter:creator" content="@kanekotic">
   
   <meta property="og:site_name" content="Kanekotic">
-  <meta property="og:url" content="http://kanekotic.github.io/post/01-29-git-branches-tags-and-commits/">
-  <meta property="og:title" content="C# - Paths to system folders | Kanekotic">
-  <meta property="og:description" content="##GIT - Branches, Tags and Commits
-I was concern what will happend with my comments in the case i remove a branch.
-In git Commits are independents of branch&rsquo;s and Tag&rsquo;s. This last two are just pointers to certain commit. Trying to delete a Branch could create unreachable commits but if this are tag they become reachable.
-Removing branches will not remove commits, they will just become unreachable. Unless they are deleted with the git-gc command for example.">
+  <meta property="og:url" content="http://kanekotic.github.io/project/peer-2-sync/">
+  <meta property="og:title" content="Peer2Sync | Kanekotic">
+  <meta property="og:description" content="##Intro
+Protocol capable of P2P (master to master) syncing key-value datastores. using c&#43;&#43; high performance web server with a redis backend. The path to requests is /rpc and takes only POST requests in JSON-RPC 2.0. The methods that have been implemented are:
+ datastorePut({ collection: String, changes: [Object] }) -&gt;: sync objects to the server. datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&gt; [Object]: retrieve all of the objects which are newer on the server.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-01-29T09:56:49&#43;02:00">
+  <meta property="article:published_time" content="2016-04-27T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2016-01-29T09:56:49&#43;02:00">
+  <meta property="article:modified_time" content="2016-04-27T00:00:00&#43;00:00">
   
 
   
@@ -135,7 +133,7 @@ Removing branches will not remove commits, they will just become unreachable. Un
 
   
 
-  <title>C# - Paths to system folders | Kanekotic</title>
+  <title>Peer2Sync | Kanekotic</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -250,78 +248,51 @@ Removing branches will not remove commits, they will just become unreachable. Un
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
 
   
 
 
   <div class="article-container">
-    <h1 itemprop="name">C# - Paths to system folders</h1>
 
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2016-01-29 09:56:49 &#43;0200 &#43;0200" itemprop="datePublished dateModified">
-      2016-01-29
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kanekotic">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://kanekotic.github.io/post/01-29-git-branches-tags-and-commits/#disqus_thread"></a>
-  
-
-  
-
-  
-  
+    <div class="pub-title">
+      <h1 itemprop="name">Peer2Sync</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=C%23%20-%20Paths%20to%20system%20folders&amp;url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-29-git-branches-tags-and-commits%2f"
+         href="https://twitter.com/intent/tweet?text=Peer2Sync&amp;url=http%3a%2f%2fkanekotic.github.io%2fproject%2fpeer-2-sync%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-29-git-branches-tags-and-commits%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkanekotic.github.io%2fproject%2fpeer-2-sync%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-29-git-branches-tags-and-commits%2f&amp;title=C%23%20-%20Paths%20to%20system%20folders"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkanekotic.github.io%2fproject%2fpeer-2-sync%2f&amp;title=Peer2Sync"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-29-git-branches-tags-and-commits%2f&amp;title=C%23%20-%20Paths%20to%20system%20folders"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkanekotic.github.io%2fproject%2fpeer-2-sync%2f&amp;title=Peer2Sync"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=C%23%20-%20Paths%20to%20system%20folders&amp;body=http%3a%2f%2fkanekotic.github.io%2fpost%2f01-29-git-branches-tags-and-commits%2f">
+         href="mailto:?subject=Peer2Sync&amp;body=http%3a%2f%2fkanekotic.github.io%2fproject%2fpeer-2-sync%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -329,19 +300,110 @@ Removing branches will not remove commits, they will just become unreachable. Un
 </div>
 
 
-  
+      </span>
+    </div>
 
-</div>
-
+    
 
     <div class="article-style" itemprop="articleBody">
-      <p>##<strong>GIT - Branches, Tags and Commits</strong></p>
+      
 
-<p>I was concern what will happend with my comments in the case i remove a branch.</p>
+<h1 id="logomakr-0ewpnu-https-cloud-githubusercontent-com-assets-3071208-17784932-e2b96a14-657e-11e6-9cf9-ad0000e3e18c-png"><img src="https://cloud.githubusercontent.com/assets/3071208/17784932/e2b96a14-657e-11e6-9cf9-ad0000e3e18c.png" alt="logomakr_0ewpnu" /></h1>
 
-<p>In git Commits are independents of branch&rsquo;s and Tag&rsquo;s. This last two are just pointers to certain commit. Trying to delete a Branch could create unreachable commits but if this are tag they become reachable.</p>
+<p>##Intro</p>
 
-<p>Removing branches will not remove commits, they will just become unreachable. Unless they are deleted with the git-gc command for example.</p>
+<p>Protocol capable of P2P (master to master) syncing key-value datastores. using <code>c++</code> high performance web server with a redis backend. The path to requests is <code>/rpc</code> and takes only <code>POST</code> requests in <code>JSON-RPC 2.0</code>. The  methods that have been implemented are:</p>
+
+<ul>
+<li><code>datastorePut({ collection: String, changes: [Object]  }) -&gt;</code>: sync objects to the server.</li>
+<li><code>datastoreGet({ collection: String, all: Boolean, ids: [String] }) -&gt; [Object]</code>: retrieve all of the objects which are newer on the server.</li>
+<li><code>datastoreMeta({ collection: String }) -&gt; [id,mtime]</code>: get last modification times of all objects upstream.</li>
+</ul>
+
+<p>Arguments explanation:</p>
+
+<ul>
+<li><code>collection</code>: this is a string identifier of the collection we want to sync.</li>
+<li><code>changes</code>: this is an array of objects to save in the collection; every object can be anything (JSON object). Has three special properties:
+
+<ul>
+<li><code>_id</code>: (always required) is the object key/id.</li>
+<li><code>_mtime</code>: is the last time the object was modified. This is a <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">POSIX time</a> in millisecons.</li>
+<li><code>_delete</code>: is set to true if we want to remove this object from the collection. If not it can be either false or not included.</li>
+</ul></li>
+<li><code>all</code>: this is a boolean which, when set to true, makes datastoreGet return all objects in the collection</li>
+<li><code>ids</code>: array of strings, specifies which objects to fetch from the database.</li>
+</ul>
+
+<p>The implementation is integrated in Travis-CI, that will generate and publish automatically containers to easy deploy the application.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Download the container from the docker-hub</p>
+
+<pre><code>docker pull kanekotic/p2s
+</code></pre>
+
+<p>And execute with the next command</p>
+
+<pre><code>docker run -p &lt;service port&gt; -e PORT=&lt;service port&gt; -e REDIS_IP=&lt;redis ip&gt; -e REDIS_PORT=&lt;redis port&gt; --net=host kanekotic/p2s
+</code></pre>
+
+<h2 id="development">Development</h2>
+
+<p>Current development enviroment is based on un an Ubuntu machine. Please follow the next steps to setup the enviroment:</p>
+
+<ul>
+<li>Basic building will require the next packages</li>
+</ul>
+
+<pre><code>sudo apt-get install redis-server libboost-all-dev gcc-5 g++-5 libgtest-dev cmake qt5-qmake qt5-default qtbase5-dev qttools5-dev-tools
+</code></pre>
+
+<ul>
+<li>To build gtest run</li>
+</ul>
+
+<pre><code>cd /usr/src/gtest
+sudo cmake .
+sudo cmake --build . 
+sudo mv libg* /usr/local/lib/
+</code></pre>
+
+<ul>
+<li>you will also need to pull the dependency for the redis client trought</li>
+</ul>
+
+<pre><code>git clone https://github.com/Cylix/cpp_redis.git 
+cd cpp_redis 
+mkdir build 
+cd build 
+cmake .. 
+make -j 
+sudo make install -j 
+sudo cp /usr/local/lib/libcpp_redis.so /usr/lib/libcpp_redis.so
+</code></pre>
+
+<ul>
+<li>the code can be build using the next command line on the directory</li>
+</ul>
+
+<pre><code>qmake 
+make
+</code></pre>
+
+<p><strong>optional</strong></p>
+
+<ul>
+<li>Use <code>Qt Creator</code> as development enviroment, it can be installed by:</li>
+</ul>
+
+<pre><code>sudo apt-get install qtcreator
+</code></pre>
+
+<ul>
+<li>Install and use Postman for integration testing (<code>./test/Test_P2S_Postman.json</code>).</li>
+</ul>
 
     </div>
 
@@ -350,9 +412,11 @@ Removing branches will not remove commits, they will just become unreachable. Un
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/daily/">daily</a>
+  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/p2p/">p2p</a>
   
-  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/learn/">learn</a>
+  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/sync/">sync</a>
+  
+  <a class="btn btn-primary btn-outline" href="http://kanekotic.github.io/tags/json-rpc/">json-rpc</a>
   
 </div>
 
@@ -361,55 +425,24 @@ Removing branches will not remove commits, they will just become unreachable. Un
 
     
     
-    <div class="article-widget">
-      <div class="hr-light"></div>
-      <h3>Related</h3>
-      <ul>
-        
-        <li><a href="/post/01-29-csharp-path-to-system-folders/">C# - Paths to system folders</a></li>
-        
-        <li><a href="/post/01-28-extension-methods-overlap-with-linq/">C# - Extension methods overlap with linq</a></li>
-        
-        <li><a href="/post/01-27-interface-with-extension-methods/">C# - Fluent Interfaces with Extension Methods</a></li>
-        
-        <li><a href="/post/01-27-meteor-the-beginning/">Meteor the beginning</a></li>
-        
-        <li><a href="/post/01-26-gitbook-the-beginning/">Gitbook - The beginning</a></li>
-        
-      </ul>
-    </div>
     
 
     
+      
+      
+      
+      
 
+      
+      
+      
+      
     
-<section id="comments">
-  <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "kanekotics" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
 
   </div>
 </article>
+
+
 
 <footer class="site-footer">
   <div class="container">
