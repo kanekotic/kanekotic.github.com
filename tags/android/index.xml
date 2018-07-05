@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 00:00:01 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Coin Run</title>
       <link>http://kanekotic.github.io/project/coin-run/</link>
-      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/coin-run/</guid>
       <description>Coin Run Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen. This is my first app, so very simple game. Developed using: - Unreal Engine - Kenney 2D Assests</description>

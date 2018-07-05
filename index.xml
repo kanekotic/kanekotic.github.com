@@ -739,6 +739,48 @@ libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;sca
     </item>
     
     <item>
+      <title>MailCrypt</title>
+      <link>http://kanekotic.github.io/project/mail-crypt/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/mail-crypt/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-9amigx-https-user-images-githubusercontent-com-3071208-42293424-65e7e83a-7fda-11e8-8872-60852153087f-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42293424-65e7e83a-7fda-11e8-8872-60852153087f.png&#34; alt=&#34;logomakr_9amigx&#34; /&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;Engine and electron app that allows to add pgp encrytion to gmail. To ensure privacy of data.&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/9AMIGX&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/9AMIGX&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coin Run</title>
+      <link>http://kanekotic.github.io/project/coin-run/</link>
+      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/coin-run/</guid>
+      <description>
+
+&lt;h1 id=&#34;coin-run&#34;&gt;Coin Run&lt;/h1&gt;
+
+&lt;p&gt;Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen.
+This is my first app, so very simple game.
+Developed using:
+- Unreal Engine
+- Kenney 2D Assests&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793489/2c808a60-cab1-11e5-8bac-47785f5593fc.png&#34; alt=&#34;img1&#34; /&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793490/2c84a500-cab1-11e5-9e75-e45d61cd4d40.png&#34; alt=&#34;img2&#34; /&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793491/2c8af2ca-cab1-11e5-90d1-722c242a5b05.png&#34; alt=&#34;img3&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Runtastic Unofficial API</title>
       <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
@@ -925,28 +967,6 @@ workoutSet(user, sessions[0] ,{authToken : token, user : user})
 &lt;h4 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h4&gt;
 
 &lt;p&gt;This is not affiliated or endorset by runtastic, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Coin Run</title>
-      <link>http://kanekotic.github.io/project/coin-run/</link>
-      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/coin-run/</guid>
-      <description>
-
-&lt;h1 id=&#34;coin-run&#34;&gt;Coin Run&lt;/h1&gt;
-
-&lt;p&gt;Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen.
-This is my first app, so very simple game.
-Developed using:
-- Unreal Engine
-- Kenney 2D Assests&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793489/2c808a60-cab1-11e5-8bac-47785f5593fc.png&#34; alt=&#34;img1&#34; /&gt;
-&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793490/2c84a500-cab1-11e5-9e75-e45d61cd4d40.png&#34; alt=&#34;img2&#34; /&gt;
-&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793491/2c8af2ca-cab1-11e5-90d1-722c242a5b05.png&#34; alt=&#34;img3&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1202,106 +1222,6 @@ workoutSet({authToken: token, userId: userId, time: Date.now()-70, duration: 60,
 &lt;h2 id=&#34;disclaimer-legalese-and-everything-else&#34;&gt;Disclaimer, legalese and everything else.&lt;/h2&gt;
 
 &lt;p&gt;This is not affiliated or endorset by Endomondo, or any other party. This software available on the site is provided &amp;ldquo;as is&amp;rdquo; and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the user under the pseudonym Kanekotic, or any of their contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OAuth Electron</title>
-      <link>http://kanekotic.github.io/project/oauth-electron/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/oauth-electron/</guid>
-      <description>
-
-&lt;h1 id=&#34;drawing-1-https-cloud-githubusercontent-com-assets-3071208-14776049-cb6164ea-0ac3-11e6-8219-c8a46a56e3e5-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14776049/cb6164ea-0ac3-11e6-8219-c8a46a56e3e5.png&#34; alt=&#34;drawing 1&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;this package is currently in development and is not available for use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Use OAuth in a simple way inside your electron App.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;add it to your elenctron project using npm command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install oauth-electron --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;h3 id=&#34;oauth1&#34;&gt;Oauth1&lt;/h3&gt;
-
-&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth2;
-var data = require(&#39;oauth-electron-twitter&#39;).oauth2_data;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;use or extend the oauth object as per your requirements&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;key&amp;quot; : &amp;quot;&amp;quot;,
-    &amp;quot;secret&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;window&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;url&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;request_token&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;access_token&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;version&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;callback&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;signature_method&amp;quot; : &amp;quot;&amp;quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pass the previously named object and a the widow to display into the login process.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var auth = new oauth();
-auth.login(info, window);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    oauth_access_token: ***,
-    oauth_access_token_secret: ***
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;oauth2&#34;&gt;Oauth2&lt;/h3&gt;
-
-&lt;p&gt;add the require for ouath and twitter specific code from this package&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var oauth = require(&#39;oauth-electron-twitter&#39;).oauth2;
-var data = require(&#39;oauth-electron-twitter&#39;).oauth2_data;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;use or extend the oauth object as per your requirements&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;key&amp;quot; : &amp;quot;&amp;quot;,
-    &amp;quot;secret&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;window&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;base_url&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;auth_path&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;token_path&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;customHeaders&amp;quot; : &amp;quot;&amp;quot;;
-    &amp;quot;scope&amp;quot; : &amp;quot;&amp;quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pass the previously named object and a the widow to display into the login process.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var auth = new oauth();
-auth.login(info, window);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the login function will return a Promise with the acces token and secret&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    oauth_access_token: ***,
-    oauth_refresh_token: ***
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h6 id=&#34;logo-award-passport-graphics-by-a-href-http-www-freepik-com-freepik-a-from-a-href-http-www-flaticon-com-flaticon-a-are-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-made-with-a-href-http-logomakr-com-title-logo-maker-logo-maker-a&#34;&gt;logo Award,Passport graphics by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; are licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/h6&gt;
 </description>
     </item>
     

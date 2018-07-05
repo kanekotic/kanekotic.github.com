@@ -114,6 +114,25 @@ depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Pat
     </item>
     
     <item>
+      <title>MailCrypt</title>
+      <link>http://kanekotic.github.io/project/mail-crypt/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/mail-crypt/</guid>
+      <description>Motivation Engine and electron app that allows to add pgp encrytion to gmail. To ensure privacy of data.
+Logo Check out the new logo that I created on LogoMakr.com https://logomakr.com/9AMIGX</description>
+    </item>
+    
+    <item>
+      <title>Coin Run</title>
+      <link>http://kanekotic.github.io/project/coin-run/</link>
+      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/coin-run/</guid>
+      <description>Coin Run Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen. This is my first app, so very simple game. Developed using: - Unreal Engine - Kenney 2D Assests</description>
+    </item>
+    
+    <item>
       <title>Runtastic Unofficial API</title>
       <link>http://kanekotic.github.io/project/runtastic-unofficial-api/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
@@ -124,15 +143,6 @@ installation npm install runtastic-unofficial-api  Use the API provides the next
 Authentication Get login information and tokens. The next snippet describes an example of the call:
 var authenticate = require(&#39;runtastic-unofficial-api&#39;).authenticate authenticate({email: &amp;lt;email&amp;gt;, password: &amp;lt;password&amp;gt;}) .then((result) =&amp;gt; console.log(result)) .catch((result) =&amp;gt; console.log(result))  the complete set of parameters get determined by:
 { &#39;user[email]&#39;: params.email, &#39;user[password]&#39;: params.password, grant_type: &#39;password&#39; }  The result of the promise will be if failed the error that caused it and if success an result object similar to this:</description>
-    </item>
-    
-    <item>
-      <title>Coin Run</title>
-      <link>http://kanekotic.github.io/project/coin-run/</link>
-      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/coin-run/</guid>
-      <description>Coin Run Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen. This is my first app, so very simple game. Developed using: - Unreal Engine - Kenney 2D Assests</description>
     </item>
     
     <item>
