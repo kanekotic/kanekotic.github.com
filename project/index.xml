@@ -124,6 +124,28 @@ Logo Check out the new logo that I created on LogoMakr.com https://logomakr.com/
     </item>
     
     <item>
+      <title>DynamoDB CLI</title>
+      <link>http://kanekotic.github.io/project/dynamo-cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dynamo-cli/</guid>
+      <description>dynamo operations command line (In development not production ready, use with caution.)
+Use Case provides a easy to use command line interface to interact with DynamoDb.
+Supported commands current implementation requires you to have correct setup of enviroment variables logind for aws in your command line.
+Upload from CSV dynamo-cli upload &amp;lt;path to csv&amp;gt;  TODO Add more credentials support Add download Command TBD  Logo Check out the new logo that I created on LogoMakr.</description>
+    </item>
+    
+    <item>
+      <title>CabritoBot</title>
+      <link>http://kanekotic.github.io/project/cabrito-bot/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/cabrito-bot/</guid>
+      <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
+Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
+    </item>
+    
+    <item>
       <title>Coin Run</title>
       <link>http://kanekotic.github.io/project/coin-run/</link>
       <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>

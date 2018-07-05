@@ -104,6 +104,24 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/dynamo-cli/</loc>
+      <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/cabrito-bot/</loc>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/project/coin-run/</loc>
       <lastmod>2017-05-30T00:00:01+00:00</lastmod>
     </url>
@@ -320,6 +338,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/advert/</loc>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/analytics/</loc>
       <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -350,7 +378,37 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/aws/</loc>
+      <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/bot/</loc>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/cli/</loc>
+      <lastmod>2017-06-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -370,7 +428,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/command-line/</loc>
-      <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -411,6 +469,16 @@
     
       <loc>http://kanekotic.github.io/tags/dependencies/</loc>
       <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/dynamodb/</loc>
+      <lastmod>2017-06-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -609,6 +677,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/goat/</loc>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/google/</loc>
       <lastmod>2017-07-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -731,6 +809,16 @@
     
       <loc>http://kanekotic.github.io/tags/logstash/</loc>
       <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/messenger/</loc>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -929,7 +1017,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/</loc>
-      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+      <lastmod>2017-05-30T00:01:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

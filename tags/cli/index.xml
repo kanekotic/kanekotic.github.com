@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cli on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/cli/</link>
+    <description>Recent content in Cli on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DynamoDB CLI</title>
+      <link>http://kanekotic.github.io/project/dynamo-cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dynamo-cli/</guid>
+      <description>dynamo operations command line (In development not production ready, use with caution.)
+Use Case provides a easy to use command line interface to interact with DynamoDb.
+Supported commands current implementation requires you to have correct setup of enviroment variables logind for aws in your command line.
+Upload from CSV dynamo-cli upload &amp;lt;path to csv&amp;gt;  TODO Add more credentials support Add download Command TBD  Logo Check out the new logo that I created on LogoMakr.</description>
+    </item>
+    
+  </channel>
+</rss>

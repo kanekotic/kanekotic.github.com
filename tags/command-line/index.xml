@@ -7,20 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Dependency Shrinker</title>
-      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Gatoo</title>
+      <link>http://kanekotic.github.io/project/gatoo/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
-      <description>Mission a command line tool to check what dependencies of an executable are really critical and not
-Installation npm install dependency-shrinker  use this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
-depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]  Warning if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.</description>
+      <guid>http://kanekotic.github.io/project/gatoo/</guid>
+      <description>This project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).
+Use as Command Line install globally with npm install gatoo -g. Aftyer this it can be run with the next command:
+gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;  Use as library first step is to add this to your project throught yarn add gatoo or npm install gatoo</description>
+    </item>
+    
+    <item>
+      <title>DynamoDB CLI</title>
+      <link>http://kanekotic.github.io/project/dynamo-cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/dynamo-cli/</guid>
+      <description>dynamo operations command line (In development not production ready, use with caution.)
+Use Case provides a easy to use command line interface to interact with DynamoDb.
+Supported commands current implementation requires you to have correct setup of enviroment variables logind for aws in your command line.
+Upload from CSV dynamo-cli upload &amp;lt;path to csv&amp;gt;  TODO Add more credentials support Add download Command TBD  Logo Check out the new logo that I created on LogoMakr.</description>
     </item>
     
   </channel>

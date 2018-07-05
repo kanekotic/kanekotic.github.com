@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 00:01:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Advert</title>
+      <link>http://kanekotic.github.io/tags/advert/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/advert/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Analytics</title>
@@ -40,6 +49,33 @@
     </item>
     
     <item>
+      <title>Aws</title>
+      <link>http://kanekotic.github.io/tags/aws/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bot</title>
+      <link>http://kanekotic.github.io/tags/bot/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cli</title>
+      <link>http://kanekotic.github.io/tags/cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Command line</title>
       <link>http://kanekotic.github.io/tags/command-line/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
@@ -51,7 +87,7 @@
     <item>
       <title>Command-line</title>
       <link>http://kanekotic.github.io/tags/command-line/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/command-line/</guid>
       <description></description>
@@ -90,6 +126,15 @@
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/dependencies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DynamoDB</title>
+      <link>http://kanekotic.github.io/tags/dynamodb/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/dynamodb/</guid>
       <description></description>
     </item>
     
@@ -265,6 +310,15 @@
     </item>
     
     <item>
+      <title>Goat</title>
+      <link>http://kanekotic.github.io/tags/goat/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/goat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Google</title>
       <link>http://kanekotic.github.io/tags/google/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
@@ -369,6 +423,15 @@
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Messenger</title>
+      <link>http://kanekotic.github.io/tags/messenger/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/messenger/</guid>
       <description></description>
     </item>
     
