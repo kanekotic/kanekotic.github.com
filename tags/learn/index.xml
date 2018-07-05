@@ -98,8 +98,7 @@ Meteor.publish(&#39;chapter&#39;, function(id, name){ check(id,String); check(na
       
       <guid>http://kanekotic.github.io/post/02-01-vnext-sonarqube-integration/</guid>
       <description>The modifications required to use the integrated sonarqube steps are:
- On your administration panel add a new Generic Endpoint with the connection name you decide and the sonarqube server address.  Configure the start step as per the next image
- select the endpoint configured before Add the project parameters:  key (this is an unique identifier). Name (display name for your software). Version (related software version).    </description>
+ On your administration panel add a new Generic Endpoint with the connection name you decide and the sonarqube server address.   Configure the start step as per the next image  select the endpoint configured before Add the project parameters:  key (this is an unique identifier). Name (display name for your software). Version (related software version).    </description>
     </item>
     
     <item>
