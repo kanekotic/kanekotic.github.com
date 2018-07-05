@@ -41,10 +41,10 @@ var authenticate = require(&#39;nike-unofficial-api&#39;).authenticate authentic
     
     <item>
       <title>Endomondo Unofficial API</title>
-      <link>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</link>
+      <link>http://kanekotic.github.io/project/endomondo-unofficial-api/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api.1/</guid>
+      <guid>http://kanekotic.github.io/project/endomondo-unofficial-api/</guid>
       <description>This is a promise based unofficial endomondo api.
 installation npm install endomondo-unofficial-api  Use the API provides the next functionalities
 Authentication Get login information and tokens. The next snippet describes an example of the call:
