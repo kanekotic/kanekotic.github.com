@@ -33,7 +33,7 @@
     <item>
       <title>Android</title>
       <link>http://kanekotic.github.io/tags/android/</link>
-      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/android/</guid>
       <description></description>
@@ -45,6 +45,24 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Atom</title>
+      <link>http://kanekotic.github.io/tags/atom/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Augmented reality</title>
+      <link>http://kanekotic.github.io/tags/augmented-reality/</link>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/augmented-reality/</guid>
       <description></description>
     </item>
     
@@ -63,6 +81,15 @@
       <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Calendar</title>
+      <link>http://kanekotic.github.io/tags/calendar/</link>
+      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/calendar/</guid>
       <description></description>
     </item>
     
@@ -472,6 +499,15 @@
     </item>
     
     <item>
+      <title>Package</title>
+      <link>http://kanekotic.github.io/tags/package/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pgp</title>
       <link>http://kanekotic.github.io/tags/pgp/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
@@ -580,6 +616,24 @@
     </item>
     
     <item>
+      <title>Template</title>
+      <link>http://kanekotic.github.io/tags/template/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Timecards</title>
+      <link>http://kanekotic.github.io/tags/timecards/</link>
+      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/timecards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Toggle</title>
       <link>http://kanekotic.github.io/tags/toggle/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
@@ -612,6 +666,15 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/unofficial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>http://kanekotic.github.io/tags/vue/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/vue/</guid>
       <description></description>
     </item>
     

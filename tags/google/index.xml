@@ -23,5 +23,15 @@ Use as Command Line install globally with npm install gatoo -g. Aftyer this it c
 gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;  Use as library first step is to add this to your project throught yarn add gatoo or npm install gatoo</description>
     </item>
     
+    <item>
+      <title>Gtimecarder</title>
+      <link>http://kanekotic.github.io/project/gtimecarder/</link>
+      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/gtimecarder/</guid>
+      <description>chrome extension to fill timecard systems from google calendar
+LOGO Check out the new logo that I created on LogoMakr.com https://logomakr.com/5UdULo</description>
+    </item>
+    
   </channel>
 </rss>

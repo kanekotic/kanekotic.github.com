@@ -122,6 +122,15 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/little-box/</loc>
+      <lastmod>2017-05-30T00:00:10+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/project/coin-run/</loc>
       <lastmod>2017-05-30T00:00:01+00:00</lastmod>
     </url>
@@ -338,6 +347,24 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/project/vue-atom-template/</loc>
+      <lastmod>2015-06-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/project/gtimecarder/</loc>
+      <lastmod>2014-06-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/advert/</loc>
       <lastmod>2017-05-30T00:01:00+00:00</lastmod>
       <priority>0</priority>
@@ -359,7 +386,7 @@
     <url>
     
       <loc>http://kanekotic.github.io/tags/android/</loc>
-      <lastmod>2017-05-30T00:00:01+00:00</lastmod>
+      <lastmod>2017-05-30T00:00:10+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -370,6 +397,26 @@
     
       <loc>http://kanekotic.github.io/tags/api/</loc>
       <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/atom/</loc>
+      <lastmod>2015-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/augmented-reality/</loc>
+      <lastmod>2017-05-30T00:00:10+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -390,6 +437,16 @@
     
       <loc>http://kanekotic.github.io/tags/bot/</loc>
       <lastmod>2017-05-30T00:01:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/calendar/</loc>
+      <lastmod>2014-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -867,6 +924,16 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/package/</loc>
+      <lastmod>2015-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/pgp/</loc>
       <lastmod>2017-06-28T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -1026,6 +1093,26 @@
     
     <url>
     
+      <loc>http://kanekotic.github.io/tags/template/</loc>
+      <lastmod>2015-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/timecards/</loc>
+      <lastmod>2014-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://kanekotic.github.io/tags/toggle/</loc>
       <lastmod>2017-06-28T00:00:01+00:00</lastmod>
       <priority>0</priority>
@@ -1058,6 +1145,16 @@
     
       <loc>http://kanekotic.github.io/tags/unofficial/</loc>
       <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kanekotic.github.io/tags/vue/</loc>
+      <lastmod>2015-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 30 May 2017 00:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 May 2017 00:00:10 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LittleBox</title>
+      <link>http://kanekotic.github.io/project/little-box/</link>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/little-box/</guid>
+      <description>Augmented reality project, spawns a rose on a glyph.
+LOGO Check out the new logo that I created on LogoMakr.com https://logomakr.com/1p2i5d</description>
+    </item>
     
     <item>
       <title>Coin Run</title>

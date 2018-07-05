@@ -146,6 +146,16 @@ Generate a prebuilt package  Create new project  npm init   Add this package as 
     </item>
     
     <item>
+      <title>LittleBox</title>
+      <link>http://kanekotic.github.io/project/little-box/</link>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/little-box/</guid>
+      <description>Augmented reality project, spawns a rose on a glyph.
+LOGO Check out the new logo that I created on LogoMakr.com https://logomakr.com/1p2i5d</description>
+    </item>
+    
+    <item>
       <title>Coin Run</title>
       <link>http://kanekotic.github.io/project/coin-run/</link>
       <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
@@ -252,6 +262,26 @@ Protocol capable of P2P (master to master) syncing key-value datastores. using c
       <description>Intent Integration of Specflow autogeneration for Rider
 Setup clone this repo, and make sure you have intellij installed the community version should be enough. you can use the next Gradle commands from command line:
 gradle compile # generate the code gradle check # gnerate the code and test  TODO Table Support Parameters Support Move to Rider style plugin XUnit Support MSTest Support Add Files to project  Logo Check out the new logo that I created on LogoMaker.</description>
+    </item>
+    
+    <item>
+      <title>Vue Atom Template</title>
+      <link>http://kanekotic.github.io/project/vue-atom-template/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/vue-atom-template/</guid>
+      <description>this is a template for generating a package using vue as rendering framework
+Logo Check out the new logo that I created on LogoMakr.com https://logomakr.com/3lbtkb</description>
+    </item>
+    
+    <item>
+      <title>Gtimecarder</title>
+      <link>http://kanekotic.github.io/project/gtimecarder/</link>
+      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/gtimecarder/</guid>
+      <description>chrome extension to fill timecard systems from google calendar
+LOGO Check out the new logo that I created on LogoMakr.com https://logomakr.com/5UdULo</description>
     </item>
     
   </channel>
