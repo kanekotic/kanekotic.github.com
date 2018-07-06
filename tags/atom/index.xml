@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 29 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jun 2017 01:01:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/atom/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PlayYoutube Atom</title>
+      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <description>Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window
+Use  &amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:  input some search terms and hit enter. Navigate the results: Using the mouse. Using up and down key. Play video: Click. Using side key.  &amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player &amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player &amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content  Authors and Contributors @kanekotic</description>
+    </item>
     
     <item>
       <title>Vue Atom Template</title>

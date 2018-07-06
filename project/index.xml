@@ -59,9 +59,43 @@ Add to your workspace on the root folder a .travis.yml, this plugin accept the n
     </item>
     
     <item>
+      <title>PlayYoutube Atom</title>
+      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <description>Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window
+Use  &amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:  input some search terms and hit enter. Navigate the results: Using the mouse. Using up and down key. Play video: Click. Using side key.  &amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player &amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player &amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content  Authors and Contributors @kanekotic</description>
+    </item>
+    
+    <item>
+      <title>PlayYoutube Visual Studio</title>
+      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <description>Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.
+follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.
+Use put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed
+Authors and Contributors @kanekotic</description>
+    </item>
+    
+    <item>
+      <title>Search Error On</title>
+      <link>http://kanekotic.github.io/project/search-error-on/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/search-error-on/</guid>
+      <description>This plugin for visual studio has been created to be able to find the errors generated during compilation time on your favourite web browser.
+Use Select one or more errors in your Error List Window. Right click and hit &amp;lsquo;Search Error On&amp;rsquo;.
+Configure Under &amp;lsquo;Tools -&amp;gt; Options-&amp;gt; Search Error On&amp;rsquo; you will be able to select one of your favourite search engines. Authors and Contributors @kanekotic
+Support or Contact Having trouble with &amp;lsquo;Search Error On&amp;hellip;&amp;rsquo;?</description>
+    </item>
+    
+    <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
       <description>Use Case command line and library to convert guids from oracle raw format to formated guid and viceversa

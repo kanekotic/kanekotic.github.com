@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Studio on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/visual-studio/</link>
+    <description>Recent content in Visual Studio on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 29 Jun 2017 01:00:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PlayYoutube Visual Studio</title>
+      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <description>Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.
+follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.
+Use put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed
+Authors and Contributors @kanekotic</description>
+    </item>
+    
+    <item>
+      <title>Search Error On</title>
+      <link>http://kanekotic.github.io/project/search-error-on/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/search-error-on/</guid>
+      <description>This plugin for visual studio has been created to be able to find the errors generated during compilation time on your favourite web browser.
+Use Select one or more errors in your Error List Window. Right click and hit &amp;lsquo;Search Error On&amp;rsquo;.
+Configure Under &amp;lsquo;Tools -&amp;gt; Options-&amp;gt; Search Error On&amp;rsquo; you will be able to select one of your favourite search engines. Authors and Contributors @kanekotic
+Support or Contact Having trouble with &amp;lsquo;Search Error On&amp;hellip;&amp;rsquo;?</description>
+    </item>
+    
+  </channel>
+</rss>

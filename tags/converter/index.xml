@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Fri, 30 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jun 2017 01:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/converter/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
       <description>Use Case command line and library to convert guids from oracle raw format to formated guid and viceversa

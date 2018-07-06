@@ -388,9 +388,139 @@ $ jpi server
     </item>
     
     <item>
+      <title>PlayYoutube Atom</title>
+      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-0iwknv-https-user-images-githubusercontent-com-3071208-42363375-bcf912a2-80f7-11e8-999b-82e107a3d1af-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363375-bcf912a2-80f7-11e8-999b-82e107a3d1af.png&#34; alt=&#34;logomakr_0iwknv&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/11987290/d6f8e8c0-a9dc-11e5-8d1e-c0ee5a2922e1.gif&#34; alt=&#34;playyoutube-atom&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:
+
+&lt;ul&gt;
+&lt;li&gt;input some search terms and hit enter.&lt;/li&gt;
+&lt;li&gt;Navigate the results:&lt;/li&gt;
+&lt;li&gt;Using the mouse.&lt;/li&gt;
+&lt;li&gt;Using up and down key.&lt;/li&gt;
+&lt;li&gt;Play video:&lt;/li&gt;
+&lt;li&gt;Click.&lt;/li&gt;
+&lt;li&gt;Using side key.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+
+&lt;p&gt;@kanekotic&lt;/p&gt;
+
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+
+&lt;p&gt;Having trouble with &amp;lsquo;playyoutube&amp;rsquo;? Any idea of how to improve it?
+Review our &lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/wiki&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; or &lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/issues&#34; target=&#34;_blank&#34;&gt;add issue/recomendation&lt;/a&gt; and we will sort it out.&lt;/p&gt;
+
+&lt;p&gt;###Todo:
+- [ ] make video frame draggable&lt;/p&gt;
+
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/0IWkNv&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/0IWkNv&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PlayYoutube Visual Studio</title>
+      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <description>
+
+&lt;h1 id=&#34;playyoutubeheader-https-user-images-githubusercontent-com-3071208-42363002-129d9374-80f6-11e8-9ccf-1bd222f07884-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363002-129d9374-80f6-11e8-9ccf-1bd222f07884.png&#34; alt=&#34;playyoutubeheader&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gitter.im/Hatisoft/PlayYouTube?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Join%20Chat.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/PlayYouTube&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.&lt;/p&gt;
+
+&lt;p&gt;follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.&lt;/p&gt;
+
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+
+&lt;p&gt;put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8636943/f13e5d16-287a-11e5-960b-21bdd390f5a2.png&#34; alt=&#34;playyoutubecapture&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+
+&lt;p&gt;@kanekotic&lt;/p&gt;
+
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+
+&lt;p&gt;Having trouble with &amp;lsquo;PlayYouTube&amp;rsquo;? Any idea of how to improve it?
+Review our &lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/wiki&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; or &lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/issues&#34; target=&#34;_blank&#34;&gt;add issue/recomendation&lt;/a&gt; and we’ll sort it out.&lt;/p&gt;
+
+&lt;p&gt;###Build State
+CI: &lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/playyoutube-877b8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/mm7u1f8dm2vn5l27?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Release: &lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/playyoutube&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/qgykpbj3ifyfu0i7?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Search Error On</title>
+      <link>http://kanekotic.github.io/project/search-error-on/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/search-error-on/</guid>
+      <description>
+
+&lt;h1 id=&#34;searchonheader-https-user-images-githubusercontent-com-3071208-42362398-5bb7dee6-80f3-11e8-9ecc-56dcc2bdda97-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42362398-5bb7dee6-80f3-11e8-9ecc-56dcc2bdda97.png&#34; alt=&#34;searchonheader&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gitter.im/Hatisoft/SearchErrorOn?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Join%20Chat.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/SearchErrorOn&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This plugin for visual studio has been created to be able to find the errors generated during compilation time on your favourite web browser.&lt;/p&gt;
+
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+
+&lt;p&gt;Select one or more errors in your Error List Window. Right click and hit &amp;lsquo;Search Error On&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8430164/f75af2c2-1f2e-11e5-99c5-ae979995bd3b.png&#34; alt=&#34;search on&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;configure&#34;&gt;Configure&lt;/h3&gt;
+
+&lt;p&gt;Under &amp;lsquo;Tools -&amp;gt; Options-&amp;gt; Search Error On&amp;rsquo; you will be able to select one of your favourite search engines.
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8430166/f9b19ff8-1f2e-11e5-91b4-9c7a8aae0e21.png&#34; alt=&#34;search on configuration&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+
+&lt;p&gt;@kanekotic&lt;/p&gt;
+
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+
+&lt;p&gt;Having trouble with &amp;lsquo;Search Error On&amp;hellip;&amp;rsquo;? Any idea of how to improve it?
+Review our &lt;a href=&#34;https://github.com/Hatisoft/SearchErrorOn/wiki&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; or &lt;a href=&#34;https://github.com/Hatisoft/SearchErrorOn/issues&#34; target=&#34;_blank&#34;&gt;add issue/recomendation&lt;/a&gt; and we’ll sort it out.&lt;/p&gt;
+
+&lt;p&gt;###Build State
+CI: &lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/searcherroron&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/3dfrnphpa1l4tlyr?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Release: &lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/searcherroron-5ibi9&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/1b25khghlfjq9cho?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Raw Guid Converter</title>
       <link>http://kanekotic.github.io/project/raw-guid-converter/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/raw-guid-converter/</guid>
       <description>
@@ -794,130 +924,6 @@ libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;sca
 &lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
 
 &lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/31ffss&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/31ffss&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CabritoBot</title>
-      <link>http://kanekotic.github.io/project/cabrito-bot/</link>
-      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/cabrito-bot/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-3dkn9b-https-cloud-githubusercontent-com-assets-3071208-22477192-c7ce1d86-e7aa-11e6-87de-c24336e1ea3e-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22477192/c7ce1d86-e7aa-11e6-87de-c24336e1ea3e.png&#34; alt=&#34;logomakr_3dkn9b&#34; /&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;mission&#34;&gt;Mission&lt;/h1&gt;
-
-&lt;p&gt;Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.&lt;/p&gt;
-
-&lt;h1 id=&#34;generate-a-prebuilt-package&#34;&gt;Generate a prebuilt package&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create new project&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;npm init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Add this package as dependency&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install any-prebuilt --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create &lt;code&gt;postinstall.js&lt;/code&gt; file with content:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create &lt;code&gt;index.js&lt;/code&gt; file with content:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var anyPrebuilt = require(&#39;any-prebuilt&#39;)
-anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt)
-module.exports.path = anyPrebuilt.path
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;On the &lt;code&gt;package.json&lt;/code&gt; add a prebuilt element (you can also add this to any other file that provides a jason object to both index and postinstall.js).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;  &amp;quot;prebuilt&amp;quot;: {
-    &amp;quot;arch&amp;quot;: &amp;lt;string&amp;gt;, // Target architecture (supported: `ia32` / `x64`. Default value: machine&#39;s architecture)
-    &amp;quot;platform&amp;quot;: &amp;lt;string&amp;gt;, //Target platform (supported: `win` / `osx` / `linux`. Default value: machine&#39;s platform)
-    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
-    &amp;quot;targetDir&amp;quot;: &amp;lt;string&amp;gt;, //Target directory (where to install the binaries. Default value: `./bin`)
-    &amp;quot;targetBin&amp;quot;: &amp;lt;string&amp;gt;, //Target binary (the precompiled binary to be required in node. No default value)
-    &amp;quot;version&amp;quot;: &amp;lt;string&amp;gt;, //Target version (format: `vX.Y.Z`. Default value: latest)
-    &amp;quot;user&amp;quot;: &amp;lt;string&amp;gt;, // user or Organization (format: string. Is `required`)
-    &amp;quot;repo&amp;quot;: &amp;lt;string&amp;gt;, //Origin repo (format: string. Is `required`)
-    &amp;quot;token&amp;quot;: &amp;lt;string&amp;gt; //Github token (format: string. `required` if private repo)
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;In your &lt;code&gt;package .json&lt;/code&gt; add the next script:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;scripts&amp;quot;: {
-    &amp;quot;postinstall&amp;quot;: &amp;quot;node postinstall.js&amp;quot;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As seen before this can be configured using a json object but also can be configured or overrided using the next enviroment variables &lt;code&gt;PREBUILT_ARCH&lt;/code&gt;, &lt;code&gt;PREBUILT_PLATFORM&lt;/code&gt;, &lt;code&gt;PREBUILT_VERSION&lt;/code&gt;, &lt;code&gt;PREBUILT_BINARY&lt;/code&gt;, &lt;code&gt;PREBUILT_TOKEN&lt;/code&gt;, &lt;code&gt;PREBUILT_REPO&lt;/code&gt;, &lt;code&gt;PREBUILT_USER&lt;/code&gt; and &lt;code&gt;PREBUILT_TARGET_DIR&lt;/code&gt; environment variables.&lt;/p&gt;
-
-&lt;h3 id=&#34;special-thanks&#34;&gt;Special thanks&lt;/h3&gt;
-
-&lt;p&gt;to all the contributors to &lt;a href=&#34;https://github.com/Ivshti/wcjs-prebuilt&#34; target=&#34;_blank&#34;&gt;wcjs-prebuilt&lt;/a&gt; that this package is based on.&lt;/p&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Hours graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>LittleBox</title>
-      <link>http://kanekotic.github.io/project/little-box/</link>
-      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/little-box/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-1p2i5d-https-user-images-githubusercontent-com-3071208-42305129-cd1dd81c-8029-11e8-892a-c30fe3140462-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42305129-cd1dd81c-8029-11e8-892a-c30fe3140462.png&#34; alt=&#34;logomakr_1p2i5d&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;Augmented reality project, spawns a rose on a glyph.&lt;/p&gt;
-
-&lt;h4 id=&#34;logo&#34;&gt;LOGO&lt;/h4&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/1p2i5d&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/1p2i5d&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Coin Run</title>
-      <link>http://kanekotic.github.io/project/coin-run/</link>
-      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/coin-run/</guid>
-      <description>
-
-&lt;h1 id=&#34;coin-run&#34;&gt;Coin Run&lt;/h1&gt;
-
-&lt;p&gt;Run and Jump around without touching the stones to get as many coins as you can. Use the accelerometer and tap the screen.
-This is my first app, so very simple game.
-Developed using:
-- Unreal Engine
-- Kenney 2D Assests&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793489/2c808a60-cab1-11e5-8bac-47785f5593fc.png&#34; alt=&#34;img1&#34; /&gt;
-&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793490/2c84a500-cab1-11e5-9e75-e45d61cd4d40.png&#34; alt=&#34;img2&#34; /&gt;
-&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/12793491/2c8af2ca-cab1-11e5-90d1-722c242a5b05.png&#34; alt=&#34;img3&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

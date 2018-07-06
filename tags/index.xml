@@ -51,7 +51,7 @@
     <item>
       <title>Atom</title>
       <link>http://kanekotic.github.io/tags/atom/</link>
-      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/atom/</guid>
       <description></description>
@@ -130,9 +130,18 @@
     </item>
     
     <item>
+      <title>Compilation</title>
+      <link>http://kanekotic.github.io/tags/compilation/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Converter</title>
       <link>http://kanekotic.github.io/tags/converter/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/converter/</guid>
       <description></description>
@@ -216,6 +225,15 @@
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/endomondo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Error</title>
+      <link>http://kanekotic.github.io/tags/error/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/error/</guid>
       <description></description>
     </item>
     
@@ -375,7 +393,7 @@
     <item>
       <title>Guid</title>
       <link>http://kanekotic.github.io/tags/guid/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/guid/</guid>
       <description></description>
@@ -483,7 +501,7 @@
     <item>
       <title>Oracle</title>
       <link>http://kanekotic.github.io/tags/oracle/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/oracle/</guid>
       <description></description>
@@ -546,7 +564,7 @@
     <item>
       <title>Raw</title>
       <link>http://kanekotic.github.io/tags/raw/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/raw/</guid>
       <description></description>
@@ -567,6 +585,15 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/runtastic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://kanekotic.github.io/tags/search/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/search/</guid>
       <description></description>
     </item>
     
@@ -670,6 +697,24 @@
     </item>
     
     <item>
+      <title>Video</title>
+      <link>http://kanekotic.github.io/tags/video/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Studio</title>
+      <link>http://kanekotic.github.io/tags/visual-studio/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/visual-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vue</title>
       <link>http://kanekotic.github.io/tags/vue/</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
@@ -684,6 +729,15 @@
       <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/yml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Youtube</title>
+      <link>http://kanekotic.github.io/tags/youtube/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/youtube/</guid>
       <description></description>
     </item>
     
