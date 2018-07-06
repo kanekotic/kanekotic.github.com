@@ -48,16 +48,16 @@ deploy:
   repo: &amp;lt;User or Organization&amp;gt;/&amp;lt;User or Organization&amp;gt;.github.com
   target-branch: master
   skip-cleanup: true
-  email: $GITHUB_EMAIL
   github-token: $GITHUB_TOKEN
+  committer-from-gh: true
   keep-history: true
   on:
     branch: master
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;you will have to change the repo content to match your destination repository (*2). The previous code what does is installs hugo in the deployment machine, builds your web page and deploys using the pages plugin.&lt;/p&gt;
+&lt;p&gt;you will have to change the repo content to match your destination repository (*2). The previous code what does is installs hugo in the deployment machine, builds your web page and deploys using the pages plugin. If you have a custom domain make sure to set the property &lt;code&gt;fqdn&lt;/code&gt; to your domain, if not you will overwrite this field in each commit.&lt;/p&gt;
 
-&lt;p&gt;After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to &lt;code&gt;More Options -&amp;gt; Settings -&amp;gt; Environment Variables&lt;/code&gt; and add &lt;code&gt;GITHUB_EMAIL&lt;/code&gt; as your email and &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; as the token retrieved from github.&lt;/p&gt;
+&lt;p&gt;After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to &lt;code&gt;More Options -&amp;gt; Settings -&amp;gt; Environment Variables&lt;/code&gt; and add &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; as the token retrieved from github.&lt;/p&gt;
 
 &lt;p&gt;After this in any commit in the master branch of your web page you will get it deployed and go live.&lt;/p&gt;
 </description>

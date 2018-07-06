@@ -364,16 +364,16 @@ deploy:
   repo: &lt;User or Organization&gt;/&lt;User or Organization&gt;.github.com
   target-branch: master
   skip-cleanup: true
-  email: $GITHUB_EMAIL
   github-token: $GITHUB_TOKEN
+  committer-from-gh: true
   keep-history: true
   on:
     branch: master
 </code></pre>
 
-<p>you will have to change the repo content to match your destination repository (*2). The previous code what does is installs hugo in the deployment machine, builds your web page and deploys using the pages plugin.</p>
+<p>you will have to change the repo content to match your destination repository (*2). The previous code what does is installs hugo in the deployment machine, builds your web page and deploys using the pages plugin. If you have a custom domain make sure to set the property <code>fqdn</code> to your domain, if not you will overwrite this field in each commit.</p>
 
-<p>After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to <code>More Options -&gt; Settings -&gt; Environment Variables</code> and add <code>GITHUB_EMAIL</code> as your email and <code>GITHUB_TOKEN</code> as the token retrieved from github.</p>
+<p>After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to <code>More Options -&gt; Settings -&gt; Environment Variables</code> and add <code>GITHUB_TOKEN</code> as the token retrieved from github.</p>
 
 <p>After this in any commit in the master branch of your web page you will get it deployed and go live.</p>
 
