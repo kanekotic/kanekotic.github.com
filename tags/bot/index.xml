@@ -18,8 +18,8 @@
       <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/project/cabrito-bot/</guid>
-      <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
-Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
+      <description>chat bot for messenger for el done for european proposal to promote eating goat.
+Logo Check out the new logo that I created on LogoMakr.com https://logomakr.com/9M3Zaw</description>
     </item>
     
   </channel>
