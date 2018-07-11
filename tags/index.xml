@@ -94,6 +94,24 @@
     </item>
     
     <item>
+      <title>Cd</title>
+      <link>http://kanekotic.github.io/tags/cd/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ci</title>
+      <link>http://kanekotic.github.io/tags/ci/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cli</title>
       <link>http://kanekotic.github.io/tags/cli/</link>
       <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
@@ -144,6 +162,15 @@
       <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/converter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cron</title>
+      <link>http://kanekotic.github.io/tags/cron/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cron/</guid>
       <description></description>
     </item>
     
@@ -355,6 +382,15 @@
     </item>
     
     <item>
+      <title>Github</title>
+      <link>http://kanekotic.github.io/tags/github/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Goat</title>
       <link>http://kanekotic.github.io/tags/goat/</link>
       <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
@@ -486,6 +522,15 @@
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/nike/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Npm</title>
+      <link>http://kanekotic.github.io/tags/npm/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/npm/</guid>
       <description></description>
     </item>
     
@@ -672,9 +717,27 @@
     <item>
       <title>Travis</title>
       <link>http://kanekotic.github.io/tags/travis/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      <pubDate>Wed, 04 Jul 2018 08:35:42 +0200</pubDate>
       
       <guid>http://kanekotic.github.io/tags/travis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Travis</title>
+      <link>http://kanekotic.github.io/tags/travis/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/travis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Travisci</title>
+      <link>http://kanekotic.github.io/tags/travisci/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/travisci/</guid>
       <description></description>
     </item>
     
@@ -693,6 +756,15 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://kanekotic.github.io/tags/unofficial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Versioning</title>
+      <link>http://kanekotic.github.io/tags/versioning/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/versioning/</guid>
       <description></description>
     </item>
     
