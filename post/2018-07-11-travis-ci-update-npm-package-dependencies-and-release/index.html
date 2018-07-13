@@ -374,7 +374,7 @@ git add .
 git commit --allow-empty -m &quot;updated dependencies [skip ci]&quot;
 
 yarn test
-yarn deploy:patch
+yarn version --patch
 
 git push --quiet origin-master master-local:master
 git push --quiet origin-master master-local:master --tags
