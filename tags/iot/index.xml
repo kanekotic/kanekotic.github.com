@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iot on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/iot/</link>
+    <description>Recent content in iot on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 27 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tellojs</title>
+      <link>http://kanekotic.github.io/project/tellojs/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/tellojs/</guid>
+      <description>Motivation Provide an async promise based unofficial sdk for the tello drone based on the official documentation.
+Installation add it to your project using npm install tellojs --save or yarn add tellojs
+Usage this sdk provide functions when you import for the next capabilities:
+const sdk = require(&#39;tellojs&#39;) const x = number, y = number, z = number, speed = number, start = {x, y, z}, end = {x, y, z} //CONTROL COMMANDS await sdk.</description>
+    </item>
+    
+  </channel>
+</rss>

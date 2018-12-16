@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web Threads</title>
+      <link>http://kanekotic.github.io/project/web-threds/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/web-threds/</guid>
+      <description>generic threads using web workers for the web
+Installation add it to your project using npm install web-threads --save or yarn add web-threads
+Usage Simple function with arguments import { execute } from &#39;web-threads&#39; let func = (value) =&amp;gt; { return value * value } let params = { fn: func.toString(), args: [2] } execute(params) .then(console.log) .catch(console.error)  Function with context import { execute } from &#39;web-threads&#39; function Func(value){ this.</description>
+    </item>
+    
+    <item>
+      <title>Flow Runtime Faker</title>
+      <link>http://kanekotic.github.io/project/flow-runtime-faker/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/flow-runtime-faker/</guid>
+      <description>Motivation Type definitions in javascript can help adding type safety for classes. But should not make more complicated property based testing. This package aims to generate random objects based on their flow definitions
+Installation yarn add flow-runtime-faker -D or npm install flow-runtime-faker --save-dev
+if you use only flow and not flow-runtime. You can use this plugin by: - yarn add flow-runtime babel-plugin-flow-runtime -D or npm install flow-runtime babel-plugin-flow-runtime --save-dev - add the next configuration for tests phase on your .</description>
+    </item>
+    
+    <item>
+      <title>tellojs</title>
+      <link>http://kanekotic.github.io/project/tellojs/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/tellojs/</guid>
+      <description>Motivation Provide an async promise based unofficial sdk for the tello drone based on the official documentation.
+Installation add it to your project using npm install tellojs --save or yarn add tellojs
+Usage this sdk provide functions when you import for the next capabilities:
+const sdk = require(&#39;tellojs&#39;) const x = number, y = number, z = number, speed = number, start = {x, y, z}, end = {x, y, z} //CONTROL COMMANDS await sdk.</description>
+    </item>
+    
+    <item>
+      <title>Array Peek</title>
+      <link>http://kanekotic.github.io/project/array-peek/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/array-peek/</guid>
+      <description>extend array functionality to allow peek method.
+peek vs forEach peek as forEach allows you to execute a callback on each of the elements of an array, not affecting the content of itself.
+The difference is that forEach returns void so no further processing can be done, while peek will return the array so you can continue the transformations necesary for your processing</description>
+    </item>
     
     <item>
       <title>Express Exception Handler</title>
@@ -60,20 +105,20 @@ Add to your workspace on the root folder a .travis.yml, this plugin accept the n
     
     <item>
       <title>PlayYoutube Atom</title>
-      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <link>http://kanekotic.github.io/project/playoutube-atom/</link>
       <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-atom/</guid>
       <description>Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window
 Use  &amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:  input some search terms and hit enter. Navigate the results: Using the mouse. Using up and down key. Play video: Click. Using side key.  &amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player &amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player &amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content  Authors and Contributors @kanekotic</description>
     </item>
     
     <item>
       <title>PlayYoutube Visual Studio</title>
-      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <link>http://kanekotic.github.io/project/playoutube-vs/</link>
       <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-vs/</guid>
       <description>Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.
 follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.
 Use put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed
@@ -106,10 +151,10 @@ Usage Raw to Guid String Code const convert = require(&#39;raw-guid-converter&#3
     
     <item>
       <title>Any Prebuilt</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
+      <link>http://kanekotic.github.io/project/any-prebuild/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
+      <guid>http://kanekotic.github.io/project/any-prebuild/</guid>
       <description>Mission Easy generation or integration of prebuilt packages. It helps fetchs prebuilt binaries from github releases.
 Generate a prebuilt package  Create new project  npm init   Add this package as dependency  npm install any-prebuilt --save   Create postinstall.js file with content:  require(&#39;any-prebuilt&#39;).install(require(&#39;./package.json&#39;).prebuilt)   Create index.js file with content:  var anyPrebuilt = require(&#39;any-prebuilt&#39;) anyPrebuilt.initialize(__dirname, require(&#39;./package.json&#39;).prebuilt) module.exports.path = anyPrebuilt.path   On the package.</description>
     </item>
@@ -138,10 +183,10 @@ val toggle = new ToggleManager();  use default files for loading configuration, 
     
     <item>
       <title>Dependency Shrinker</title>
-      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
+      <link>http://kanekotic.github.io/project/dependency-shirnker/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
+      <guid>http://kanekotic.github.io/project/dependency-shirnker/</guid>
       <description>Mission a command line tool to check what dependencies of an executable are really critical and not
 Installation npm install dependency-shrinker  use this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
 depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]  Warning if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.</description>
@@ -306,16 +351,6 @@ gradle compile # generate the code gradle check # gnerate the code and test  TOD
       <guid>http://kanekotic.github.io/project/vue-atom-template/</guid>
       <description>this is a template for generating a package using vue as rendering framework
 Logo Check out the new logo that I created on LogoMakr.com https://logomakr.com/3lbtkb</description>
-    </item>
-    
-    <item>
-      <title>Gtimecarder</title>
-      <link>http://kanekotic.github.io/project/gtimecarder/</link>
-      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/gtimecarder/</guid>
-      <description>chrome extension to fill timecard systems from google calendar
-LOGO Check out the new logo that I created on LogoMakr.com https://logomakr.com/5UdULo</description>
     </item>
     
   </channel>

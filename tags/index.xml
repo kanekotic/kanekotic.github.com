@@ -7,721 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 30 May 2017 00:01:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kanekotic.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Advert</title>
-      <link>http://kanekotic.github.io/tags/advert/</link>
-      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/advert/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Analytics</title>
-      <link>http://kanekotic.github.io/tags/analytics/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>http://kanekotic.github.io/tags/android/</link>
-      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Api</title>
-      <link>http://kanekotic.github.io/tags/api/</link>
-      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Atom</title>
-      <link>http://kanekotic.github.io/tags/atom/</link>
-      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/atom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Augmented reality</title>
-      <link>http://kanekotic.github.io/tags/augmented-reality/</link>
-      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/augmented-reality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aws</title>
-      <link>http://kanekotic.github.io/tags/aws/</link>
-      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bot</title>
-      <link>http://kanekotic.github.io/tags/bot/</link>
-      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/bot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Calendar</title>
-      <link>http://kanekotic.github.io/tags/calendar/</link>
-      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/calendar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cd</title>
-      <link>http://kanekotic.github.io/tags/cd/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/cd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ci</title>
-      <link>http://kanekotic.github.io/tags/ci/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/ci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cli</title>
-      <link>http://kanekotic.github.io/tags/cli/</link>
-      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Command line</title>
-      <link>http://kanekotic.github.io/tags/command-line/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/command-line/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Command-line</title>
-      <link>http://kanekotic.github.io/tags/command-line/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/command-line/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Command-line-tool</title>
-      <link>http://kanekotic.github.io/tags/command-line-tool/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/command-line-tool/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compilation</title>
-      <link>http://kanekotic.github.io/tags/compilation/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/compilation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Converter</title>
-      <link>http://kanekotic.github.io/tags/converter/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/converter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cron</title>
-      <link>http://kanekotic.github.io/tags/cron/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/cron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Daily</title>
-      <link>http://kanekotic.github.io/tags/daily/</link>
-      <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/daily/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dependencies</title>
-      <link>http://kanekotic.github.io/tags/dependencies/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/dependencies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DynamoDB</title>
-      <link>http://kanekotic.github.io/tags/dynamodb/</link>
-      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/dynamodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Elasticsearch</title>
-      <link>http://kanekotic.github.io/tags/elasticsearch/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/elasticsearch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Electron</title>
-      <link>http://kanekotic.github.io/tags/electron/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/electron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Elk-stack</title>
-      <link>http://kanekotic.github.io/tags/elk-stack/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/elk-stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Email</title>
-      <link>http://kanekotic.github.io/tags/email/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/email/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Encrypted</title>
-      <link>http://kanekotic.github.io/tags/encrypted/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/encrypted/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Endomondo</title>
-      <link>http://kanekotic.github.io/tags/endomondo/</link>
-      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/endomondo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Error</title>
-      <link>http://kanekotic.github.io/tags/error/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/error/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Exception-handler</title>
-      <link>http://kanekotic.github.io/tags/exception-handler/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/exception-handler/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Exception-handling</title>
-      <link>http://kanekotic.github.io/tags/exception-handling/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/exception-handling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Exceptions</title>
-      <link>http://kanekotic.github.io/tags/exceptions/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/exceptions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Executable</title>
-      <link>http://kanekotic.github.io/tags/executable/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/executable/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Export</title>
-      <link>http://kanekotic.github.io/tags/export/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/export/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Express</title>
-      <link>http://kanekotic.github.io/tags/express/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/express/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Express-middleware</title>
-      <link>http://kanekotic.github.io/tags/express-middleware/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/express-middleware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Expressjs</title>
-      <link>http://kanekotic.github.io/tags/expressjs/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/expressjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Facebook</title>
-      <link>http://kanekotic.github.io/tags/facebook/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Feature-flags</title>
-      <link>http://kanekotic.github.io/tags/feature-flags/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/feature-flags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Feature-toggle</title>
-      <link>http://kanekotic.github.io/tags/feature-toggle/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/feature-toggle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Feature-toggles</title>
-      <link>http://kanekotic.github.io/tags/feature-toggles/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/feature-toggles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Game</title>
-      <link>http://kanekotic.github.io/tags/game/</link>
-      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/game/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>http://kanekotic.github.io/tags/github/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Goat</title>
-      <link>http://kanekotic.github.io/tags/goat/</link>
-      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/goat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Google</title>
-      <link>http://kanekotic.github.io/tags/google/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/google/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Google-analytics</title>
-      <link>http://kanekotic.github.io/tags/google-analytics/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/google-analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grafana</title>
-      <link>http://kanekotic.github.io/tags/grafana/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/grafana/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Guid</title>
-      <link>http://kanekotic.github.io/tags/guid/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/guid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Infrastructure</title>
-      <link>http://kanekotic.github.io/tags/infrastructure/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/infrastructure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Intellij</title>
-      <link>http://kanekotic.github.io/tags/intellij/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/intellij/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Intellij-plugin</title>
-      <link>http://kanekotic.github.io/tags/intellij-plugin/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/intellij-plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jenkins</title>
-      <link>http://kanekotic.github.io/tags/jenkins/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/jenkins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Json-rpc</title>
-      <link>http://kanekotic.github.io/tags/json-rpc/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/json-rpc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kibana</title>
-      <link>http://kanekotic.github.io/tags/kibana/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/kibana/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Learn</title>
-      <link>http://kanekotic.github.io/tags/learn/</link>
-      <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/learn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logstash</title>
-      <link>http://kanekotic.github.io/tags/logstash/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/logstash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Messenger</title>
-      <link>http://kanekotic.github.io/tags/messenger/</link>
-      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/messenger/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nike</title>
-      <link>http://kanekotic.github.io/tags/nike/</link>
-      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/nike/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Npm</title>
-      <link>http://kanekotic.github.io/tags/npm/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/npm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oauth</title>
-      <link>http://kanekotic.github.io/tags/oauth/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/oauth/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle</title>
-      <link>http://kanekotic.github.io/tags/oracle/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/oracle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>P2p</title>
-      <link>http://kanekotic.github.io/tags/p2p/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/p2p/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Package</title>
-      <link>http://kanekotic.github.io/tags/package/</link>
-      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/package/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pgp</title>
-      <link>http://kanekotic.github.io/tags/pgp/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/pgp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plugin</title>
-      <link>http://kanekotic.github.io/tags/plugin/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Prebuilt</title>
-      <link>http://kanekotic.github.io/tags/prebuilt/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/prebuilt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Prebuilt-packages</title>
-      <link>http://kanekotic.github.io/tags/prebuilt-packages/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/prebuilt-packages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raw</title>
-      <link>http://kanekotic.github.io/tags/raw/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/raw/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rider</title>
-      <link>http://kanekotic.github.io/tags/rider/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/rider/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Runtastic</title>
-      <link>http://kanekotic.github.io/tags/runtastic/</link>
-      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/runtastic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>http://kanekotic.github.io/tags/search/</link>
-      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Social</title>
-      <link>http://kanekotic.github.io/tags/social/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Social network</title>
-      <link>http://kanekotic.github.io/tags/social-network/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/social-network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Specflow</title>
-      <link>http://kanekotic.github.io/tags/specflow/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/specflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Survival</title>
-      <link>http://kanekotic.github.io/tags/survival/</link>
-      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/survival/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sync</title>
-      <link>http://kanekotic.github.io/tags/sync/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/sync/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Template</title>
-      <link>http://kanekotic.github.io/tags/template/</link>
-      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/template/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Timecards</title>
-      <link>http://kanekotic.github.io/tags/timecards/</link>
-      <pubDate>Sun, 29 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/timecards/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Toggle</title>
-      <link>http://kanekotic.github.io/tags/toggle/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/toggle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Travis</title>
-      <link>http://kanekotic.github.io/tags/travis/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/travis/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Travis</title>
@@ -729,51 +17,6 @@
       <pubDate>Wed, 04 Jul 2018 08:35:42 +0200</pubDate>
       
       <guid>http://kanekotic.github.io/tags/travis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Travisci</title>
-      <link>http://kanekotic.github.io/tags/travisci/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/travisci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Twitter</title>
-      <link>http://kanekotic.github.io/tags/twitter/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/twitter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unofficial</title>
-      <link>http://kanekotic.github.io/tags/unofficial/</link>
-      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/unofficial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Versioning</title>
-      <link>http://kanekotic.github.io/tags/versioning/</link>
-      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/versioning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Video</title>
-      <link>http://kanekotic.github.io/tags/video/</link>
-      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/tags/video/</guid>
       <description></description>
     </item>
     
@@ -787,7 +30,871 @@
     </item>
     
     <item>
-      <title>Vue</title>
+      <title>advert</title>
+      <link>http://kanekotic.github.io/tags/advert/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/advert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analytics</title>
+      <link>http://kanekotic.github.io/tags/analytics/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>http://kanekotic.github.io/tags/android/</link>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>http://kanekotic.github.io/tags/api/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atom</title>
+      <link>http://kanekotic.github.io/tags/atom/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>augmented reality</title>
+      <link>http://kanekotic.github.io/tags/augmented-reality/</link>
+      <pubDate>Tue, 30 May 2017 00:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/augmented-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>http://kanekotic.github.io/tags/aws/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bot</title>
+      <link>http://kanekotic.github.io/tags/bot/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cd</title>
+      <link>http://kanekotic.github.io/tags/cd/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci</title>
+      <link>http://kanekotic.github.io/tags/ci/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>http://kanekotic.github.io/tags/cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command line</title>
+      <link>http://kanekotic.github.io/tags/command-line/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command-line</title>
+      <link>http://kanekotic.github.io/tags/command-line/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command-line-tool</title>
+      <link>http://kanekotic.github.io/tags/command-line-tool/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/command-line-tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compilation</title>
+      <link>http://kanekotic.github.io/tags/compilation/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>converter</title>
+      <link>http://kanekotic.github.io/tags/converter/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/converter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cron</title>
+      <link>http://kanekotic.github.io/tags/cron/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daily</title>
+      <link>http://kanekotic.github.io/tags/daily/</link>
+      <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/daily/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dependencies</title>
+      <link>http://kanekotic.github.io/tags/dependencies/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/dependencies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dji</title>
+      <link>http://kanekotic.github.io/tags/dji/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/dji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drone</title>
+      <link>http://kanekotic.github.io/tags/drone/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/drone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamoDB</title>
+      <link>http://kanekotic.github.io/tags/dynamodb/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>http://kanekotic.github.io/tags/elasticsearch/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electron</title>
+      <link>http://kanekotic.github.io/tags/electron/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elk-stack</title>
+      <link>http://kanekotic.github.io/tags/elk-stack/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/elk-stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>http://kanekotic.github.io/tags/email/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted</title>
+      <link>http://kanekotic.github.io/tags/encrypted/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/encrypted/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>endomondo</title>
+      <link>http://kanekotic.github.io/tags/endomondo/</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/endomondo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>error</title>
+      <link>http://kanekotic.github.io/tags/error/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exception-handler</title>
+      <link>http://kanekotic.github.io/tags/exception-handler/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/exception-handler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exception-handling</title>
+      <link>http://kanekotic.github.io/tags/exception-handling/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/exception-handling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exceptions</title>
+      <link>http://kanekotic.github.io/tags/exceptions/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/exceptions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>executable</title>
+      <link>http://kanekotic.github.io/tags/executable/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/executable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>export</title>
+      <link>http://kanekotic.github.io/tags/export/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/export/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>express</title>
+      <link>http://kanekotic.github.io/tags/express/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>express-middleware</title>
+      <link>http://kanekotic.github.io/tags/express-middleware/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/express-middleware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>expressjs</title>
+      <link>http://kanekotic.github.io/tags/expressjs/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/expressjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facebook</title>
+      <link>http://kanekotic.github.io/tags/facebook/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>faker</title>
+      <link>http://kanekotic.github.io/tags/faker/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/faker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feature-flags</title>
+      <link>http://kanekotic.github.io/tags/feature-flags/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-flags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feature-toggle</title>
+      <link>http://kanekotic.github.io/tags/feature-toggle/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-toggle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feature-toggles</title>
+      <link>http://kanekotic.github.io/tags/feature-toggles/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/feature-toggles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flow</title>
+      <link>http://kanekotic.github.io/tags/flow/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/flow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flow-runtime</title>
+      <link>http://kanekotic.github.io/tags/flow-runtime/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/flow-runtime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game</title>
+      <link>http://kanekotic.github.io/tags/game/</link>
+      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>generic</title>
+      <link>http://kanekotic.github.io/tags/generic/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/generic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>http://kanekotic.github.io/tags/github/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goat</title>
+      <link>http://kanekotic.github.io/tags/goat/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/goat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>http://kanekotic.github.io/tags/google/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google-analytics</title>
+      <link>http://kanekotic.github.io/tags/google-analytics/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/google-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grafana</title>
+      <link>http://kanekotic.github.io/tags/grafana/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guid</title>
+      <link>http://kanekotic.github.io/tags/guid/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/guid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infrastructure</title>
+      <link>http://kanekotic.github.io/tags/infrastructure/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intellij</title>
+      <link>http://kanekotic.github.io/tags/intellij/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/intellij/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intellij-plugin</title>
+      <link>http://kanekotic.github.io/tags/intellij-plugin/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/intellij-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iot</title>
+      <link>http://kanekotic.github.io/tags/iot/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>http://kanekotic.github.io/tags/jenkins/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json-rpc</title>
+      <link>http://kanekotic.github.io/tags/json-rpc/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/json-rpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kibana</title>
+      <link>http://kanekotic.github.io/tags/kibana/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learn</title>
+      <link>http://kanekotic.github.io/tags/learn/</link>
+      <pubDate>Thu, 17 Mar 2016 09:56:49 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/learn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logstash</title>
+      <link>http://kanekotic.github.io/tags/logstash/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>messenger</title>
+      <link>http://kanekotic.github.io/tags/messenger/</link>
+      <pubDate>Tue, 30 May 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/messenger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multithreading</title>
+      <link>http://kanekotic.github.io/tags/multithreading/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/multithreading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nike</title>
+      <link>http://kanekotic.github.io/tags/nike/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/nike/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>http://kanekotic.github.io/tags/npm/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oauth</title>
+      <link>http://kanekotic.github.io/tags/oauth/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/oauth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle</title>
+      <link>http://kanekotic.github.io/tags/oracle/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>p2p</title>
+      <link>http://kanekotic.github.io/tags/p2p/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/p2p/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>http://kanekotic.github.io/tags/package/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>parallel</title>
+      <link>http://kanekotic.github.io/tags/parallel/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/parallel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pgp</title>
+      <link>http://kanekotic.github.io/tags/pgp/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/pgp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>http://kanekotic.github.io/tags/plugin/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prebuilt</title>
+      <link>http://kanekotic.github.io/tags/prebuilt/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/prebuilt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prebuilt-packages</title>
+      <link>http://kanekotic.github.io/tags/prebuilt-packages/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/prebuilt-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>promise</title>
+      <link>http://kanekotic.github.io/tags/promise/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/promise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>property</title>
+      <link>http://kanekotic.github.io/tags/property/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/property/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raw</title>
+      <link>http://kanekotic.github.io/tags/raw/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/raw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rider</title>
+      <link>http://kanekotic.github.io/tags/rider/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/rider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>runtastic</title>
+      <link>http://kanekotic.github.io/tags/runtastic/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/runtastic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>http://kanekotic.github.io/tags/search/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social</title>
+      <link>http://kanekotic.github.io/tags/social/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/social/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social network</title>
+      <link>http://kanekotic.github.io/tags/social-network/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/social-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>specflow</title>
+      <link>http://kanekotic.github.io/tags/specflow/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/specflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survival</title>
+      <link>http://kanekotic.github.io/tags/survival/</link>
+      <pubDate>Tue, 30 May 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/survival/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>http://kanekotic.github.io/tags/sync/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tello</title>
+      <link>http://kanekotic.github.io/tags/tello/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/tello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>http://kanekotic.github.io/tags/template/</link>
+      <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>http://kanekotic.github.io/tags/testing/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>threads</title>
+      <link>http://kanekotic.github.io/tags/threads/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/threads/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toggle</title>
+      <link>http://kanekotic.github.io/tags/toggle/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/toggle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travis</title>
+      <link>http://kanekotic.github.io/tags/travis/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/travis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travisci</title>
+      <link>http://kanekotic.github.io/tags/travisci/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/travisci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>http://kanekotic.github.io/tags/twitter/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unofficial</title>
+      <link>http://kanekotic.github.io/tags/unofficial/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/unofficial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>versioning</title>
+      <link>http://kanekotic.github.io/tags/versioning/</link>
+      <pubDate>Wed, 11 Jul 2018 09:27:28 +0200</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/versioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>http://kanekotic.github.io/tags/video/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
       <link>http://kanekotic.github.io/tags/vue/</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
       
@@ -796,7 +903,25 @@
     </item>
     
     <item>
-      <title>Yml</title>
+      <title>web worker</title>
+      <link>http://kanekotic.github.io/tags/web-worker/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/web-worker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webworker</title>
+      <link>http://kanekotic.github.io/tags/webworker/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/tags/webworker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yml</title>
       <link>http://kanekotic.github.io/tags/yml/</link>
       <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
       
@@ -805,7 +930,7 @@
     </item>
     
     <item>
-      <title>Youtube</title>
+      <title>youtube</title>
       <link>http://kanekotic.github.io/tags/youtube/</link>
       <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
       

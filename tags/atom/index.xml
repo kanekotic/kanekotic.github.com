@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Atom on Kanekotic</title>
+    <title>atom on Kanekotic</title>
     <link>http://kanekotic.github.io/tags/atom/</link>
-    <description>Recent content in Atom on Kanekotic</description>
+    <description>Recent content in atom on Kanekotic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -14,10 +14,10 @@
     
     <item>
       <title>PlayYoutube Atom</title>
-      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <link>http://kanekotic.github.io/project/playoutube-atom/</link>
       <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-atom/</guid>
       <description>Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window
 Use  &amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:  input some search terms and hit enter. Navigate the results: Using the mouse. Using up and down key. Play video: Click. Using side key.  &amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player &amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player &amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content  Authors and Contributors @kanekotic</description>
     </item>

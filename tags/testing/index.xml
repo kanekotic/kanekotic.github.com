@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/testing/</link>
+    <description>Recent content in testing on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flow Runtime Faker</title>
+      <link>http://kanekotic.github.io/project/flow-runtime-faker/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/flow-runtime-faker/</guid>
+      <description>Motivation Type definitions in javascript can help adding type safety for classes. But should not make more complicated property based testing. This package aims to generate random objects based on their flow definitions
+Installation yarn add flow-runtime-faker -D or npm install flow-runtime-faker --save-dev
+if you use only flow and not flow-runtime. You can use this plugin by: - yarn add flow-runtime babel-plugin-flow-runtime -D or npm install flow-runtime babel-plugin-flow-runtime --save-dev - add the next configuration for tests phase on your .</description>
+    </item>
+    
+    <item>
+      <title>Array Peek</title>
+      <link>http://kanekotic.github.io/project/array-peek/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/array-peek/</guid>
+      <description>extend array functionality to allow peek method.
+peek vs forEach peek as forEach allows you to execute a callback on each of the elements of an array, not affecting the content of itself.
+The difference is that forEach returns void so no further processing can be done, while peek will return the array so you can continue the transformations necesary for your processing</description>
+    </item>
+    
+  </channel>
+</rss>

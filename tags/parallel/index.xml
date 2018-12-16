@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>parallel on Kanekotic</title>
+    <link>http://kanekotic.github.io/tags/parallel/</link>
+    <description>Recent content in parallel on Kanekotic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kanekotic.github.io/tags/parallel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Threads</title>
+      <link>http://kanekotic.github.io/project/web-threds/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/web-threds/</guid>
+      <description>generic threads using web workers for the web
+Installation add it to your project using npm install web-threads --save or yarn add web-threads
+Usage Simple function with arguments import { execute } from &#39;web-threads&#39; let func = (value) =&amp;gt; { return value * value } let params = { fn: func.toString(), args: [2] } execute(params) .then(console.log) .catch(console.error)  Function with context import { execute } from &#39;web-threads&#39; function Func(value){ this.</description>
+    </item>
+    
+  </channel>
+</rss>

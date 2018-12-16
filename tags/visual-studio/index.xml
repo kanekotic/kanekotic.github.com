@@ -14,10 +14,10 @@
     
     <item>
       <title>PlayYoutube Visual Studio</title>
-      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <link>http://kanekotic.github.io/project/playoutube-vs/</link>
       <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-vs/</guid>
       <description>Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.
 follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.
 Use put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed

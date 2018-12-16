@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
@@ -118,6 +118,412 @@ deploy:
 &lt;p&gt;After adding the file you will have to go to Travis web page and toggle your code repository (*1) got to &lt;code&gt;More Options -&amp;gt; Settings -&amp;gt; Environment Variables&lt;/code&gt; and add &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; as the token retrieved from github.&lt;/p&gt;
 
 &lt;p&gt;After this in any commit in the master branch of your web page you will get it deployed and go live.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Web Threads</title>
+      <link>http://kanekotic.github.io/project/web-threds/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/web-threds/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-09u4zz-https-user-images-githubusercontent-com-3071208-44622482-88a91a80-a8b9-11e8-976c-fdd422ac5c98-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/44622482-88a91a80-a8b9-11e8-976c-fdd422ac5c98.png&#34; alt=&#34;logomakr_09u4zz&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/web-threads&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/web-threads.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/web-threads?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/web-threads/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/web-threads&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dt/web-threads.svg&#34; alt=&#34;npm&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/web-threads/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/web-threads.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/kanekotic/web-threads/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-blue.svg&#34; alt=&#34;Donate&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;generic threads using web workers for the web&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your project using &lt;code&gt;npm install web-threads --save&lt;/code&gt; or &lt;code&gt;yarn add web-threads&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;simple-function-with-arguments&#34;&gt;Simple function with arguments&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import { execute } from &#39;web-threads&#39;
+
+let func = (value) =&amp;gt; {
+    return value * value
+}
+let params = {
+    fn: func.toString(),
+    args: [2]
+} 
+execute(params)
+    .then(console.log)
+    .catch(console.error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;function-with-context&#34;&gt;Function with context&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import { execute } from &#39;web-threads&#39;
+
+function Func(value){
+    this.value = value
+}
+Func.prototype.foo = function(){
+    return this.value * this.value
+};
+var instance = new Func(2)
+let params = {
+    fn: instance.foo,
+    context: instance
+} 
+execute(params)
+    .then(console.log)
+    .catch(console.error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;function-with-context-and-arguments&#34;&gt;Function with context and arguments&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import { execute } from &#39;web-threads&#39;
+
+function Func(value){
+    this.value = value
+}
+Func.prototype.foo = function(otherValue){
+    return this.value * otherValue
+};
+var instance = new Func(2)
+let params = {
+    fn: instance.foo,
+    context: instance,
+    args: [4]
+} 
+execute(params)
+    .then(console.log)
+    .catch(console.error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;es6-class-call-function-with-arguments&#34;&gt;ES6 class call function with arguments&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import { execute } from &#39;web-threads&#39;
+
+class someClass {
+    constructor(val){
+        this.val = val
+    }
+    foo(some){
+        return this.val * some
+    }
+}
+
+var instance = new someClass(2)
+let params = {
+    fn: instance.foo,
+    context: instance,
+    args: [4]
+} 
+execute(params)
+    .then(console.log)
+    .catch(console.error)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;inspired-in&#34;&gt;Inspired in:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CodeInBrackets/ui.wind.js&#34; target=&#34;_blank&#34;&gt;work done pairing with @kmruiz for ui.wind.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.scottlogic.com/2011/02/24/web-workers-part-3-creating-a-generic-worker.html&#34; target=&#34;_blank&#34;&gt;scottlogic.com post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.eslinstructor.net/vkthread/&#34; target=&#34;_blank&#34;&gt;@vkiryukhin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;web-graphic-by-a-href-http-www-flaticon-com-authors-picol-picol-a-from-a-href-http-www-flaticon-com-flaticon-a-is-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-check-out-the-new-logo-that-i-created-on-a-href-http-logomakr-com-title-logo-makr-logomakr-com-a-https-logomakr-com-09u4zz&#34;&gt;Web graphic by &lt;a href=&#34;http://www.flaticon.com/authors/picol&#34;&gt;picol&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/09u4Zz&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/09u4Zz&lt;/a&gt;&lt;/h5&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Flow Runtime Faker</title>
+      <link>http://kanekotic.github.io/project/flow-runtime-faker/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/flow-runtime-faker/</guid>
+      <description>
+
+&lt;h1 id=&#34;logo-https-user-images-githubusercontent-com-3071208-48891796-a7796780-ee3c-11e8-93a0-69b06f1a1198-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/48891796-a7796780-ee3c-11e8-93a0-69b06f1a1198.png&#34; alt=&#34;logo&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/flow-runtime-faker&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/flow-runtime-faker.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/flow-runtime-faker?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/flow-runtime-faker/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/flow-runtime-faker&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dt/flow-runtime-faker.svg&#34; alt=&#34;npm&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/flow-runtime-faker/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/flow-runtime-faker.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/kanekotic/flow-runtime-faker/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-green.svg&#34; alt=&#34;Donate&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;Type definitions in javascript can help adding type safety for classes. But should not make more complicated property based testing. This package aims to generate random objects based on their flow definitions&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;yarn add flow-runtime-faker -D&lt;/code&gt; or &lt;code&gt;npm install flow-runtime-faker --save-dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;if you use only &lt;code&gt;flow&lt;/code&gt; and not &lt;code&gt;flow-runtime&lt;/code&gt;. You can use this plugin by:
+ - &lt;code&gt;yarn add flow-runtime babel-plugin-flow-runtime -D&lt;/code&gt; or &lt;code&gt;npm install flow-runtime babel-plugin-flow-runtime --save-dev&lt;/code&gt;
+ - add the next configuration for tests phase on your &lt;code&gt;.babelrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;    {
+    ...
+     &amp;quot;env&amp;quot;: {
+        &amp;quot;test&amp;quot;: {
+            &amp;quot;plugins&amp;quot;: [[&amp;quot;flow-runtime&amp;quot;, { &amp;quot;assert&amp;quot;: false, &amp;quot;annotate&amp;quot;: false }]]
+        }
+      }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import faker from &#39;flow-runtime-faker&#39;
+
+type otherType {
+    fuz: 42 | 7 | 32 | &amp;quot;Some&amp;quot; | &amp;quot;Some Other&amp;quot; | false
+}
+
+type myType = {
+    foo: number,
+    bar: number[],
+    daz: string,
+    don: otherType
+}
+
+let value = fake(test)
+
+console.log(value)
+/*
+type myType = {
+    foo: 10,
+    bar: [1,6.40],
+    daz: &amp;quot;something&amp;quot;,
+    don: {
+        fuz: 42
+    }
+}
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Done?&lt;/th&gt;
+&lt;th&gt;Flow Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;void&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;numeric literals&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;string literals&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;boolean literals&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;union&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;maybe&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;optional&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;arrays&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;subtypes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>tellojs</title>
+      <link>http://kanekotic.github.io/project/tellojs/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/tellojs/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-123ujk-https-user-images-githubusercontent-com-3071208-49430616-cddbc300-f7ab-11e8-9356-381c730d0839-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/49430616-cddbc300-f7ab-11e8-9356-381c730d0839.png&#34; alt=&#34;logomakr_123ujk&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/tellojs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/tellojs.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/tellojs?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/tellojs/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/tellojs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dt/tellojs.svg&#34; alt=&#34;npm&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/tellojs/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/tellojs.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/kanekotic/tellojs/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-blue.svg&#34; alt=&#34;Donate&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;Provide an async promise based unofficial sdk for the tello drone based on the official &lt;a href=&#34;https://dl-cdn.ryzerobotics.com/downloads/tello/20180910/Tello%20SDK%20Documentation%20EN_1.3.pdf&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your project using &lt;code&gt;npm install tellojs --save&lt;/code&gt; or &lt;code&gt;yarn add tellojs&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;this sdk provide functions when you import for the next capabilities:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const sdk = require(&#39;tellojs&#39;)
+
+const x = number,
+    y = number,
+    z = number,
+    speed = number,
+    start = {x, y, z},
+    end = {x, y, z}
+
+//CONTROL COMMANDS
+await sdk.control.connect()                     // Enter SDK mode.
+await sdk.control.takeoff()                     // Auto takeoff.
+await sdk.control.land()                        // Auto landing.
+await sdk.control.emergency()                   // Stop motors immediately
+await sdk.control.stop()                        // Hovers in the air
+await sdk.control.move.up(x)                    // Ascend to “x” cm.
+await sdk.control.move.down(x)                  // Descend to “x” cm.
+await sdk.control.move.left(x)                  // move left to “x” cm.
+await sdk.control.move.right(x)                 // move right to “x” cm.
+await sdk.control.move.front(x)                 // move forward to “x” cm.
+await sdk.control.move.back(x)                  // move backwards to “x” cm.
+await sdk.control.move.go(end, speed )          //  fly to x y z in speed (cm/s)
+await sdk.control.move.curve(start, end, speed) //  fly to x y z in speed (cm/s)
+await sdk.control.rotate.clockwise(x)           // rotate clockwise &#39;x&#39; degrees.
+await sdk.control.rotate.counterClockwise(x)    // rotate counter clockwise &#39;x&#39; degrees.
+await sdk.control.flip.left()                   // Flip to the left.
+await sdk.control.flip.right()                  // Flip to the right.
+await sdk.control.flip.back()                   // Flip in backward.
+await sdk.control.flip.front()                  // Flip in forward.
+
+//SET COMMANDS
+await sdk.set.speed(x)                          // set speed to x cm/s
+await sdk.set.rc(x, y, z, yaw)                  // Send RC control via four channels.
+await sdk.set.wifi(ssid, password)              // Set Wi-Fi with SSID password
+
+//READ COMMANDS
+await sdk.read.speed()                          // Obtain current speed (cm/s).
+await sdk.read.battery()                        // Obtain current battery percentage.
+await sdk.read.time()                           // Obtain current flight time.
+await sdk.read.height()                         // Obtain get height (cm)
+await sdk.read.temperature()                    // Obtain temperature (°C)
+await sdk.read.attitude()                       // Obtain IMU attitude data
+await sdk.read.barometer()                      // Obtain barometer value (m)
+await sdk.read.tof()                            // Obtain distance value from TOF（cm）
+await sdk.read.acceleration()                   // Obtain IMU angular acceleration data (0.001g)
+await sdk.read.wifi()                           // Obtain Wi-Fi SNR.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;web-graphic-by-a-href-http-www-flaticon-com-authors-picol-picol-a-from-a-href-http-www-flaticon-com-flaticon-a-is-licensed-under-a-href-http-creativecommons-org-licenses-by-3-0-title-creative-commons-by-3-0-cc-by-3-0-a-check-out-the-new-logo-that-i-created-on-a-href-http-logomakr-com-title-logo-makr-logomakr-com-a-https-logomakr-com-09u4zz&#34;&gt;Web graphic by &lt;a href=&#34;http://www.flaticon.com/authors/picol&#34;&gt;picol&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/09u4Zz&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/09u4Zz&lt;/a&gt;&lt;/h5&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array Peek</title>
+      <link>http://kanekotic.github.io/project/array-peek/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://kanekotic.github.io/project/array-peek/</guid>
+      <description>
+
+&lt;h1 id=&#34;logomakr-5sisss-https-user-images-githubusercontent-com-3071208-46520471-66bd9300-c87c-11e8-855c-e38b28094435-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/46520471-66bd9300-c87c-11e8-855c-e38b28094435.png&#34; alt=&#34;logomakr_5sisss&#34; /&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/array-peek&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/array-peek.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/array-peek?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/array-peek/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/array-peek&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dy/array-peek.svg&#34; alt=&#34;npm&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kanekotic/array-peek/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/array-peek.svg&#34; alt=&#34;GitHub license&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://GitHub.com/kanekotic/array-peek/graphs/commit-activity&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-green.svg&#34; alt=&#34;Donate&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;extend array functionality to allow peek method.&lt;/p&gt;
+
+&lt;h2 id=&#34;peek-vs-foreach&#34;&gt;peek vs forEach&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;peek&lt;/code&gt; as &lt;code&gt;forEach&lt;/code&gt; allows you to execute a callback on each of the elements of an array, not affecting the content of itself.&lt;/p&gt;
+
+&lt;p&gt;The difference is that &lt;code&gt;forEach&lt;/code&gt; returns void so no further processing can be done, while &lt;code&gt;peek&lt;/code&gt; will return the array so you can continue the transformations necesary for your processing&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;add it to your project using &lt;code&gt;npm install array-peek --save&lt;/code&gt; or &lt;code&gt;yarn add array-peek&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;to use this package just add it before the usage of any array to extend its prototype. From then on you will have access to the peek function as seen in the next example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require(&#39;array-peek&#39;)
+
+[1,2,3]
+    .peek(console.log)
+    .map((value) =&amp;gt; value * value)
+    .peek(console.log)
+    
+//  Output:
+//&amp;gt; 1
+//&amp;gt; 2
+//&amp;gt; 3
+//&amp;gt; 1
+//&amp;gt; 4
+//&amp;gt; 9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;created-my-free-logo-https-logomakr-com-5sisss-at-logomakr-com-logomakr-com&#34;&gt;Created my free &lt;a href=&#34;https://logomakr.com/5sISSS&#34; target=&#34;_blank&#34;&gt;logo&lt;/a&gt; at &lt;a href=&#34;LogoMakr.com&#34; target=&#34;_blank&#34;&gt;LogoMakr.com&lt;/a&gt;&lt;/h5&gt;
 </description>
     </item>
     
@@ -447,10 +853,10 @@ $ jpi server
     
     <item>
       <title>PlayYoutube Atom</title>
-      <link>http://kanekotic.github.io/project/playyotube-atom/</link>
+      <link>http://kanekotic.github.io/project/playoutube-atom/</link>
       <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-atom/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-atom/</guid>
       <description>
 
 &lt;h1 id=&#34;logomakr-0iwknv-https-user-images-githubusercontent-com-3071208-42363375-bcf912a2-80f7-11e8-999b-82e107a3d1af-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363375-bcf912a2-80f7-11e8-999b-82e107a3d1af.png&#34; alt=&#34;logomakr_0iwknv&#34; /&gt;&lt;/h1&gt;
@@ -498,10 +904,10 @@ Review our &lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/wiki&#34; tar
     
     <item>
       <title>PlayYoutube Visual Studio</title>
-      <link>http://kanekotic.github.io/project/playyotube-vs/</link>
+      <link>http://kanekotic.github.io/project/playoutube-vs/</link>
       <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/playyotube-vs/</guid>
+      <guid>http://kanekotic.github.io/project/playoutube-vs/</guid>
       <description>
 
 &lt;h1 id=&#34;playyoutubeheader-https-user-images-githubusercontent-com-3071208-42363002-129d9374-80f6-11e8-9ccf-1bd222f07884-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363002-129d9374-80f6-11e8-9ccf-1bd222f07884.png&#34; alt=&#34;playyoutubeheader&#34; /&gt;&lt;/h1&gt;
@@ -646,10 +1052,10 @@ let guid = convert(&#39;0e883046-0b6d-4036-ab44-6c6fb3c44fe3&#39;)
     
     <item>
       <title>Any Prebuilt</title>
-      <link>http://kanekotic.github.io/project/any-prebuilt/</link>
+      <link>http://kanekotic.github.io/project/any-prebuild/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kanekotic.github.io/project/any-prebuilt/</guid>
+      <guid>http://kanekotic.github.io/project/any-prebuild/</guid>
       <description>
 
 &lt;h1 id=&#34;logomakr-3dkn9b-https-cloud-githubusercontent-com-assets-3071208-22477192-c7ce1d86-e7aa-11e6-87de-c24336e1ea3e-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22477192/c7ce1d86-e7aa-11e6-87de-c24336e1ea3e.png&#34; alt=&#34;logomakr_3dkn9b&#34; /&gt;&lt;/h1&gt;
@@ -725,224 +1131,6 @@ module.exports.path = anyPrebuilt.path
 &lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
 
 &lt;p&gt;Hours graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Koteky</title>
-      <link>http://kanekotic.github.io/project/koteky/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/koteky/</guid>
-      <description>
-
-&lt;h1 id=&#34;drawing-https-cloud-githubusercontent-com-assets-3071208-14738483-22967ed8-0882-11e6-874d-4c19eb244373-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14738483/22967ed8-0882-11e6-874d-4c19eb244373.png&#34; alt=&#34;drawing&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gitter.im/Hatisoft/koteky?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Hatisoft/koteky.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/koteky&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/Hatisoft/koteky&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/Hatisoft/koteky.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/koteky&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/np9fywosgs2ob33i?svg=true&#34; alt=&#34;Build status&#34; /&gt;&lt;/a&gt;
-&lt;img src=&#34;https://img.shields.io/npm/v/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
-&lt;img src=&#34;https://img.shields.io/npm/l/koteky.svg&#34; alt=&#34;license&#34; /&gt;
-&lt;img src=&#34;https://img.shields.io/github/issues/Hatisoft/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
-&lt;img src=&#34;https://img.shields.io/npm/dm/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
-&lt;img src=&#34;https://img.shields.io/npm/dt/koteky.svg&#34; alt=&#34;Build status&#34; /&gt;
-&lt;img src=&#34;https://img.shields.io/github/downloads/Hatisoft/koteky/total.svg&#34; alt=&#34;Build status&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a plugin based crossplatform social network manager application based on electron.&lt;/p&gt;
-
-&lt;h2 id=&#34;usage-alpha&#34;&gt;Usage (Alpha)&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This project is still on development and is not ready for public use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Current early use can be done by cloning repo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;# Clone the repository
-$ git clone https://github.com/Hatisoft/koteky.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Plugins can be installed in app or modifying the package.json&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  ...
-  &amp;quot;plugins&amp;quot;:
-  {
-   &amp;quot;name_of_plugin&amp;quot; : &amp;quot;version_or_repo&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Run:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;# Go into the repository
-$ cd koteky
-
-# Install the dependencies and run
-$ npm install &amp;amp;&amp;amp; npm start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Use plugin based architecture&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Style and Display posts&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Authentication based on Oauth for social networks&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Implement Twitter plugin&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Implement Facebook plugin&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Implement LinkedIn plugin&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;credits&#34;&gt;Credits&lt;/h4&gt;
-
-&lt;p&gt;Social Network graphic by &lt;a href=&#34;http://www.freepik.com&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;.Dog graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Scala Local Toggle</title>
-      <link>http://kanekotic.github.io/project/scala-local-toggle/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:01 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/scala-local-toggle/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-6etktj-https-user-images-githubusercontent-com-3071208-32364786-318debc0-c077-11e7-9064-a65d6ce35cf6-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/32364786-318debc0-c077-11e7-9064-a65d6ce35cf6.png&#34; alt=&#34;logomakr_6etktj&#34; /&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/kanekotic/scala-local-toggle&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/scala-local-toggle.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://maven-badges.herokuapp.com/maven-central/com.github.kanekotic/scala-local-toggle_2.12/badge.svg?style=flat&#34; alt=&#34;Maven Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;feature toggle by configuration file for scala applications&lt;/p&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;//Use version in badge
-libraryDependencies += &amp;quot;com.github.kanekotic&amp;quot; %% &amp;quot;scala-local-toggle&amp;quot; % &amp;lt;version&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Instantiate can be done by newing the class, it can also be register in guice or dependency injection frameworks.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val toggle = new ToggleManager();
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;use default files for loading configuration, it will try to load toggles from the following (first-listed are higher priority):&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;system properties&lt;/li&gt;
-&lt;li&gt;application.conf (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;application.json (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;application.properties (all resources on classpath with this name)&lt;/li&gt;
-&lt;li&gt;reference.conf (all resources on classpath with this name)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;this files will require to have an setting for the toggles HOCON or JSON complient configuration similar to this, in any other case toggles will default to false:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;feature.local.toggles: [
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;,
-      &amp;quot;local&amp;quot;: true
-      &amp;quot;development&amp;quot;: true
-      &amp;quot;production&amp;quot;: false
-    }, 
-    {
-      &amp;quot;name&amp;quot;: &amp;quot;NAME_OF_OTHER_YOUR_TOGGLE&amp;quot;,
-      &amp;quot;local&amp;quot;: true
-      &amp;quot;development&amp;quot;: false
-      &amp;quot;production&amp;quot;: false
-    }
-  ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the boolean denotes the state of the toggle depending on the environment, and the name is the identifying the value of the environment variable:
-- local maps to environment variable value LOCAL.
-- development maps to environment variable value DEVELOPMENT.
-- production maps to environment variable value PRODUCTION.&lt;/p&gt;
-
-&lt;p&gt;aditionally the enviroment variable that will be track to know the current environment of execution can be modified by&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-hocon&#34;&gt;  feature.local.environment: &amp;quot;SOME_ENVIROMENT_VARIABLE_NAME&amp;quot;
-  #Defaults to ENVIRONMENT 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Use with the name identifier defined in the previous step&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;  if (toggle.isEnabled(&amp;quot;NAME_OF_YOUR_TOGGLE&amp;quot;)) {
-    //your code under toggle here
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;logo&#34;&gt;LOGO&lt;/h5&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6ETKtj&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/6ETKtj&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Dependency Shrinker</title>
-      <link>http://kanekotic.github.io/project/dependency-shrinker/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/dependency-shrinker/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-6rglby-https-cloud-githubusercontent-com-assets-3071208-22743728-b6164884-ede0-11e6-9bbe-5e7643b22be7-png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/22743728/b6164884-ede0-11e6-9bbe-5e7643b22be7.png&#34; alt=&#34;logomakr_6rglby&#34; /&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
-
-&lt;p&gt;a command line tool to check what dependencies of an executable are really critical and not&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install dependency-shrinker
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;use&#34;&gt;use&lt;/h2&gt;
-
-&lt;p&gt;this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;depshrink list &amp;lt;Path to executable&amp;gt; &amp;lt;boot time&amp;gt; [Paths to dependencies folders]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;warning&#34;&gt;Warning&lt;/h2&gt;
-
-&lt;p&gt;if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing.&lt;/p&gt;
-
-&lt;p&gt;I will not take resposability on the issues generated by this package, so use at your own risk and make sure you backup all before using. And use with caution.&lt;/p&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/stephen-hutchings&#34;&gt;Stephen Hutchings&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>MailCrypt</title>
-      <link>http://kanekotic.github.io/project/mail-crypt/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kanekotic.github.io/project/mail-crypt/</guid>
-      <description>
-
-&lt;h1 id=&#34;logomakr-9amigx-https-user-images-githubusercontent-com-3071208-42293424-65e7e83a-7fda-11e8-8872-60852153087f-png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42293424-65e7e83a-7fda-11e8-8872-60852153087f.png&#34; alt=&#34;logomakr_9amigx&#34; /&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-
-&lt;p&gt;Engine and electron app that allows to add pgp encrytion to gmail. To ensure privacy of data.&lt;/p&gt;
-
-&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
-
-&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/9AMIGX&#34; target=&#34;_blank&#34;&gt;https://logomakr.com/9AMIGX&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
