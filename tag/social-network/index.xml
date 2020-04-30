@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>social network | Academic</title>
+    <link>https://www.kanekotic.com/tag/social-network/</link>
+      <atom:link href="https://www.kanekotic.com/tag/social-network/index.xml" rel="self" type="application/rss+xml" />
+    <description>social network</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Thu, 29 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>social network</title>
+      <link>https://www.kanekotic.com/tag/social-network/</link>
+    </image>
+    
+    <item>
+      <title>Koteky</title>
+      <link>https://www.kanekotic.com/project/koteky/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/koteky/</guid>
+      <description>&lt;h1 id=&#34;drawinghttpscloudgithubusercontentcomassets30712081473848322967ed8-0882-11e6-874d-4c19eb244373png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/14738483/22967ed8-0882-11e6-874d-4c19eb244373.png&#34; alt=&#34;drawing&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://gitter.im/Hatisoft/koteky?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Hatisoft/koteky.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/koteky&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://travis-ci.org/Hatisoft/koteky&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://travis-ci.org/Hatisoft/koteky.svg?branch=master&#34; alt=&#34;Build Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/koteky&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/np9fywosgs2ob33i?svg=true&#34; alt=&#34;Build status&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://img.shields.io/npm/v/koteky.svg&#34; alt=&#34;Build status&#34;&gt;
+&lt;img src=&#34;https://img.shields.io/npm/l/koteky.svg&#34; alt=&#34;license&#34;&gt;
+&lt;img src=&#34;https://img.shields.io/github/issues/Hatisoft/koteky.svg&#34; alt=&#34;Build status&#34;&gt;
+&lt;img src=&#34;https://img.shields.io/npm/dm/koteky.svg&#34; alt=&#34;Build status&#34;&gt;
+&lt;img src=&#34;https://img.shields.io/npm/dt/koteky.svg&#34; alt=&#34;Build status&#34;&gt;
+&lt;img src=&#34;https://img.shields.io/github/downloads/Hatisoft/koteky/total.svg&#34; alt=&#34;Build status&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is a plugin based crossplatform social network manager application based on electron.&lt;/p&gt;
+&lt;h2 id=&#34;usage-alpha&#34;&gt;Usage (Alpha)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This project is still on development and is not ready for public use&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current early use can be done by cloning repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;# Clone the repository
+$ git clone https://github.com/Hatisoft/koteky.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Plugins can be installed in app or modifying the package.json&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;{
+  ...
+  &amp;quot;plugins&amp;quot;:
+  {
+   &amp;quot;name_of_plugin&amp;quot; : &amp;quot;version_or_repo&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Run:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;# Go into the repository
+$ cd koteky
+
+# Install the dependencies and run
+$ npm install &amp;amp;&amp;amp; npm start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Use plugin based architecture&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Style and Display posts&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Authentication based on Oauth for social networks&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Implement Twitter plugin&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Implement Facebook plugin&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Implement LinkedIn plugin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;credits&#34;&gt;Credits&lt;/h4&gt;
+&lt;p&gt;Social Network graphic by &lt;a href=&#34;http://www.freepik.com&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;.Dog graphic by &lt;a href=&#34;http://www.freepik.com/&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

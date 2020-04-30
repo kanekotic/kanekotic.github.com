@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jenkins | Academic</title>
+    <link>https://www.kanekotic.com/tag/jenkins/</link>
+      <atom:link href="https://www.kanekotic.com/tag/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <description>jenkins</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Fri, 30 Jun 2017 00:00:01 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>jenkins</title>
+      <link>https://www.kanekotic.com/tag/jenkins/</link>
+    </image>
+    
+    <item>
+      <title>Travis YML Plugin</title>
+      <link>https://www.kanekotic.com/project/travis-yml-plugin/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/travis-yml-plugin/</guid>
+      <description>&lt;h1 id=&#34;logomakr_5059huhttpscloudgithubusercontentcomassets3071208202488191e3637aa-a9ec-11e6-89b7-6c9c403af3c7png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/20248819/1e3637aa-a9ec-11e6-89b7-6c9c403af3c7.png&#34; alt=&#34;logomakr_5059hu&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.&lt;/p&gt;
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+&lt;p&gt;Install by navigating and selecting &lt;code&gt;Manage Jenkins&lt;/code&gt; -&amp;gt; &lt;code&gt;Manage Plugins&lt;/code&gt; -&amp;gt; &lt;code&gt;Travis YML Plugin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;before_install&lt;/li&gt;
+&lt;li&gt;install&lt;/li&gt;
+&lt;li&gt;before_script&lt;/li&gt;
+&lt;li&gt;script&lt;/li&gt;
+&lt;li&gt;after_success&lt;/li&gt;
+&lt;li&gt;after_failure&lt;/li&gt;
+&lt;li&gt;before_deploy&lt;/li&gt;
+&lt;li&gt;deploy&lt;/li&gt;
+&lt;li&gt;after_deploy&lt;/li&gt;
+&lt;li&gt;after_script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you have any failure on your build and want to review the final generated, you should declare the environment variable &lt;code&gt;DEBUG_TRAVIS_YML&lt;/code&gt; either on your build node or in jenkins.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+&lt;p&gt;If you want to help on the development of this plugin you will need &lt;code&gt;Jruby&lt;/code&gt; and the next prerequisites:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For development and to see this plugin in a test Jenkins server:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ bundle install
+$ jpi server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;after that open a pull request to add your changes.&lt;/p&gt;
+&lt;p&gt;If you have any further request open an issue on the main repository or contact the sustainers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@kanekotic&lt;/li&gt;
+&lt;li&gt;@masaki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;logo&#34;&gt;Logo&lt;/h2&gt;
+&lt;p&gt;People graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

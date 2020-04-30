@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>export | Academic</title>
+    <link>https://www.kanekotic.com/tag/export/</link>
+      <atom:link href="https://www.kanekotic.com/tag/export/index.xml" rel="self" type="application/rss+xml" />
+    <description>export</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>export</title>
+      <link>https://www.kanekotic.com/tag/export/</link>
+    </image>
+    
+    <item>
+      <title>Gatoo</title>
+      <link>https://www.kanekotic.com/project/gatoo/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/gatoo/</guid>
+      <description>&lt;h1 id=&#34;logomakr_32f2mdhttpsuser-imagesgithubusercontentcom307120842147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42147664-29898cca-7dcf-11e8-9c50-2cf3845b7fe8.png&#34; alt=&#34;logomakr_32f2md&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://travis-ci.org/kanekotic/gatoo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/gatoo.svg?branch=master&#34; alt=&#34;Build Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/gatoo?branch=master&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/gatoo/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This project will provide a command line and a library to export google analytics to your prefered endpoint (console, log management, or db).&lt;/p&gt;
+&lt;h2 id=&#34;use-as-command-line&#34;&gt;Use as Command Line&lt;/h2&gt;
+&lt;p&gt;install globally with &lt;code&gt;npm install gatoo -g&lt;/code&gt;. Aftyer this it can be run with the next command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;gatoo console &amp;lt;email&amp;gt; &amp;lt;ReplativePath&amp;gt; &amp;lt;viewId&amp;gt; &amp;lt;startDate&amp;gt; &amp;lt;endDate&amp;gt; &amp;lt;metrics&amp;gt; &amp;lt;dimensions&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;use-as-library&#34;&gt;Use as library&lt;/h2&gt;
+&lt;p&gt;first step is to add this to your project throught &lt;code&gt;yarn add gatoo&lt;/code&gt; or &lt;code&gt;npm install gatoo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;currently you can retrieve in a simple way data from google analytics and route it to your prefered output. An example of retrieval is the next one.&lt;/p&gt;
+&lt;h3 id=&#34;import&#34;&gt;Import&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const importer = require(&#39;../lib/index&#39;).importer
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const example = async () =&amp;gt; {
+    const result = await importer(email, keyPath, config)
+    console.log(JSON.stringify(result.data))
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;export&#34;&gt;Export&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).exporter
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const doSomething () =&amp;gt; {}
+
+const example = async () =&amp;gt; {
+    const result = await exporter(email, keyPath, config,  doSomething)
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;export-to-console&#34;&gt;Export to console&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const exporter = require(&#39;../lib/index&#39;).outputTo
+    path = require(&#39;path&#39;)
+    
+const email = &#39;your email&#39; //email account from the user credentials
+    keyPath = path.join(__dirname, &#39;your credentials&#39;)// path to credentials json or pem
+    config = {
+    viewId: &amp;quot;some viewId&amp;quot;,//the view id to query
+    daterange:{
+        &amp;quot;endDate&amp;quot;:&amp;quot;2017-06-30&amp;quot;,
+        &amp;quot;startDate&amp;quot;:&amp;quot;2016-06-30&amp;quot;
+      },
+      metrics: &amp;quot;ga:users&amp;quot;,
+      dimensions: &amp;quot;ga:date&amp;quot;
+    }
+
+const example = async () =&amp;gt; {
+    const result = await outputTo.console(email, keyPath, config)
+}
+
+example()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Retrieve data from google analytics&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create library&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create adapter for output console&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create command line tool console&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create adapter logstash&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create adapter fluentd&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create adapter ES&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create command line tool logstash&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create command line tool fluentd&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create command line tool ES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/32f2Md&#34;&gt;https://logomakr.com/32f2Md&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

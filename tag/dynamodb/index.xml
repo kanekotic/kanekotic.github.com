@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynamoDB | Academic</title>
+    <link>https://www.kanekotic.com/tag/dynamodb/</link>
+      <atom:link href="https://www.kanekotic.com/tag/dynamodb/index.xml" rel="self" type="application/rss+xml" />
+    <description>dynamoDB</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>dynamoDB</title>
+      <link>https://www.kanekotic.com/tag/dynamodb/</link>
+    </image>
+    
+    <item>
+      <title>DynamoDB CLI</title>
+      <link>https://www.kanekotic.com/project/dynamo-cli/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/dynamo-cli/</guid>
+      <description>&lt;h1 id=&#34;logomakr_31ffsshttpsuser-imagesgithubusercontentcom307120842293899-9639c29e-7fdd-11e8-97de-aeaf65118d83png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42293899-9639c29e-7fdd-11e8-97de-aeaf65118d83.png&#34; alt=&#34;logomakr_31ffss&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;dynamo operations command line (In development not production ready, use with caution.)&lt;/p&gt;
+&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;
+&lt;p&gt;provides a easy to use command line interface to interact with DynamoDb.&lt;/p&gt;
+&lt;h2 id=&#34;supported-commands&#34;&gt;Supported commands&lt;/h2&gt;
+&lt;p&gt;current implementation requires you to have correct setup of enviroment variables logind for aws in your command line.&lt;/p&gt;
+&lt;h3 id=&#34;upload-from-csv&#34;&gt;Upload from CSV&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dynamo-cli upload &amp;lt;path to csv&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more credentials support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add download Command&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; TBD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/31ffss&#34;&gt;https://logomakr.com/31ffss&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

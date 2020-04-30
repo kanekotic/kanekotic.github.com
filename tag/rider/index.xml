@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rider | Academic</title>
+    <link>https://www.kanekotic.com/tag/rider/</link>
+      <atom:link href="https://www.kanekotic.com/tag/rider/index.xml" rel="self" type="application/rss+xml" />
+    <description>rider</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>rider</title>
+      <link>https://www.kanekotic.com/tag/rider/</link>
+    </image>
+    
+    <item>
+      <title>Specflow.Rider</title>
+      <link>https://www.kanekotic.com/project/specflow-rider/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/specflow-rider/</guid>
+      <description>&lt;h1 id=&#34;logomakr_8dchduhttpsuser-imagesgithubusercontentcom307120829508416-bf674688-8654-11e7-8c90-5472529cd9aapng&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/29508416-bf674688-8654-11e7-8c90-5472529cd9aa.png&#34; alt=&#34;logomakr_8dchdu&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://travis-ci.org/kanekotic/Specflow.Rider&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/Specflow.Rider.svg?branch=master&#34; alt=&#34;Build Status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;intent&#34;&gt;Intent&lt;/h2&gt;
+&lt;p&gt;Integration of Specflow autogeneration for Rider&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;clone this repo, and make sure you have intellij installed the community version should be enough. you can use the next Gradle commands from command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gradle compile  # generate the code
+gradle check    # gnerate the code and test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Table Support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Parameters Support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Move to Rider style plugin&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; XUnit Support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; MSTest Support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add Files to project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/8dchdu8dchdu&#34;&gt;https://logomakr.com/8dchdu8dchdu&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

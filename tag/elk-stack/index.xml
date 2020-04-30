@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elk-stack | Academic</title>
+    <link>https://www.kanekotic.com/tag/elk-stack/</link>
+      <atom:link href="https://www.kanekotic.com/tag/elk-stack/index.xml" rel="self" type="application/rss+xml" />
+    <description>elk-stack</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Fri, 28 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>elk-stack</title>
+      <link>https://www.kanekotic.com/tag/elk-stack/</link>
+    </image>
+    
+    <item>
+      <title>ELK Docker</title>
+      <link>https://www.kanekotic.com/project/elk-docker/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/elk-docker/</guid>
+      <description>&lt;h1 id=&#34;logomakr_5axvtchttpsuser-imagesgithubusercontentcom307120841837679-81e03624-785e-11e8-841c-4bd25a61b5cdpng&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/41837679-81e03624-785e-11e8-841c-4bd25a61b5cd.png&#34; alt=&#34;logomakr_5axvtc&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;This show how multiple containers can aggregate log to logging infrastructure with docker compose using logstash, elastic search and kibana&lt;/p&gt;
+&lt;h2 id=&#34;run&#34;&gt;Run&lt;/h2&gt;
+&lt;p&gt;you will need docker installed in your computer, after it :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;docker-compose up
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;run to get some logs from httpd&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;repeat 10 curl http://localhost:80/ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Kibana:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this might take a bit&lt;/li&gt;
+&lt;li&gt;Navigate to http://localhost:5601&lt;/li&gt;
+&lt;li&gt;Add logstash-* as index with @timestamp as Time-field name&lt;/li&gt;
+&lt;li&gt;Go to Discover&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grafana:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to http://localhost:3000&lt;/li&gt;
+&lt;li&gt;username and password are admin&lt;/li&gt;
+&lt;li&gt;Navigate and create dashboards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;the target architecture would be to allow gathering information from applications but also sync with hadoop to enable having a data lake to improve analytics, and pull directly from google analytics to logstash.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/41893258-66e86d6a-791b-11e8-9e2a-929c723b9f44.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;(current architecture is missing google analytics and hadoop as seen in TODO list)&lt;/p&gt;
+&lt;h2 id=&#34;backlog&#34;&gt;Backlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add kibana container&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add Grafana container visualization&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add elasticsearch container&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add logstash container and configuration&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add aplication containers&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add dashboard as code for grafana&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add import fron google analytics through logstash and http_poller&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add hadoop infrastructure for data analytics extension&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references--further-readings&#34;&gt;References &amp;amp; further readings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://docs.fluentd.org/v0.12/articles/docker-logging-efk-compose&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;docker logging article&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gist.github.com/eunomie/e7a183602b8734c47058d277700fdc2d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gist eunomie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.elastic.co/guide/en/logstash/current/plugins-inputs-http_poller.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http poller&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.elastic.co/products/hadoop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hadoop elastic search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://blog.treasuredata.com/blog/2015/08/31/hadoop-vs-elasticsearch-for-advanced-analytics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hadoop vs elastic search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/5axvTc&#34;&gt;https://logomakr.com/5axvTc&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

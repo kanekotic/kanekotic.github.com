@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>faker | Academic</title>
+    <link>https://www.kanekotic.com/tag/faker/</link>
+      <atom:link href="https://www.kanekotic.com/tag/faker/index.xml" rel="self" type="application/rss+xml" />
+    <description>faker</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>faker</title>
+      <link>https://www.kanekotic.com/tag/faker/</link>
+    </image>
+    
+    <item>
+      <title>Flow Runtime Faker</title>
+      <link>https://www.kanekotic.com/project/flow-runtime-faker/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/flow-runtime-faker/</guid>
+      <description>&lt;h1 id=&#34;logohttpsuser-imagesgithubusercontentcom307120848891796-a7796780-ee3c-11e8-93a0-69b06f1a1198png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/48891796-a7796780-ee3c-11e8-93a0-69b06f1a1198.png&#34; alt=&#34;logo&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://travis-ci.org/kanekotic/flow-runtime-faker&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/flow-runtime-faker.svg?branch=master&#34; alt=&#34;Build Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/flow-runtime-faker?branch=master&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/flow-runtime-faker/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://github.com/kanekotic/flow-runtime-faker&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dt/flow-runtime-faker.svg&#34; alt=&#34;npm&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://github.com/kanekotic/flow-runtime-faker/blob/master/LICENSE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/flow-runtime-faker.svg&#34; alt=&#34;GitHub license&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://GitHub.com/kanekotic/flow-runtime-faker/graphs/commit-activity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-green.svg&#34; alt=&#34;Donate&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Type definitions in javascript can help adding type safety for classes. But should not make more complicated property based testing. This package aims to generate random objects based on their flow definitions&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;yarn add flow-runtime-faker -D&lt;/code&gt; or &lt;code&gt;npm install flow-runtime-faker --save-dev&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;if you use only &lt;code&gt;flow&lt;/code&gt; and not &lt;code&gt;flow-runtime&lt;/code&gt;. You can use this plugin by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yarn add flow-runtime babel-plugin-flow-runtime -D&lt;/code&gt; or &lt;code&gt;npm install flow-runtime babel-plugin-flow-runtime --save-dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;add the next configuration for tests phase on your &lt;code&gt;.babelrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;   {
+   ...
+    &amp;quot;env&amp;quot;: {
+       &amp;quot;test&amp;quot;: {
+           &amp;quot;plugins&amp;quot;: [[&amp;quot;flow-runtime&amp;quot;, { &amp;quot;assert&amp;quot;: false, &amp;quot;annotate&amp;quot;: false }]]
+       }
+     }
+   }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import faker from &#39;flow-runtime-faker&#39;
+
+type otherType {
+    fuz: 42 | 7 | 32 | &amp;quot;Some&amp;quot; | &amp;quot;Some Other&amp;quot; | false
+}
+
+type myType = {
+    foo: number,
+    bar: number[],
+    daz: string,
+    don: otherType
+}
+
+let value = fake(test)
+
+console.log(value)
+/*
+type myType = {
+    foo: 10,
+    bar: [1,6.40],
+    daz: &amp;quot;something&amp;quot;,
+    don: {
+        fuz: 42
+    }
+}
+*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Done?&lt;/th&gt;
+&lt;th&gt;Flow Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;void&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;numeric literals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;string literals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;boolean literals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;union&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;maybe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;optional&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;arrays&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;subtypes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array Peek</title>
+      <link>https://www.kanekotic.com/project/array-peek/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/array-peek/</guid>
+      <description>&lt;h1 id=&#34;logomakr_5sissshttpsuser-imagesgithubusercontentcom307120846520471-66bd9300-c87c-11e8-855c-e38b28094435png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/46520471-66bd9300-c87c-11e8-855c-e38b28094435.png&#34; alt=&#34;logomakr_5sisss&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://travis-ci.org/kanekotic/array-peek&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://travis-ci.org/kanekotic/array-peek.svg?branch=master&#34; alt=&#34;Build Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://coveralls.io/github/kanekotic/array-peek?branch=master&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/kanekotic/array-peek/badge.svg?branch=master&#34; alt=&#34;Coverage Status&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://github.com/kanekotic/array-peek&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/npm/dy/array-peek.svg&#34; alt=&#34;npm&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://github.com/kanekotic/array-peek/blob/master/LICENSE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/license/kanekotic/array-peek.svg&#34; alt=&#34;GitHub license&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://GitHub.com/kanekotic/array-peek/graphs/commit-activity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Maintained%3F-yes-green.svg&#34; alt=&#34;Maintenance&#34;&gt;&lt;/a&gt;
+
+&lt;a href=&#34;https://www.paypal.me/kanekotic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Donate-PayPal-green.svg&#34; alt=&#34;Donate&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;extend array functionality to allow peek method.&lt;/p&gt;
+&lt;h2 id=&#34;peek-vs-foreach&#34;&gt;peek vs forEach&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;peek&lt;/code&gt; as &lt;code&gt;forEach&lt;/code&gt; allows you to execute a callback on each of the elements of an array, not affecting the content of itself.&lt;/p&gt;
+&lt;p&gt;The difference is that &lt;code&gt;forEach&lt;/code&gt; returns void so no further processing can be done, while &lt;code&gt;peek&lt;/code&gt; will return the array so you can continue the transformations necesary for your processing&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;add it to your project using &lt;code&gt;npm install array-peek --save&lt;/code&gt; or &lt;code&gt;yarn add array-peek&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;to use this package just add it before the usage of any array to extend its prototype. From then on you will have access to the peek function as seen in the next example.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;require(&#39;array-peek&#39;)
+
+[1,2,3]
+    .peek(console.log)
+    .map((value) =&amp;gt; value * value)
+    .peek(console.log)
+    
+//  Output:
+//&amp;gt; 1
+//&amp;gt; 2
+//&amp;gt; 3
+//&amp;gt; 1
+//&amp;gt; 4
+//&amp;gt; 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;created-my-free-logohttpslogomakrcom5sisss-at-logomakrcomlogomakrcom&#34;&gt;Created my free 
+&lt;a href=&#34;https://logomakr.com/5sISSS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;logo&lt;/a&gt; at 
+&lt;a href=&#34;LogoMakr.com&#34;&gt;LogoMakr.com&lt;/a&gt;&lt;/h5&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>express | Academic</title>
+    <link>https://www.kanekotic.com/tag/express/</link>
+      <atom:link href="https://www.kanekotic.com/tag/express/index.xml" rel="self" type="application/rss+xml" />
+    <description>express</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>express</title>
+      <link>https://www.kanekotic.com/tag/express/</link>
+    </image>
+    
+    <item>
+      <title>Express Exception Handler</title>
+      <link>https://www.kanekotic.com/project/express-exception-handler/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/express-exception-handler/</guid>
+      <description>&lt;h1 id=&#34;logomakr_6nl700httpsuser-imagesgithubusercontentcom307120828988724-97dc463a-7971-11e7-9cec-ffc06bcc9205png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/28988724-97dc463a-7971-11e7-9cec-ffc06bcc9205.png&#34; alt=&#34;logomakr_6nl700&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;This package was created to add a general way to handle exception for express application with the expectation to make it simpler to handle all possible requests.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;add it to your project with &lt;code&gt;npm install express-exception-handler&lt;/code&gt; or &lt;code&gt;yarn add express-exception-handler&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+&lt;p&gt;there are 2 diferent ways to integrate the main functionality of this package, either by adding the handle that gets injected to the router framework&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var exceptionHandler = require(&#39;express-exception-handler&#39;)
+exceptionHandler.handle()
+const app = require(&#39;express&#39;)()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or by wraping manually the routes&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var wrap = require(&#39;express-exception-handler&#39;).wrap
+router.post(&#39;/&#39;, wrap(async (req, res) =&amp;gt; {
+    ...
+}))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;it also integrates an extended class from Error that contains a &lt;code&gt;message&lt;/code&gt; and a &lt;code&gt;status&lt;/code&gt; that can be used to pass diferent information to the error handle&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var httpError = require(&#39;express-exception-handler&#39;).exception
+router.post(&#39;/&#39;, async (req, res) =&amp;gt; {
+    throw new HttpError(&#39;Great Message&#39;, 400, &amp;quot;{Response: awesome}&amp;quot;)
+}))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;last but not least it also contains a middleware that can be added directly to express that handles the previous named errors.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var middleware = require(&#39;express-exception-handler&#39;).middleware
+const app = require(&#39;express&#39;)()
+app.use(middleware)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Arrows graphic by &lt;a href=&#34;http://www.flaticon.com/authors/madebyoliver&#34;&gt;madebyoliver&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;LogoMaker.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/6nL7006nL700&#34;&gt;https://logomakr.com/6nL7006nL700&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

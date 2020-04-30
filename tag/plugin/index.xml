@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugin | Academic</title>
+    <link>https://www.kanekotic.com/tag/plugin/</link>
+      <atom:link href="https://www.kanekotic.com/tag/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <description>plugin</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>plugin</title>
+      <link>https://www.kanekotic.com/tag/plugin/</link>
+    </image>
+    
+    <item>
+      <title>Electron Plugin</title>
+      <link>https://www.kanekotic.com/project/electron-plugin/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/electron-plugin/</guid>
+      <description>&lt;p&gt;Create extensible electron applications through a plugin architecture that uses NPM (or similar registry) or GitHub as repository for the extensions.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;add it to your electron project using &lt;code&gt;npm install electron-plugin --save&lt;/code&gt; or &lt;code&gt;yarn add electron-plugin&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;require &lt;code&gt;electron-plugin&lt;/code&gt; exports a function that requires a javascript object and an electron window, as seen on the next example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const pluginManager = require(`electron-plugin`)
+let config = { 
+        installPath: `${__dirname}/test_folder`,
+        plugins : {
+            &amp;quot;electron-plugin-example&amp;quot;: &amp;quot;0.0.2&amp;quot;
+        }
+     },
+    extensionPoint = {
+        app: &#39;anything you want to use as exstention point&#39;
+    }
+
+pluginManager.load(config, extensionPoint)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;created-my-free-logologomakrcom2nqeyp-at-logomakrcomlogomakrcom&#34;&gt;Created my free 
+&lt;a href=&#34;logomakr.com/2NQeYP&#34;&gt;logo&lt;/a&gt; at 
+&lt;a href=&#34;LogoMakr.com&#34;&gt;LogoMakr.com&lt;/a&gt;&lt;/h5&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Travis YML Plugin</title>
+      <link>https://www.kanekotic.com/project/travis-yml-plugin/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:01 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/travis-yml-plugin/</guid>
+      <description>&lt;h1 id=&#34;logomakr_5059huhttpscloudgithubusercontentcomassets3071208202488191e3637aa-a9ec-11e6-89b7-6c9c403af3c7png&#34;&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/20248819/1e3637aa-a9ec-11e6-89b7-6c9c403af3c7.png&#34; alt=&#34;logomakr_5059hu&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;This plugin has been done to be able to have certain level of compatibility in between Jenkins, Travis-CI and other YML based build services.&lt;/p&gt;
+&lt;h2 id=&#34;use&#34;&gt;Use&lt;/h2&gt;
+&lt;p&gt;Install by navigating and selecting &lt;code&gt;Manage Jenkins&lt;/code&gt; -&amp;gt; &lt;code&gt;Manage Plugins&lt;/code&gt; -&amp;gt; &lt;code&gt;Travis YML Plugin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add to your workspace on the root folder a .travis.yml, this plugin accept the next phases of lifecycle:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;before_install&lt;/li&gt;
+&lt;li&gt;install&lt;/li&gt;
+&lt;li&gt;before_script&lt;/li&gt;
+&lt;li&gt;script&lt;/li&gt;
+&lt;li&gt;after_success&lt;/li&gt;
+&lt;li&gt;after_failure&lt;/li&gt;
+&lt;li&gt;before_deploy&lt;/li&gt;
+&lt;li&gt;deploy&lt;/li&gt;
+&lt;li&gt;after_deploy&lt;/li&gt;
+&lt;li&gt;after_script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you have any failure on your build and want to review the final generated, you should declare the environment variable &lt;code&gt;DEBUG_TRAVIS_YML&lt;/code&gt; either on your build node or in jenkins.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+&lt;p&gt;If you want to help on the development of this plugin you will need &lt;code&gt;Jruby&lt;/code&gt; and the next prerequisites:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For development and to see this plugin in a test Jenkins server:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ bundle install
+$ jpi server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;after that open a pull request to add your changes.&lt;/p&gt;
+&lt;p&gt;If you have any further request open an issue on the main repository or contact the sustainers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@kanekotic&lt;/li&gt;
+&lt;li&gt;@masaki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;logo&#34;&gt;Logo&lt;/h2&gt;
+&lt;p&gt;People graphic by &lt;a href=&#34;http://www.flaticon.com/authors/freepik&#34;&gt;Freepik&lt;/a&gt; from &lt;a href=&#34;http://www.flaticon.com/&#34;&gt;Flaticon&lt;/a&gt; is licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34; title=&#34;Creative Commons BY 3.0&#34;&gt;CC BY 3.0&lt;/a&gt;. Made with &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Maker&#34;&gt;Logo Maker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PlayYoutube Atom</title>
+      <link>https://www.kanekotic.com/project/playoutube-atom/</link>
+      <pubDate>Thu, 29 Jun 2017 01:01:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/playoutube-atom/</guid>
+      <description>&lt;h1 id=&#34;logomakr_0iwknvhttpsuser-imagesgithubusercontentcom307120842363375-bcf912a2-80f7-11e8-999b-82e107a3d1afpng&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363375-bcf912a2-80f7-11e8-999b-82e107a3d1af.png&#34; alt=&#34;logomakr_0iwknv&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;Search and play youtube videos inside atom. Follow your favorite tutorials inside the development environment in a floating window&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/11987290/d6f8e8c0-a9dc-11e5-8d1e-c0ee5a2922e1.gif&#34; alt=&#34;playyoutube-atom&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:search&amp;rsquo; (&amp;lsquo;ctrl-shift-y&amp;rsquo;): Display the search window:
+&lt;ul&gt;
+&lt;li&gt;input some search terms and hit enter.&lt;/li&gt;
+&lt;li&gt;Navigate the results:
+&lt;ul&gt;
+&lt;li&gt;Using the mouse.&lt;/li&gt;
+&lt;li&gt;Using up and down key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Play video:
+&lt;ul&gt;
+&lt;li&gt;Click.&lt;/li&gt;
+&lt;li&gt;Using side key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:hide&amp;rsquo; (&amp;lsquo;ctrl-shift-h&amp;rsquo;): Hides the player&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:show&amp;rsquo; (&amp;lsquo;ctrl-shift-j&amp;rsquo;): Shows the player&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;playyoutube-atom:close&amp;rsquo; (&amp;lsquo;ctrl-shift-c&amp;rsquo;): Clear current search and video content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+&lt;p&gt;@kanekotic&lt;/p&gt;
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+&lt;p&gt;Having trouble with &amp;lsquo;playyoutube&amp;rsquo;? Any idea of how to improve it?
+Review our 
+&lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/wiki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; or 
+&lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;add issue/recomendation&lt;/a&gt; and we will sort it out.&lt;/p&gt;
+&lt;p&gt;###Todo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; make video frame draggable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/0IWkNv&#34;&gt;https://logomakr.com/0IWkNv&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PlayYoutube Visual Studio</title>
+      <link>https://www.kanekotic.com/project/playoutube-vs/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/playoutube-vs/</guid>
+      <description>&lt;h1 id=&#34;playyoutubeheaderhttpsuser-imagesgithubusercontentcom307120842363002-129d9374-80f6-11e8-9ccf-1bd222f07884png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42363002-129d9374-80f6-11e8-9ccf-1bd222f07884.png&#34; alt=&#34;playyoutubeheader&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://gitter.im/Hatisoft/PlayYouTube?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Join%20Chat.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/PlayYouTube&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Plugin for Visual studio that allows you to search and play youtube videos inside your development enviroment.&lt;/p&gt;
+&lt;p&gt;follow tutorials or listen what you want, without the pain of having to toggle between multiple windows.&lt;/p&gt;
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+&lt;p&gt;put your query on the search combo box and hit enter. You will be provided with a list of results, the selected results will be displayed and be streamed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8636943/f13e5d16-287a-11e5-960b-21bdd390f5a2.png&#34; alt=&#34;playyoutubecapture&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+&lt;p&gt;@kanekotic&lt;/p&gt;
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+&lt;p&gt;Having trouble with &amp;lsquo;PlayYouTube&amp;rsquo;? Any idea of how to improve it?
+Review our 
+&lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/wiki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; or 
+&lt;a href=&#34;https://github.com/Hatisoft/PlayYouTube/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;add issue/recomendation&lt;/a&gt; and we’ll sort it out.&lt;/p&gt;
+&lt;p&gt;###Build State
+CI: 
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/playyoutube-877b8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/mm7u1f8dm2vn5l27?svg=true&#34; alt=&#34;Build status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Release: 
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/playyoutube&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/qgykpbj3ifyfu0i7?svg=true&#34; alt=&#34;Build status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Search Error On</title>
+      <link>https://www.kanekotic.com/project/search-error-on/</link>
+      <pubDate>Thu, 29 Jun 2017 01:00:10 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/search-error-on/</guid>
+      <description>&lt;h1 id=&#34;searchonheaderhttpsuser-imagesgithubusercontentcom307120842362398-5bb7dee6-80f3-11e8-9ecc-56dcc2bdda97png&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42362398-5bb7dee6-80f3-11e8-9ecc-56dcc2bdda97.png&#34; alt=&#34;searchonheader&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://gitter.im/Hatisoft/SearchErrorOn?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://badges.gitter.im/Join%20Chat.svg&#34; alt=&#34;Join the chat at https://gitter.im/Hatisoft/SearchErrorOn&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This plugin for visual studio has been created to be able to find the errors generated during compilation time on your favourite web browser.&lt;/p&gt;
+&lt;h3 id=&#34;use&#34;&gt;Use&lt;/h3&gt;
+&lt;p&gt;Select one or more errors in your Error List Window. Right click and hit &amp;lsquo;Search Error On&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8430164/f75af2c2-1f2e-11e5-99c5-ae979995bd3b.png&#34; alt=&#34;search on&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;configure&#34;&gt;Configure&lt;/h3&gt;
+&lt;p&gt;Under &amp;lsquo;Tools -&amp;gt; Options-&amp;gt; Search Error On&amp;rsquo; you will be able to select one of your favourite search engines.
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/3071208/8430166/f9b19ff8-1f2e-11e5-91b4-9c7a8aae0e21.png&#34; alt=&#34;search on configuration&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h3&gt;
+&lt;p&gt;@kanekotic&lt;/p&gt;
+&lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
+&lt;p&gt;Having trouble with &amp;lsquo;Search Error On&amp;hellip;&#39;? Any idea of how to improve it?
+Review our 
+&lt;a href=&#34;https://github.com/Hatisoft/SearchErrorOn/wiki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; or 
+&lt;a href=&#34;https://github.com/Hatisoft/SearchErrorOn/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;add issue/recomendation&lt;/a&gt; and we’ll sort it out.&lt;/p&gt;
+&lt;p&gt;###Build State
+CI: 
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/searcherroron&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/3dfrnphpa1l4tlyr?svg=true&#34; alt=&#34;Build status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Release: 
+&lt;a href=&#34;https://ci.appveyor.com/project/kanekotic/searcherroron-5ibi9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/1b25khghlfjq9cho?svg=true&#34; alt=&#34;Build status&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

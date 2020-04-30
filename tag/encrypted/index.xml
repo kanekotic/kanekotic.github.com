@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>encrypted | Academic</title>
+    <link>https://www.kanekotic.com/tag/encrypted/</link>
+      <atom:link href="https://www.kanekotic.com/tag/encrypted/index.xml" rel="self" type="application/rss+xml" />
+    <description>encrypted</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>encrypted</title>
+      <link>https://www.kanekotic.com/tag/encrypted/</link>
+    </image>
+    
+    <item>
+      <title>MailCrypt</title>
+      <link>https://www.kanekotic.com/project/mail-crypt/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://www.kanekotic.com/project/mail-crypt/</guid>
+      <description>&lt;h1 id=&#34;logomakr_9amigxhttpsuser-imagesgithubusercontentcom307120842293424-65e7e83a-7fda-11e8-8872-60852153087fpng&#34;&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/3071208/42293424-65e7e83a-7fda-11e8-8872-60852153087f.png&#34; alt=&#34;logomakr_9amigx&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Engine and electron app that allows to add pgp encrytion to gmail. To ensure privacy of data.&lt;/p&gt;
+&lt;h3 id=&#34;logo&#34;&gt;Logo&lt;/h3&gt;
+&lt;p&gt;Check out the new logo that I created on &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt; &lt;a href=&#34;https://logomakr.com/9AMIGX&#34;&gt;https://logomakr.com/9AMIGX&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
