@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
+    <title>Kanekotic</title>
     <link>https://www.kanekotic.com/author/</link>
       <atom:link href="https://www.kanekotic.com/author/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <description>Kanekotic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><copyright>kanekotic © 2020</copyright>
     <image>
       <url>https://www.kanekotic.com/author/avatar_huf949a5834b999a51577c72f33cf9dc41_38910_270x270_fill_lanczos_center_2.png</url>
-      <title>Academic</title>
+      <title>Kanekotic</title>
       <link>https://www.kanekotic.com/author/</link>
     </image>
     

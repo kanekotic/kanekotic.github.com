@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>versioning | Academic</title>
+    <title>versioning | Kanekotic</title>
     <link>https://www.kanekotic.com/tag/versioning/</link>
       <atom:link href="https://www.kanekotic.com/tag/versioning/index.xml" rel="self" type="application/rss+xml" />
     <description>versioning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 11 Jul 2018 09:27:28 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><copyright>kanekotic © 2020</copyright><lastBuildDate>Wed, 11 Jul 2018 09:27:28 +0200</lastBuildDate>
     <image>
       <url>https://www.kanekotic.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>versioning</title>
